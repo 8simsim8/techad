@@ -5,11 +5,119 @@ $(document).ready(function(){
 
   var menuHeader = new makeHeader();
 
+//******************** Счетчик *************************************
   var $counterBlock = $('.b-content__counter-digits');
-  var startDigits = '152400,00';
-  var stopDigits = '152450,00';
+  var startDigits = 540220.00;
+  var stopDigits = 540248.00;
 
-  counter($counterBlock, startDigits, stopDigits);
+  // Стратовый плагин счетчика
+  var easingFn = function (t, b, c, d) {
+    return c*((t=t/d-1)*t*t + 1) + b;
+  }
+  
+  var options = {
+    useEasing : true, 
+    easingFn: easingFn, 
+    useGrouping : false, 
+    separator : ',', 
+    decimal : ',', 
+    prefix : '', 
+    suffix : '' 
+  };
+
+  var demo = new CountUp($counterBlock, startDigits, stopDigits, 2, 3, options);
+  demo.start();
+
+  var isStart;
+
+  // Отследить окончание работы стартового счетчика
+  var loadCount = setTimeout(function runCount() {
+    isStart = demo.ending;
+    if(isStart) {
+      stopTimer();
+    } else {
+      setTimeout(runCount, 500);
+    }
+  }, 500);
+
+  // Стоп таймер отслеживания стартового счетчика и запуск постоянно работающего
+  function stopTimer() {
+    clearTimeout(loadCount);
+    var str = demo.outResult;
+    // var number = parseToNumber(str);
+    // number = Math.round((number + 1)*100)/100;
+    // str = parseToString(number);
+    // startRender($counterBlock, str);
+    countTimer(str);
+  }
+
+  // Постоянно работающий счетчик
+  function countTimer(number){
+    var nowNumber = demo.outResult;
+    nowNumber = parseToNumber(number);
+    var loadCount = setTimeout(function runTimer() {
+      nowNumber = Math.round((nowNumber + 1)*100)/100;
+      startRender($counterBlock, parseToString(nowNumber));
+      setTimeout(runTimer, 500);
+    }, 500);
+  }
+
+  // Вывод результата на экран
+  function startRender(el, number) {
+    var $target = el.children('p');
+    $target.remove();
+    var array;
+    array = String(number).split('');
+    for(i = 0 ; i < array.length ; i++) {
+      var str = '<p>' + array[i] + '</p>';
+      $(el).append(str);
+    }
+  }
+
+  // Преобразование числа в строку
+  function parseToString(number) {
+
+    var array = String(number).split('');
+    var str = '';
+    var index = 0;
+
+    for(i = 0; i < array.length; i++) {
+      if(index != 0) {
+        index++;
+      }
+      if(array[i] == '.') {
+        array[i] = ',';
+        index = 1;
+      }
+      str += array[i];
+    }
+    // Если были нули после заптой
+      if(index == 0) {
+        str += ',00';
+      }
+      if(index == 1) {
+        str += '00';
+      }
+      if(index == 2) {
+        str += '0';
+      }
+
+    return str;
+  }
+
+  // Преобразование строки в число
+  function parseToNumber(str) {
+    var array = str.split('');
+    var number = '';
+    for(i = 0; i < array.length; i++) {
+      if(array[i] == ',') {
+        array[i] = '.';
+      }
+      number += array[i];
+    }
+    return +number;
+  }
+// *********** /Счетчик *********************************
 
 // *** Меню ***
   function makeHeader(){
@@ -31,58 +139,5 @@ $(document).ready(function(){
     });
   }
 // *** /Меню ***
-
-  function counter(el, start, stop) {
-
-    $(window).on('load', function(){
-      
-    //   var i = start;
-    //   // setTimeout(function run() {
-    //   //   i++;
-    //   //   renderDidts(el, i);
-    //   //   if(i < stop)
-    //   //   setTimeout(run, 100);
-    //   // }, 100);
-       startRender(el, start);
-    //   //parserDigit(el,i);
-      
-    });
-
-    // function renderDidts(el, number) {
-    //   parserDigit(el,number);
-      
-    // }
-    
-    // function parserDigit(el,number) {
-    //   var array;
-
-    //   array = String(number).split('');
-    //   var sumSpan = el.children().length;
-
-    //   var $span = el.children();
-
-    //   for( i = array.length-1 ; i > 0 ; i-- ) {
-    //     console.log(array[i], $span.eq(sumSpan-1).html());
-    //     if(array[i] != $span.eq(sumSpan-1).html()) {
-    //       $span.eq(sumSpan-1).html(array[i]);
-    //       sumSpan--;
-    //     }
-    //   }
-      
-    //   console.log(array);
-
-    // }
-    
-    function startRender(el, start) {
-      var array;
-      array = String(start).split('');
-      for(i = 0 ; i < array.length ; i++) {
-        var str = '<span>' + array[i] + '</span>';
-        $(el).append(str);
-      }
-      
-    }
-
-  }
 
 });
