@@ -49,7 +49,8 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
         separator : ',', // character to use as a separator
         decimal : '.', // character to use as a decimal
         easingFn: null, // optional custom easing closure function, default is Robert Penner's easeOutExpo
-        formattingFn: null // optional custom formatting function, default is self.formatNumber below
+        formattingFn: null, // optional custom formatting function, default is self.formatNumber below
+        print: true
     };
     // extend default options with passed options object
     for (var key in options) {
@@ -99,17 +100,18 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
     self.printValue = function(value) {
         var result = self.formattingFn(value);
         self.outResult = result;
-        // console.log(self.outResult);
-        // if (self.d.tagName === 'INPUT') {
-        //     this.d.value = result;
-        // }
-        // else if (self.d.tagName === 'text' || self.d.tagName === 'tspan') {
-        //     this.d.textContent = result;
-        // }
-        // else {
-        //     this.d.innerHTML = result;
-        // }
-        startRender(target, result);
+        if(self.options.print) {
+          if (self.d.tagName === 'INPUT') {
+            this.d.value = result;
+          } else
+            if (self.d.tagName === 'text' || self.d.tagName === 'tspan'){
+              this.d.textContent = result;
+            } else {
+                this.d.innerHTML = result;
+            }
+        } else {
+          startRender(target, result);
+        }
 
         function startRender(el, number) {
           var $target = el.children('p');
