@@ -333,7 +333,7 @@ html {
         margin-bottom: 30px;
       }
       .form-contact {
-        margin-top: 30px;
+        margin-top: 10px;
       }
         input[type="email"] {
           margin-bottom: 20px;
@@ -373,7 +373,6 @@ html {
         height : 222px;
         overflow: hidden;
         margin-bottom: 20px;
-        border-radius : 4px;
       }
         .blog-item__bg img {
           width: 100%;

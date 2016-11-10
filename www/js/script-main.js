@@ -139,4 +139,42 @@ $(document).ready(function(){
   });
 // *********** /Cчетчик процетов *************************
 
+// Валидация формы
+  $.validator.setDefaults({
+    submitHandler: function(form) {
+
+      var form = $('form')[0];
+      var formData = new FormData(form);
+
+      $.ajax({
+        url: '/PHPmailer.php',
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function(data) {
+          console.log('success!', data);
+        },
+        error: function(e) {
+          console.log('error: ', e);
+        }
+      });
+    }
+  });
+
+  $('form').validate({
+    rules: {
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      email: {
+        required: 'Вы не ввели свой e-mail',
+        email: 'Пожалуйста, проверьте адресс'
+      }
+    }
+  });
+
 });

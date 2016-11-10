@@ -18,4 +18,56 @@ $(document).ready(function(){
     }
   });
 
+// Валидация формы
+  $.validator.setDefaults({
+    submitHandler: function(form) {
+
+      var form = $('form')[0];
+      var formData = new FormData(form);
+
+      $.ajax({
+        url: '/PHPmailer.php',
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function(data) {
+          console.log('success!', data);
+        },
+        error: function(e) {
+          console.log('error: ', e);
+        }
+      });
+    }
+  });
+
+  $('form').validate({
+    rules: {
+      name: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      phone: {
+        required: true,
+        number: true,
+        minlength: 5
+      },
+    },
+    messages: {
+      name: {
+        required: 'Вы не ввели свое имя',
+      },
+      email: {
+        required: 'Вы не ввели свой e-mail',
+        email: 'Пожалуйста, проверьте адресс'
+      },
+      phone: {
+        required: 'Вы не ввели свой номер телефона',
+      },
+    }
+  });
+
 });

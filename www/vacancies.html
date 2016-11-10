@@ -26,6 +26,7 @@
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/script-vacancies.js"></script>
   </head>
@@ -128,9 +129,24 @@
           <h1>Присоединяйтесь! Будет сложно, но весело!</h1>
           <div class="row">
             <form action="vacancies_submit" method="get" accept-charset="utf-8" class="b-content__contact-form col sm-offset-4 sm-4 xs-12">
-              <input type="text" name="name" value="" placeholder="Ваше имя">
-              <input type="email" name="emai" value="" placeholder="Ваш e-mail">
-              <input type="tel" name="tel" value="" placeholder="Ваш номер телефона">
+              <span class="input input--akira">
+                <input class="input__field input__field--akira" type="text" id="name" name="name" />
+                <label class="input__label input__label--akira" for="name">
+                  <span class="input__label-content input__label-content--akira">Ваше имя</span>
+                </label>
+              </span>
+              <span class="input input--akira">
+                <input class="input__field input__field--akira" type="email" id="e-mail"  name="email" />
+                <label class="input__label input__label--akira" for="e-mail">
+                  <span class="input__label-content input__label-content--akira">Ваш e-mail</span>
+                </label>
+              </span>
+              <span class="input input--akira">
+                <input class="input__field input__field--akira"" type="tel" id="tel" name="phone" />
+                <label class="input__label input__label--akira" for="tel">
+                  <span class="input__label-content input__label-content--akira">Номер телефона</span>
+                </label>
+              </span>
               <input type="submit" name="submit" value="Откликнуться на вакансию">
             </form>
           </div>

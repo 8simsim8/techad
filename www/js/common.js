@@ -26,4 +26,11 @@ $(document).ready(function(){
   }
 // *** /Меню ***
 
+  $('.input__field').on('focus',function(){
+    $(this).parent().addClass('input--filled');
+  });
+  $('.input__field').on('blur',function(){
+    if($(this).val() == '') $(this).parent().removeClass('input--filled');
+  });
+
 });
