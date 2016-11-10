@@ -55,7 +55,8 @@ html {
     padding: 35px 0;
   }
     .b-content__knowledge h1 {
-      margin: 0 10px 40px;
+      margin-bottom: 40px;
+      padding: 0 10px;
     }
       .b-content__knowledge-inner {
         margin-bottom: 10px;
@@ -66,10 +67,9 @@ html {
           .b-content__knowledge-item h2 {
             margin-bottom: 20px;
           }
-      .b-content__knowledge-debugging {
-        height: 160px;
-        padding-left: 16.6667% !important;
-        padding-right: 8.3333% !important;
+      .b-content__knowledge-debugging.col {
+        padding-left: 16.6667%;
+        padding-right: 8.3333%;
         padding-top: 25px;
         padding-bottom: 25px;
         background-color: #FCEAE9;
@@ -87,7 +87,8 @@ html {
     
   }
     .b-content__offer h1 {
-      margin: 0 10px 50px;
+      padding: 0 10px;
+      margin-bottom: 50px;
     }
     .b-content__offer-inner {
       
@@ -236,5 +237,26 @@ html {
             }
 
   @media (max-width: 768px) {
-    
+    h1 {
+      text-align: center;
+      padding: 0;
+    }
+    .l-content {
+      padding-top: 0;
+    }
+    .b-content__offer-inner-item {
+      background-position:  center top;
+      text-align: center;
+    }
+    .b-content__appeal-top-img {
+      height: 300px;
+    }
+      .b-content__appeal-top-img > div {
+        width: 100%;
+        left: 0;
+      }
+    .b-content__knowledge-debugging.col {
+      padding: 25px;
+      background-image: none;
+    }
   }

@@ -1,7 +1,11 @@
 $(document).ready(function(){
-  
-  var DISTANCE_SMALL_HEADER = 200;
-  var DISTANCE_SHOW_BUTTON_TOP = 500;
+
+  window.WIDTH_MOBILE_DEVISE = 550;
+  window.WIDTH_TABLET_DEVISE = 768;
+  window.DISTANCE_SMALL_HEADER = 200;
+  window.DISTANCE_SHOW_BUTTON_TOP = 500;
+
+  window.widthWindow = $(window).width();
 
   var menuHeader = new makeHeader();
 
@@ -10,19 +14,21 @@ $(document).ready(function(){
     var $header = $('header');
 
   // Уменшение меню по скролу
-    $(window).on('load scroll', function (){
-      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-      if(scrolled > DISTANCE_SMALL_HEADER) {
-        $header.addClass('m-menu_small');
-      } else {
-        $header.removeClass('m-menu_small');
-      }
-    });
+    if(widthWindow > WIDTH_TABLET_DEVISE) {
+      $(window).on('load scroll', function (){
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        if(scrolled > DISTANCE_SMALL_HEADER) {
+          $header.addClass('m-menu_small');
+        } else {
+          $header.removeClass('m-menu_small');
+        }
+      });
 
-  // Проскроливание фиксорованного меню
-    $(window).scroll(function () {
-      $header.css("left", -$(this).scrollLeft() + "px");
-    });
+    // Проскроливание фиксорованного меню
+      $(window).scroll(function () {
+        $header.css("left", -$(this).scrollLeft() + "px");
+      });
+    }
   }
 // *** /Меню ***
 

@@ -403,7 +403,7 @@ select
 
 }
 
-@media (min-width : 768px) and (max-width : 991px)
+@media (min-width : 769px) and (max-width : 991px)
 {
 	/*Порядок размещения блоков*/
 	.row .col.order-sm-1
@@ -613,7 +613,7 @@ select
 	}
 }
 
-@media (min-width : 768px)
+@media (min-width : 769px)
 {
 
 	.row .col.sm-offset-1
@@ -1200,7 +1200,7 @@ select
 
 }
 
-@media (max-width : 414px)
+@media (max-width : 550px)
 {
 	.row
 	{
@@ -1211,8 +1211,8 @@ select
 
 	.row .col
 	{
-		margin-bottom : inherit;
 		width         : 100%;
 		min-width     : 100%;
+		margin-left: 0 !important;
 	}
 }

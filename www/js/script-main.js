@@ -131,8 +131,9 @@ $(document).ready(function(){
 
   $(window).on('load scroll', function(){
     var heightWindow = $(window).height();
-    var distanseToBottom = $('.b-content__contact')[0].getBoundingClientRect().bottom;
-    var distanseToTop = $('.b-content__contact')[0].getBoundingClientRect().top;
+    var $elem = (widthWindow > WIDTH_MOBILE_DEVISE) ?  $('.b-content__contact') : $('.b-content__contact-percent');
+    var distanseToBottom = $elem[0].getBoundingClientRect().bottom;
+    var distanseToTop = $elem[0].getBoundingClientRect().top;
     if(distanseToBottom <= heightWindow && distanseToTop >= -10) {
       percent.start();
     }

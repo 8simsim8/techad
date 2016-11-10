@@ -410,5 +410,104 @@ html {
 
 
   @media (max-width: 768px) {
-    
+    .b-content__counter {
+      padding: 90px 0 95px;
+    }
+
+    .b-content__counter-digits {
+      padding-right: 35px;
+    }
+    .b-content__counter-digits p {
+      font-size : 4.7rem;
+      padding: 0 10px;
+      width: 2.4rem;
+      }
+      .b-content__counter-digits:after {
+        margin-left: 10px;
+        font-size: 2.5rem;
+        line-height: 6rem;
+      }
+  .b-content__scheme .wrapp {
+    padding-top: 30px;
+  }
+    .b-content__scheme-item {
+      margin-bottom: 80px;
+    }
+    .m-content__scheme-item_tagline.b-content__scheme-item {
+      padding-top: 20px;
+    }
+    .m-content__scheme-item_tagline.b-content__scheme-item:after {
+      top: -40px;
+    }
+    .b-content__scheme-item:first-child:after,
+    .b-content__scheme-item:after {
+      top: auto;
+      bottom: -53px;
+      right: 50%;
+      margin-right: -40px;
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+    .button {
+      margin-bottom: 20px;
+    }
+    .m-content__scheme-item_register {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+  .b-content__excellence-detail {
+    margin-top: 20px;
+  }  
+      .b-content__excellence h2 {
+        width: 280px;
+        margin: 0 auto;
+      }
+      .b-content__excellence h2 + p.text {
+        text-align: center;
+      }
+    .m-content__excellence-detail-item_1.b-content__excellence-detail-item,
+    .m-content__excellence-detail-item_2.b-content__excellence-detail-item,
+    .m-content__excellence-detail-item_3.b-content__excellence-detail-item,
+    .m-content__excellence-detail-item_4.b-content__excellence-detail-item {
+      padding-top: 90px;
+      margin-top: 50px;
+      background-position: center top;
+    }
+    .b-content__work-item:before {
+      display: none;
+    }
+    .b-content__work-item a {
+      width: 100%;
+    }
+    .b-content__contact-statistics {
+      margin-bottom: 40px;
+    }
+    .b-content__contact-percent {
+      text-align: center;
+    }
+
+  }
+
+  @media (max-width: 550px) {
+    .b-content__counter-digits {
+      padding-right: 35px;
+    }
+    .b-content__counter-digits p {
+      font-size : 2.3rem;
+      padding: 0 10px;
+      width: 1.75rem;
+      }
+      .b-content__counter-digits:after {
+        margin-left: 10px;
+        font-size: 1rem;
+        line-height: 2.4rem;
+      }
+    .button {
+      width: 100%;
+    }
+      .button.get-counter {
+        margin-top: 20px;
+      }
   }
