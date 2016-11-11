@@ -305,26 +305,65 @@ a.text {
       background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
     }
 
+.top-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 10px;
+  display: none;
+  height: 50px;
+  width: 100vw;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 15px -2px rgba(0,0,0,0.5);
+}
+    .top-panel .button-menu {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      width: 50px;
+      height: 100%;
+      padding: 10px 0;
+    }
+      .top-panel .button-menu p {
+        margin: 0 auto;
+        margin-bottom: 6px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,0.5);
+      }
+        .top-panel .button-menu p:last-child {
+          margin-bottom: 0;
+        }
+
 header,
 main,
 footer {
-  min-width: 1180px;
+  min-width: 1024px;
 }
 
 /* HEADER */
   header {
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100px;
     width: 100%;
     background-color: #FFFFFF;
     box-shadow: 0 1px 15px -2px rgba(0,0,0,0.5);
     transition: height 0.2s ease,
-				transform 0.4s ease;
+        -webkit-transform 0.4s ease;
+    transition: height 0.2s ease,
+        transform 0.4s ease;
+    transition: height 0.2s ease,
+        transform 0.4s ease,
+        -webkit-transform 0.4s ease;
     z-index: 9999;
   }
-  	header.open-menu {
-	  transform: translate3d(0,0,0);	
-	}
+    .open-menu header {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);  
+  }
     header .wrapp {
       padding: 0 10px;
     }
@@ -335,11 +374,10 @@ footer {
     section .wrapp,
     footer .wrapp {
       height: 100%;
-      width: 1180px;
+      width: 1024px;
       margin: 0 auto;
     }
       .header-logo {
-        float: left;
         display: block;
         height: 60px;
         width: 200px;
@@ -365,7 +403,7 @@ footer {
         margin: 0 20px;
       }
         .header-register {
-          text-align: right;
+          text-align: center;
         }
 
 .l-content {
@@ -420,6 +458,41 @@ h2,
   max-width: 600px;
   margin: 0 auto;
 }
+
+.top-panel {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 10000;
+}
+  .top-panel .header-logo {
+    display: block;
+    height: 40px;
+  }
+  .top-panel .button-menu {
+    display: block;
+  }
+  .shadow-menu {
+    opacity: 0;
+    pointer-events: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9998;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity 0.4s ease;
+  }
+    .shadow-menu.open-menu {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
   header,
   main,
   footer {
@@ -438,36 +511,44 @@ h2,
     header {
       height: 100vh;
       width: 30vw;
-	  transform: translate3d(-30vw,0,0);
+      -webkit-transform: translate3d(-30vw,0,0);
+      transform: translate3d(-30vw,0,0);
     }
       header .wrapp {
         height: 100vh;
       }
-      .header-logo.col {
-		flex: 2;
-		width: 100%;
-        margin-bottom: 30px;
+      header .header-logo.col {
+        display: none;
+/*         -webkit-flex: 2;
+        -ms-flex: 2;
+        flex: 2;
+        width: 100%;
+        margin-bottom: 30px; */
       }
       .l-header .row {
-		padding: 20px 10px;
+        padding: 120px 10px 20px;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
       }
         .header-nav.col {
-		  flex: 5;
+          -webkit-flex: 5;
+          -ms-flex: 5;
+          flex: 5;
           -webkit-flex-direction: column;
           -ms-flex-direction: column;
           flex-direction: column;
-		  margin: 0 0 auto;
+          margin: 0 0 auto;
         }
-			.header-nav > li {
-				text-align: center;
-			}
+      .header-nav > li {
+        text-align: center;
+      }
       .header-register.col {
-		flex: 1;
-		margin: 50px 0;
-		text-align: center;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        margin: 50px 0;
+        text-align: center;
       }
   .b-footer__column-item {
     margin-bottom: 20px;
@@ -481,8 +562,8 @@ h2,
   
 @media (max-width: 550px) { 
     header {
-	  width: 50vw;
-	  transform: translate3d(-50vw,0,0);
-	}
+    width: 50vw;
+    -webkit-transform: translate3d(-50vw,0,0);
+    transform: translate3d(-50vw,0,0);
+  }
 }
-		

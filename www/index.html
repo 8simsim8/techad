@@ -6,7 +6,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
-    <meta name="theme-color" content="#111B38">
+    <meta name="theme-color" content="#FFFFFF">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-rim-auto-match" content="none">
     <!-- Favicon -->
@@ -33,22 +33,32 @@
   </head>
   <body>
 
-    <header class="l-header">
-      <nav class="wrapp row row-center">
-        <a href="index.html" title="Main" class="header-logo col sm-2"></a>
-        <ul class="header-nav col sm-offset-2 sm-6">
-          <li><a href="#" title="" class="link text">Примеры</a></li>
-          <li><a href="#" title="" class="link text">Статистика</a></li>
-          <li><a href="#" title="" class="link text">Помощь</a></li>
-          <li><a href="vacancies.html" title="" class="link text">Вакансии</a></li>
-          <li><a href="#" title="" class="link text">Контакты</a></li>
-        </ul>
-        <p class="header-register col sm-2">
-          <a href="#" title="Регистрация" class="link">Регистрация</a>
-        </p>
-      </nav>
-    </header>
-    
+    <div class="top-panel">
+      <a href="index.html" title="Main" class="header-logo col sm-2"></a>
+      <div class="button-menu">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div class="shadow-menu">
+      <header class="l-header">
+        <nav class="wrapp row row-center">
+          <a href="index.html" title="Main" class="header-logo col sm-2"></a>
+          <ul class="header-nav col sm-offset-2 sm-6">
+            <li><a href="#" title="" class="link text">Примеры</a></li>
+            <li><a href="#" title="" class="link text">Статистика</a></li>
+            <li><a href="#" title="" class="link text">Помощь</a></li>
+            <li><a href="vacancies.html" title="" class="link text">Вакансии</a></li>
+            <li><a href="#" title="" class="link text">Контакты</a></li>
+          </ul>
+          <p class="header-register col sm-2">
+            <a href="#" title="Регистрация" class="link">Регистрация</a>
+          </p>
+        </nav>
+      </header>
+    </div>
+
     <main class="l-content">
 
       <section class="b-content__counter">
@@ -70,36 +80,39 @@
       </section>
 
       <section class="b-content__scheme">
-        <div class="row row-wrap wrapp">
-          <div class="b-content__scheme-item m-content__scheme-item_1 col md-3 sm-3 xs-12">
-            <p class="b-content__scheme-item-title">Скрипт NoAdTech</p>
-            <p class="b-content__scheme-item-circle">1</p>
-            <p class="text">Вы интегрируете короткий JS-код на своем сайте — это не займет более пяти минут</p>
-          </div>
-          <div class="b-content__scheme-item m-content__scheme-item_2 col md-3 sm-3 xs-12">
-            <p class="b-content__scheme-item-title">Ваш сайт</p>
-            <p class="b-content__scheme-item-circle">2</p>
-            <p class="text">Скрипт в асинхронном режиме обменивается данными с нашем сервером (никак не влияя на скорость работы вашего cайта)</p>
-          </div>
-          <div class="b-content__scheme-item m-content__scheme-item_3 col md-3 sm-3 xs-12">
-            <p class="b-content__scheme-item-title">Сервера NoAdTech</p>
-            <p class="b-content__scheme-item-circle">3</p>
-            <p class="text">Мы обрабатываем данные на своей платформе и обходим все возможные блокировщики</p>
-          </div>
-          <div class="b-content__scheme-item m-content__scheme-item_4 col md-3 sm-3 xs-12">
-            <p class="b-content__scheme-item-title">Рекламные сети</p>
-            <p class="b-content__scheme-item-circle">4</p>
-            <p class="text">Мы уже интегрированы с основными рекламными сетями, что радикально увеличивает шансы на успешный обход блокировщиков</p>
-          </div>
-          <p class="b-content__scheme-item m-content__scheme-item_tagline col sm-offset-2 sm-8 xs-12">Выначинаете зарабатывать на <span>30% больше</span> на рекламных показах и возвращаетесь к оптимальным показателям</p>
-          <div class="m-content__scheme-item_register col sm-offset-2 sm-8 xs-12">
-            <div class="button contact-us">
-              <h2>Свяжитесь с нами</h2>
-              <p class="text">чтобы узнать подробности и начать работу</p>
+        <div class="wrapp">
+          <h1 class="col sm-6 sm-offset-3 xs-12">Как это работает</h1>
+          <div class="row row-wrap">
+            <div class="b-content__scheme-item m-content__scheme-item_1 col md-3 sm-3 xs-12">
+              <p class="b-content__scheme-item-title">Скрипт NoAdTech</p>
+              <p class="b-content__scheme-item-circle">1</p>
+              <p class="text">Вы интегрируете короткий JS-код на своем сайте — это не займет более пяти минут</p>
             </div>
-            <div class="button get-counter">
-              <h2>Получите счётчик</h2>
-              <p class="text">чтобы узнать сколько людей блокируют вашу рекламу</p>
+            <div class="b-content__scheme-item m-content__scheme-item_2 col md-3 sm-3 xs-12">
+              <p class="b-content__scheme-item-title">Ваш сайт</p>
+              <p class="b-content__scheme-item-circle">2</p>
+              <p class="text">Скрипт в асинхронном режиме обменивается данными с нашем сервером (никак не влияя на скорость работы вашего cайта)</p>
+            </div>
+            <div class="b-content__scheme-item m-content__scheme-item_3 col md-3 sm-3 xs-12">
+              <p class="b-content__scheme-item-title">Сервера NoAdTech</p>
+              <p class="b-content__scheme-item-circle">3</p>
+              <p class="text">Мы обрабатываем данные на своей платформе и обходим все возможные блокировщики</p>
+            </div>
+            <div class="b-content__scheme-item m-content__scheme-item_4 col md-3 sm-3 xs-12">
+              <p class="b-content__scheme-item-title">Рекламные сети</p>
+              <p class="b-content__scheme-item-circle">4</p>
+              <p class="text">Мы уже интегрированы с основными рекламными сетями, что радикально увеличивает шансы на успешный обход блокировщиков</p>
+            </div>
+            <p class="b-content__scheme-item m-content__scheme-item_tagline col sm-offset-2 sm-8 xs-12">Выначинаете зарабатывать на <span>30% больше</span> на рекламных показах и возвращаетесь к оптимальным показателям</p>
+            <div class="m-content__scheme-item_register col sm-offset-2 sm-8 xs-12">
+              <div class="button contact-us">
+                <h2>Свяжитесь с нами</h2>
+                <p class="text">чтобы узнать подробности и начать работу</p>
+              </div>
+              <div class="button get-counter">
+                <h2>Получите счётчик</h2>
+                <p class="text">чтобы узнать сколько людей блокируют вашу рекламу</p>
+              </div>
             </div>
           </div>
         </div>

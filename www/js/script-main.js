@@ -5,6 +5,9 @@ $(document).ready(function(){
   var startDigits = 540220.00;
   var stopDigits = 540248.00;
 
+  var widthWindow;
+  var heightWindow;
+
   // Стратовый плагин счетчика
   var easingFn = function (t, b, c, d) {
     return c*((t=t/d-1)*t*t + 1) + b;
@@ -130,8 +133,7 @@ $(document).ready(function(){
   var percent = new CountUp($('.b-content__contact-percent')[0], 0, 33, 0, 2, optionsPercent);
 
   $(window).on('load scroll', function(){
-    var heightWindow = $(window).height();
-    var $elem = (widthWindow > WIDTH_MOBILE_DEVISE) ?  $('.b-content__contact') : $('.b-content__contact-percent');
+    var $elem = (widthWindow > WIDTH_TABLET_DEVISE) ?  $('.b-content__contact') : $('.b-content__contact-percent');
     var distanseToBottom = $elem[0].getBoundingClientRect().bottom;
     var distanseToTop = $elem[0].getBoundingClientRect().top;
     if(distanseToBottom <= heightWindow && distanseToTop >= -10) {
@@ -176,6 +178,11 @@ $(document).ready(function(){
         email: 'Пожалуйста, проверьте адресс'
       }
     }
+  });
+
+  $(window).on('load resize', function(){
+    widthWindow = $(window).width();
+    heightWindow = $(window).height();
   });
 
 });

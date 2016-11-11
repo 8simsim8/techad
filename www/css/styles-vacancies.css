@@ -244,8 +244,13 @@ html {
     .l-content {
       padding-top: 0;
     }
+    .b-content__offer h1 {
+      margin-bottom: 20px;
+    }
     .b-content__offer-inner-item {
-      background-position:  center top;
+      margin-top: 20px;
+      padding-top: 60px;
+      background-position: center top;
       text-align: center;
     }
     .b-content__appeal-top-img {
@@ -258,5 +263,9 @@ html {
     .b-content__knowledge-debugging.col {
       padding: 25px;
       background-image: none;
+    }
+    .b-content__contact-social-item {
+      height: 60px;
+      width: 60px;
     }
   }
