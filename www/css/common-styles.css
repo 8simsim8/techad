@@ -89,16 +89,20 @@ h2 {
   line-height: 1.8em;
   color: #FFB54A;
   border-radius : 4px;
+  border: 1px solid transparent;
   background-color: rgba(24, 181, 74, 0.2);
   white-space: nowrap;
   transition: color 0.2s ease,
-              background-color 0.2s ease;
+              background-color 0.2s ease,
+              border 0.2s ease;
 }
   .tag:before {
-    content: '# ';
+    content: '#\00A0';
   }
+  .list-current-tag .tag,
   .tag[data-current=""],
   .tag:hover {
+    border: 1px solid rgba(0, 146, 69, 1);
     color: #FFFFFF;
     background-color: rgba(0, 146, 69, 1);
   }
@@ -109,6 +113,37 @@ h2 {
   line-height : 1.28em;
   color : #B9CBD1;
 }
+
+blockquote {
+  margin-left: 8.33333%;
+  max-width: 83.333333%;
+  padding-left: 30px;
+}
+  blockquote p.text {
+    position: relative;
+    font-family: 'RalewayRegular', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6em;
+    color: #39B54A;
+  }
+  blockquote p.text,
+  blockquote p.text + p.annotation {
+    padding-left: 30px;
+  }
+    blockquote p.text:before {
+      position: absolute;
+      top: 0.5rem;
+      left: 0px;
+      content: '“';
+      font-family : RalewayBold;
+      font-weight : bold;
+      font-size : 2.5rem;
+      line-height : 1.6rem;
+    }
+    blockquote p.text + p.annotation {
+      margin: 20px 0 35px;
+      color: #666666;
+    }
 
 a {
   text-decoration: none;
@@ -491,6 +526,71 @@ footer {
             color: #000F95;
             border-bottom: 1px solid rgba(0, 113, 188, 0.3);
           }
+/* Блок ссылок на соцсети */
+    .b-content__contact-social {
+    }
+      .b-content__contact-social p.text {
+        position: relative;
+        padding: 40px 0;
+        margin-bottom: 60px;
+        text-align: center;
+      }
+        .b-content__contact-social p.text:before,
+        .b-content__contact-social p.text:after {
+          position: absolute;
+          left: 50%;
+          display: block;
+          content: '';
+          width: 1px;
+          height: 35px;
+          background-color: #CCCCCC;
+        }
+        .b-content__contact-social p.text:before {
+          top: 0px;
+        }
+        .b-content__contact-social p.text:after {
+          bottom: 0px;
+        }
+        .b-content__contact-social-inner {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          margin: 0 auto;
+        }
+          .b-content__contact-social-item {
+            display: block;
+            margin: 0 10px;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transition: -webkit-transform 0.2s ease;
+            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+          }
+            .b-content__contact-social-item:hover {
+              -webkit-transform: scale(1.1);
+              -ms-transform: scale(1.1);
+              transform: scale(1.1);
+            }
+            .b-content__contact-social-item[title='Facebook'] {
+              background-image: url('../img/icon-social-fb.svg');
+            }
+            .b-content__contact-social-item[title='Instagram'] {
+              background-image: url('../img/icon-social-in.svg');
+            }
+            .b-content__contact-social-item[title='Twitter'] {
+              background-image: url('../img/icon-social-tw.svg');
+            }
+            .b-content__contact-social-item[title='Vkontakte'] {
+              background-image: url('../img/icon-social-vk.svg');
+            }
+
 
 
 /* FOOTER */
@@ -537,7 +637,9 @@ html {
 h1,
 h2,
 .lead,
-.text {
+.text,
+p.link,
+ul {
   max-width: 600px;
   margin: 0 auto;
 }
@@ -652,7 +754,10 @@ h2,
 .l-content {
   padding-top: 0;
 }
-
+  .b-content__contact-social-item {
+    height: 60px;
+    width: 60px;
+  }
   .b-footer__column-item {
     margin-bottom: 20px;
   }
@@ -664,6 +769,12 @@ h2,
 }
   
 @media (max-width: 550px) { 
-    header {
+  header {
   }
+  blockquote {
+    margin-left: 0;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
 }

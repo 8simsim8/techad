@@ -172,69 +172,6 @@ html {
       .b-content__contact-form input:not(:last-child) {
         margin-bottom: 20px;
       }
-    .b-content__contact-social {
-    }
-      .b-content__contact-social p.text {
-        position: relative;
-        padding: 40px 0;
-        margin-bottom: 60px;
-        text-align: center;
-      }
-        .b-content__contact-social p.text:before,
-        .b-content__contact-social p.text:after {
-          position: absolute;
-          left: 50%;
-          display: block;
-          content: '';
-          width: 1px;
-          height: 35px;
-          background-color: #CCCCCC;
-        }
-        .b-content__contact-social p.text:before {
-          top: 0px;
-        }
-        .b-content__contact-social p.text:after {
-          bottom: 0px;
-        }
-        .b-content__contact-social-inner {
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-justify-content: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          margin: 0 auto;
-        }
-          .b-content__contact-social-item {
-            display: block;
-            margin: 0 10px;
-            height: 2rem;
-            width: 2rem;
-            border-radius: 50%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            transition: -webkit-transform 0.2s ease;
-            transition: transform 0.2s ease;
-            transition: transform 0.2s ease, -webkit-transform 0.2s ease;
-          }
-            .b-content__contact-social-item:hover {
-              -webkit-transform: scale(1.1);
-              -ms-transform: scale(1.1);
-              transform: scale(1.1);
-            }
-            .b-content__contact-social-item[title='Facebook'] {
-              background-image: url('../img/icon-social-fb.svg');
-            }
-            .b-content__contact-social-item[title='Instagram'] {
-              background-image: url('../img/icon-social-in.svg');
-            }
-            .b-content__contact-social-item[title='Twitter'] {
-              background-image: url('../img/icon-social-tw.svg');
-            }
-            .b-content__contact-social-item[title='Vkontakte'] {
-              background-image: url('../img/icon-social-vk.svg');
-            }
 
   @media (max-width: 768px) {
     h1 {
@@ -263,9 +200,5 @@ html {
     .b-content__knowledge-debugging.col {
       padding: 25px;
       background-image: none;
-    }
-    .b-content__contact-social-item {
-      height: 60px;
-      width: 60px;
     }
   }
