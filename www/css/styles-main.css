@@ -369,45 +369,6 @@ html {
     .blog-container {
       margin-bottom: 50px;
     }
-    .blog-item__inner {
-      display: block;
-    }
-      .blog-item__bg {
-        width : 100%;
-        height : 222px;
-        overflow: hidden;
-        margin-bottom: 20px;
-      }
-        .blog-item__bg img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: -webkit-transform 0.2s ease;
-          transition: transform 0.2s ease;
-          transition: transform 0.2s ease, -webkit-transform 0.2s ease;
-        }
-          .blog-item__inner:hover img {
-            -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-            transform: scale(1.1);
-          }
-        .blog-item__inner .text.bold {
-          margin-bottom: 20px;
-          color : #39B54A;
-          transition: color 0.2s ease;
-        }
-          .blog-item__inner:hover .text.bold {
-            color : #383838;
-          }
-          .blog-item__inner .text span {
-            color: #0013BC;
-            transition: color 0.2s ease,
-                        border 0.2s ease;
-          }
-          .blog-item__inner:hover .text span {
-            color: #000F95;
-            border-bottom: 1px solid rgba(0, 113, 188, 0.3);
-          }
     .blog-container + p {
       text-align: center;
     }

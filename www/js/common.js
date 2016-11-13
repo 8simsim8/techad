@@ -36,8 +36,9 @@ $(document).ready(function(){
       var buttonMenu = document.getElementsByClassName('button-menu');
       $(buttonMenu).on('click', function() {
         $header.removeClass('m-menu_small');
-        $('.shadow-menu').toggleClass('open-menu');
-        if($('.shadow-menu').hasClass('open-menu')) {
+        $header.toggleClass('open-menu');
+        $(this).toggleClass('open-menu');
+        if($header.hasClass('open-menu')) {
           disableScroll();
         } else {
           enableScroll();

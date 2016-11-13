@@ -1,0 +1,94 @@
+html {
+  font-size: 20px;
+}
+
+  .b-content__title {
+    padding: 90px 0 70px;
+    background-image: url('../img/bg-tittle-blog.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+    .b-content__title h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: #FFFFFF;
+      margin-bottom: 25px;
+    }
+    .b-content__title p.lead {
+      margin-bottom: 50px;
+      color: #FFFFFF;
+    }
+    .tag-container {
+      margin-left: 16.6667%;
+      width: 66.6666667%;
+      text-align: center;
+      line-height: 2.1rem;
+    }
+
+  .b-content__container {
+    padding: 60px 0 70px;
+  }
+    .blog-item__inner {
+      margin-bottom: 50px;
+    }
+    .blog-item__inner h2 {
+
+    }
+    .blog-item__inner p.text span {
+      color: #383838;
+    }
+  .b-content__paginator {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: 70px;
+  }
+    .b-content__paginator span {
+      display: inline-block;
+      margin: 0 10px;
+      font-family: 'RalewayRegular', sans-serif;
+      font-size: 0.8rem;
+      line-height: 40px;
+      text-align: center;
+      background : rgba(185, 203, 209, 0.3);
+      width : 40px;
+      height : 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.2s ease,
+                  color 0.2s ease;
+    }
+      .b-content__paginator span.current-page,
+      .b-content__paginator span:hover {
+        background : rgba(24, 181, 74, 0.2);
+      }
+
+.b-content__contact {
+  padding: 60px 0 70px;
+  background : rgba(185, 203, 209, 0.3);
+}
+  .b-content__contact h1 {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+    .b-content__contact .input.input--akira {
+      float: left;
+      width: 55%;
+    }
+    .b-content__contact input[type="submit"] {
+      margin-top: 30px;
+      float: right;
+      width: 40%;
+    }
+
+
+
+
+  @media (max-width: 768px) {
+    .b-content__contact .input.input--akira  {
+      width: 100%;
+    }
+    .b-content__contact input[type="submit"] {
+      width: 100%;
+    }
+  }
