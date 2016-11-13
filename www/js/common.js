@@ -7,6 +7,9 @@ $(document).ready(function(){
 
   var menuHeader = new makeHeader();
 
+  var buttonToTop = new makeButtonToTop();  // Кнопка "вверх"
+
+
 // *** Меню ***
   function makeHeader(){
     var $header                   = $('header');
@@ -46,6 +49,38 @@ $(document).ready(function(){
       });
   }
 // *** /Меню ***
+
+// Кнопка "ВВЕРХ"
+  function makeButtonToTop() {
+
+    var block               = document.getElementsByTagName('main')[0];
+    var buttonTop           = document.createElement('div');
+
+    buttonTop.classList.add('button-to-top');
+    buttonTop.classList.add('text');
+    buttonTop.innerHTML = 'TOP';
+    block.appendChild(buttonTop);
+
+    if(window.pageYOffset >= DISTANCE_SHOW_BUTTON_TOP) {
+      $(buttonTop).addClass('show-button');
+    }
+
+    $(window).on('scroll', function(){
+      var scrollWindow = window.pageYOffset || document.documentElement.scrollTop;
+      if(scrollWindow >= DISTANCE_SHOW_BUTTON_TOP) {
+        $(buttonTop).addClass('show-button');
+      } else {
+        $(buttonTop).removeClass('show-button');
+      }
+    });
+
+    $(buttonTop).on('click', function(){
+      $("html, body").animate({
+        scrollTop: 0
+      }, 200);
+    });
+
+  }
 
 // *** Inputs ***
   $('.input__field').on('focus',function(){
