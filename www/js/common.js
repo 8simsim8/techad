@@ -57,8 +57,6 @@ $(document).ready(function(){
     var buttonTop           = document.createElement('div');
 
     buttonTop.classList.add('button-to-top');
-    buttonTop.classList.add('text');
-    buttonTop.innerHTML = 'TOP';
     block.appendChild(buttonTop);
 
     if(window.pageYOffset >= DISTANCE_SHOW_BUTTON_TOP) {

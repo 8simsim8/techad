@@ -31,6 +31,15 @@ html {
     padding: 70px 0 80px;
     border-bottom: 1px solid #B9CBD1;
   }
+  .b-content__article h2,
+  .b-content__article p.lead,
+  .b-content__article p.text,
+  .b-content__article blockquote,
+  .b-content__article ul {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .b-content__article h2 {
     font-size: 1.2rem;
     line-height: 1.16em;

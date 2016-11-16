@@ -1,0 +1,134 @@
+html {
+  font-size: 20px;
+}
+
+  .b-content__title {
+    padding: 140px 0 140px;
+    background-image: url('../img/bg-tittle-contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+    .b-content__title h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: #FFFFFF;
+      margin-bottom: 25px;
+    }
+    .b-content__title p.lead {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #FFFFFF;
+    }
+
+.b-content__form {
+  padding: 60px 0 90px;
+}
+  .b-content__form .wrapp {
+  }
+    .b-content__form h2 {
+      color : #333333;
+      margin-bottom: 50px;
+    }
+    .b-content__form-our-contacts {
+      
+    }
+      .b-content__form-our-contacts li {
+        position: relative;
+        padding-top: 0.35em;
+        padding-left: 50px;
+        margin-bottom: 35px;
+      }
+        .b-content__form-our-contacts li:last-child {
+          margin-bottom: 0px;
+        }
+        .b-content__form-our-contacts li:before {
+          position: absolute;
+          display: block;
+          content: '';
+          left: 0;
+          height: 1.5rem;
+          width: 1.5rem;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          border-radius: 50%;
+        }
+          .b-content__form-our-contacts li.tel:before {
+            background-image: url('../img/icon-telephone.svg');
+          }
+          .b-content__form-our-contacts li.email:before {
+            background-image: url('../img/icon-email.svg');
+          }
+          .b-content__form-our-contacts li.skype:before {
+            background-image: url('../img/icon-skype.svg');
+          }
+        .b-content__form-our-contacts li a {
+          font-family: 'AABebasNeue';
+          font-size: 1.7rem;
+          color: #333333;
+        }
+    .b-content__form-container {
+      position: relative;
+    }
+      .b-content__form-container form h2 {
+        margin-bottom: 20px;
+      }
+        .b-content__form-container .textarea,
+        .b-content__form-container form textarea {
+          font-weight: normal;
+        }
+      .message-sent .b-content__form-container form {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .b-content__form-finish {
+        position: absolute;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        background: #FFFFFF;
+        pointer-events: none;
+      }
+      .message-sent .b-content__form-finish {
+        opacity: 1;
+        pointer-events: auto;
+       }
+       .b-content__form-finish-inner {
+        margin-top: 2.5rem;
+        padding-top: 115px;
+        background-image: url('../img/bg-send-message.svg');
+        background-size: 100px 75px;
+        background-repeat: no-repeat;
+        background-position: center top;
+       }
+        .b-content__form-finish-inner h2 {
+          text-align: center;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          color: #39B54A;
+        }
+        .b-content__form-finish-inner p {
+          text-align: center;
+          font-size: 1rem;
+        }
+
+  @media (max-width: 768px) {
+    .b-content__contact .input.input--akira  {
+      width: 100%;
+    }
+    .b-content__contact input[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .b-content__form-container form {
+      margin-top: 50px;
+    }
+  }

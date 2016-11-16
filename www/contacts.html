@@ -20,16 +20,16 @@
     <link rel="stylesheet" type="text/css" href="css/gird-column.css">
     <link rel="stylesheet" type="text/css" href="css/reset-min.css">
     <link rel="stylesheet" type="text/css" href="css/common-styles.css">
-    <link rel="stylesheet" type="text/css" href="css/styles-blog.css">
+    <link rel="stylesheet" type="text/css" href="css/styles-contacts.css">
     <!-- Scripts -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.18/autosize.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/script-blog.js"></script>
+    <script type="text/javascript" src="js/script-contacts.js"></script>
   </head>
   <body>
 
@@ -61,80 +61,55 @@
 
       <section class="b-content__title">
         <div class="wrapp">
-          <h1>Наш блог</h1>
+          <h1>Контакты</h1>
           <div class="row">
-            <p class="lead col sm-offset-1 sm-10">Наша цель — сделать доставку рекламных материалов более эффективной, быстрой и надежной.</p>
+            <p class="lead col sm-offset-1 sm-10">Вы всегода можете задать интересующие вас вопросы через форму обратной связи. Наши специалисты свяжутся с вам в ближайшее время</p>
           </div>
-          <p class="tag-container">
-            <a href="#" class="tag">Разработка</a>
-            <a href="#" class="tag" data-current>NoAdTech</a>
-            <a href="#" class="tag">Adblock</a>
-            <a href="#" class="tag">Рекламные сети</a>
-            <a href="#" class="tag">Стартап</a>
-            <a href="#" class="tag">Софт</a>
-            <a href="#" class="tag">Реклама</a>
-            <a href="#" class="tag">Браузер</a>
-            <a href="#" class="tag">Anti Adblobk Script</a>
-          </p>
         </div>
       </section>
 
-      <section>
-        <div class="b-content__container wrapp row row-wrap">
-          <!-- <a href="#" class="blog-item__inner col sm-4 xs-6">
-            <div class="blog-item__bg">
-              <img src="img/temp/blog_1.jpg" alt="">
-            </div>
-            <p class="text bold">23 июля</p>
-            <h2>Adblock Plus продает рекламу</h2>
-            <p class="text"><span>Блокировщики рекламы заняли первые места в App Store через день после запуска iOS 9</span></p>
-          </a>
-          <a href="#" class="blog-item__inner col sm-4 xs-6">
-            <div class="blog-item__bg">
-              <img src="img/temp/blog_2.jpg" alt="">
-            </div>
-            <p class="text bold">23 июля</p>
-            <p class="text"><span>Adblock Plus начнет продавать рекламу</span></p>
-          </a>
-          <a href="#" class="blog-item__inner col sm-4 xs-6">
-            <div class="blog-item__bg">
-              <img src="img/temp/blog_3.jpg" alt="">
-            </div>
-            <p class="text bold">23 июля</p>
-            <p class="text"><span>7 сервисов для блокировки сайтов, которые мешают работе</span></p>
-          </a>
-          <a href="#" class="blog-item__inner col sm-4 xs-6">
-            <div class="blog-item__bg">
-              <img src="img/temp/blog_4.jpg" alt="">
-            </div>
-            <p class="text bold">12 июля</p>
-            <p class="text"><span>Кейсы: как наш клиент чуть было не потерял 70% своего онлайн-бизнеса</span></p>
-          </a> -->
-        </div>
-        <p class="b-content__paginator">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-        </p>
-      </section>
-
-      <section class="b-content__contact">
-        <div class="wrapp">
-        <h1>Узнайте больше, как мы боремся с блокировщиками рекламы!</h1>
-          <div class="row row-wrap">
-            <form action="email_submit" accept-charset="utf-8" class="form-contact col sm-offset-3 sm-6 xs-offset-2 xs-8" name="contact-email">
+      <section class="b-content__form">
+        <div class="wrapp row row-wrap">
+          <div class="col sm-offset-2 sm-4 xs-6">
+            <h2>Свяжитесь с нами</h2>
+            <ul class="b-content__form-our-contacts">
+              <li class="tel"><a href="tel:+78512335766" title="Позвоните нам" >&#177; 78512335766</a></li>
+              <li class="email"><a href="mailto:hello@noadtech.com?subject=feedback" title="Напишите нам" >hello@noadtech.com</a></li>
+              <li class="skype"><a href="skype:no.ad.tech" title="Скайп" >no.ad.tech</a></li>
+            </ul>
+          </div>
+          <div class="b-content__form-container col sm-4 xs-6">
+            <form>
+              <h2>Напишите нам!</h2>
+              <span class="input input--akira">
+                <input class="input__field input__field--akira" type="text" id="name" name="name" />
+                <label class="input__label input__label--akira" for="name">
+                  <span class="input__label-content input__label-content--akira">Имя</span>
+                </label>
+              </span>
               <span class="input input--akira">
                 <input class="input__field input__field--akira" type="email" id="e-mail"  name="email" />
                 <label class="input__label input__label--akira" for="e-mail">
-                  <span class="input__label-content input__label-content--akira">Ваш e-mail</span>
+                  <span class="input__label-content input__label-content--akira">E-mail</span>
                 </label>
               </span>
-              <input type="submit" value="Получить рассылку">
+              <span class="textarea input--akira">
+                <textarea class="input__field input__field--akira" name="message" /></textarea>
+                <label class="input__label input__label--akira" for="e-mail">
+                  <span class="input__label-content input__label-content--akira">Текст сообщения</span>
+                </label>
+              </span>
+              <input type="submit" name="submit" value="Отправить">
             </form>
+
+            <div class="b-content__form-finish">
+              <div class="b-content__form-finish-inner">
+                <h2>Сообщение отправлено!</h2>
+                <p class="text">В ближайшее время мы дадим Вам ответ.</p>
+              </div>
+            </div>
           </div>
-
         </div>
-
       </section>
 
     </main>
