@@ -1,7 +1,4 @@
-html {
-  font-size: 20px;
-}
-
+/* Таблица стилей к странице блога */
   .b-content__title {
     padding: 90px 0 70px;
     background-image: url('../img/bg-tittle-blog.jpg');

@@ -1,7 +1,4 @@
-html {
-  font-size: 20px;
-}
-
+/* Таблица стилей к странице контактов */
   .b-content__title {
     padding: 140px 0 140px;
     background-image: url('../img/bg-tittle-contact.jpg');
