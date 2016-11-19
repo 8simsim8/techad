@@ -133,7 +133,7 @@ $(document).ready(function(){
   var percent = new CountUp($('.b-content__contact-percent')[0], 0, 33, 0, 2, optionsPercent);
 
   $(window).on('load scroll', function(){
-    var $elem = (widthWindow > WIDTH_TABLET_DEVISE) ?  $('.b-content__contact') : $('.b-content__contact-percent');
+    var $elem = (widthWindow > WIDTH_TABLET_DEVICE) ?  $('.b-content__contact') : $('.b-content__contact-percent');
     var distanseToBottom = $elem[0].getBoundingClientRect().bottom;
     var distanseToTop = $elem[0].getBoundingClientRect().top;
     if(distanseToBottom <= heightWindow && distanseToTop >= -10) {

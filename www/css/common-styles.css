@@ -373,6 +373,75 @@ textarea.input__field {
       -webkit-transition: background-color 5000s ease-in-out 0s;
       background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
     }
+  /* Checkbox */
+  label.input-checkbox {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+    .input-checkbox input[type='checkbox'] {
+      visibility: hidden;
+      width: 0;
+      position: relative;
+      height: 1.625em;
+      top: 7px;
+      margin-right: 15px;
+    }
+
+    .input-checkbox input[type='checkbox'] + span:before {
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 0;
+      content: '';
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      border: 2px solid rgba(0,0,0,0.5);
+      background-color: #FFFFFF;
+    }
+
+      .input-checkbox span {
+        padding-left: 15px;
+        opacity: 0.5;
+        transition: opacity .1s ease;
+        -webkit-transition: opacity .1s ease;
+      }
+
+        .input-checkbox span:hover {
+          opacity: 1;
+          transition: opacity .1s ease;
+          -webkit-transition: opacity .1s ease;
+        }
+
+        .input-checkbox input[type='checkbox']:checked + span,
+        .input-checkbox input[type='checkbox']:checked + span:before{
+          opacity: 1;
+          transition: opacity .1s ease;
+          -webkit-transition: opacity .1s ease;
+          }
+
+        .input-checkbox input[type='checkbox']:checked + span:before{
+          background-color: #FFFFFF;
+          transition: border-color .1s ease;
+          -webkit-transition: border-color .1s ease;
+        }
+          .input-checkbox input[type='checkbox']:checked + span:after {
+            position: absolute;
+            content: '';
+            top: 10px;
+            left: 4px;
+            width: 16px;
+            height: 16px;
+            background-image: url('../img/marker-check.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+           }
+
 
 .top-panel {
   position: fixed;
@@ -429,6 +498,129 @@ textarea.input__field {
             -ms-transform: rotate(-45deg) scale(1.14);
             transform: rotate(-45deg) scale(1.14);
           }
+
+/* Попапы входа/регистрации */
+.l-popup {
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10000;
+  transition: opacity 0.5s ease;
+}
+  .open-popup.l-popup {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .button-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url('../img/icon-close.svg');
+    cursor: pointer;
+  }
+  .b-popup__window {
+    position: relative;
+    display: none;
+    margin: auto;
+    width: 570px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+  }
+    .open-popup.b-popup__window {
+      display: block;
+    }
+    .form-wrapp {
+      padding: 9rem 100px 0;
+      background-image: url('../img/logo-small.svg');
+      background-size: 4rem 4rem;
+      background-position: center 3.3rem;
+      background-repeat: no-repeat;
+    }
+    .b-popup__window h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .b-popup__window .input .link {
+      position: absolute;
+      top: 50%;
+      margin-top: -0.5em;
+      right: 20px;
+      color : #0071BC;
+      z-index: 10;
+      transition: font-size 0.2s,
+                  opacity 0.1s,
+                  -webkit-transform 0.3s;
+      transition: transform 0.3s,
+                  font-size 0.2s,
+                  opacity 0.1s;
+      transition: transform 0.3s,
+                  font-size 0.2s,
+                  opacity 0.1s,
+                  -webkit-transform 0.3s;
+    }
+      .b-popup__window .input--filled.input .link {
+        font-size: 0.65rem;
+        -webkit-transform: translateY(-2.6em);
+        -ms-transform: translateY(-2.6em);
+        transform: translateY(-2.6em);
+      }
+
+      .b-popup__window p.annotation {
+        margin-top: 20px;
+        margin-bottom: 5px;
+      }
+
+      .enter-social-wrapp {
+        font-size: 0;
+        margin-bottom: 40px;
+      }
+        .enter-social-wrapp a {
+          display: inline-block;
+          height: 2.2rem;
+          width: calc(50% - 10px);
+          text-align: center;
+          font-size: 0.9rem;
+          line-height: 2.2rem;
+          color: #FFFFFF;
+          border-radius: 5px;
+          background-size: auto 1rem;
+          background-repeat: no-repeat;
+          background-position: 15px center;
+        }
+          .enter-social-wrapp a:hover {
+            color: #f5f5f5;
+          }
+          .button-google {
+            margin-right: 10px;
+            background-color: #DD4B39;
+            background-image: url('../img/logo-g-plus.svg');
+          }
+            .button-google:hover {
+              background-color: #dd6639;
+            }
+          .button-facebook {
+            margin-left: 10px !important;
+            background-color: #4E6BA8;
+            background-image: url('../img/logo-facebook.svg');
+          }
+            .button-facebook:hover {
+              background-color: #4e5ca8;
+            }
+      .b-popup__bottom {
+        padding: 1.25em 10px;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(185, 203, 209, 0.3);
+      }
+/* ------------------------------- */
 
 header,
 main,
@@ -819,7 +1011,22 @@ footer {
     
 }
   
-@media (max-width: 550px) { 
+@media (max-width: 550px) {
+  .b-popup__window {
+    height: 100%;
+    width: 100%;
+  }
+  .form-wrapp {
+    padding: 80px 30px 0;
+    background-size: 3.5rem 3.5rem;
+    background-position: center 1.5rem;
+  }
+  .enter-social-wrapp a {
+    width: calc(50% - 5px);
+    background-size: auto 0.8rem;
+    background-position: 10px center;
+  }
+
   header {
   }
   blockquote {

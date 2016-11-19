@@ -27,8 +27,9 @@
     <![endif]-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/countUp.js"></script>
+    <script type="text/javascript" src="js/iOS-scroll.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/countUp.js"></script>
     <script type="text/javascript" src="js/script-main.js"></script>
   </head>
   <body>
@@ -41,6 +42,7 @@
         <p></p>
       </div>
     </div>
+
     <header class="l-header">
       <nav class="wrapp row row-center">
         <a href="index.html" title="Main" class="header-logo col sm-2"></a>
@@ -52,12 +54,89 @@
           <li><a href="contacts.html" title="" class="link text">Контакты</a></li>
         </ul>
         <p class="header-register col sm-2">
-          <a href="#" title="Регистрация" class="link">Регистрация</a>
+          <a href="#" title="Регистрация" class="link register-button button-open">Регистрация</a>
         </p>
       </nav>
     </header>
 
+    <div class="l-popup">
+
+      <div class="login b-popup__window">
+        <p class="button-close"></p>
+        <div class="form-wrapp">
+          <form action="" class="b-popup__login" name="login">
+            <h1>Вход</h1>
+            <span class="input input--akira">
+              <input class="input__field input__field--akira" type="text" id="login-email" name="email" />
+              <label class="input__label input__label--akira" for="login-email">
+                <span class="input__label-content input__label-content--akira">E-mail</span>
+              </label>
+            </span>
+            <span class="input input--akira">
+              <input class="input__field input__field--akira" type="password" id="login-password" name="password" />
+              <label class="input__label input__label--akira" for="login-password">
+                <span class="input__label-content input__label-content--akira">Пароль</span>
+              </label>
+              <a href="#" class="link">Забыли?</a>
+            </span>
+            <label class="input-checkbox text">
+              <input type="checkbox" name="remember-pass" value="none" class="">
+              <span>Запомнить</span>
+            </label>
+            <input type="submit" name="submit" value="Войти">
+            <p class="annotation">Войти через соцсети:</p>
+            <p class="enter-social-wrapp">
+              <a href="#" class="button-google text bold">Google</a>
+              <a href="#" class="button-facebook text bold">Facebook</a>
+            </p>
+          </form>
+        </div>
+        <p class="b-popup__bottom">
+          <a href="#" class="link register-button button-open">Регистрация</a>
+        </p>
+      </div>
+
+      <div class="register b-popup__window">
+        <p class="button-close"></p>
+        <div class="form-wrapp">
+          <form action="" class="b-popup__register" name="register">
+            <h1>Регистрация</h1>
+            <span class="input input--akira">
+              <input class="input__field input__field--akira" type="text" id="register-name" name="name" />
+              <label class="input__label input__label--akira" for="register-name">
+                <span class="input__label-content input__label-content--akira">Ваше имя</span>
+              </label>
+            </span>
+            <span class="input input--akira">
+              <input class="input__field input__field--akira" type="text" id="register-email" name="email" />
+              <label class="input__label input__label--akira" for="register-email">
+                <span class="input__label-content input__label-content--akira">E-mail</span>
+              </label>
+            </span>
+            <span class="input input--akira">
+              <input class="input__field input__field--akira" type="password" id="register-password" name="password" />
+              <label class="input__label input__label--akira" for="register-password">
+                <span class="input__label-content input__label-content--akira">Пароль</span>
+              </label>
+            </span>
+            <input type="submit" name="submit" value="Зарегистрироваться">
+            <p class="annotation">Зарегистрируйтесь через соцсети:</p>
+            <p class="enter-social-wrapp">
+              <a href="#" class="button-google text bold">Google</a>
+              <a href="#" class="button-facebook text bold">Facebook</a>
+            </p>
+          </form>
+        </div>
+        <p class="b-popup__bottom text">
+          <span>Есть аккаунт? </span>
+          <a href="#" class="link login-button button-open">Войти</a>
+        </p>
+      </div>
+    </div>
+
     <main class="l-content">
+
+<!-- Main content   -->
 
       <section class="b-content__counter">
         <div class="row row-wrap wrapp">

@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  if(window.innerWidth > WIDTH_MOBILE_DEVISE) {
+  if(window.innerWidth > WIDTH_MOBILE_DEVICE) {
     $(window).on('load scroll', function(){
       var heightWindow = $(window).height();
       var distanseToBottom = $('.b-content__appeal')[0].getBoundingClientRect().bottom;

@@ -62,7 +62,7 @@
           
         }
         .category-current .b-content__accordeon-category-title:after {
-          background-image: url('../img/icon-close-accordeon.svg');
+          background-image: url('../img/icon-close.svg');
         }
         .category-current .b-content__accordeon-category-title {
           background-color : #EAEFF1;
