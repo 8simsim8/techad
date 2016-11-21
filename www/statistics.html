@@ -155,11 +155,11 @@
           <div class="b-content__losses-left col sm-4">
             <div class="b-content__losses-left-item">
               <p class="text">6 612 043 пользователей не устанавливали блокировщик</p>
-              <h1>64%</h1>
+              <h1 class='percents'>64</h1>
             </div>
             <div class="b-content__losses-left-item">
               <p class="text">4 352 032 пользователей блокируют рекламу</p>
-              <h1>36%</h1>
+              <h1 class='percents'>36</h1>
             </div>
           </div>
           <div class="b-content__losses-right col sm-8">
@@ -167,7 +167,7 @@
               <h2>Всего потери</h2>
               <div>
                 <h1 data-currency='$'>8 239 940,43</h1>
-                <h1>27.5%</h1>
+                <h1 class='percents'>27.5</h1>
               </div>
             </div>
 
@@ -175,22 +175,22 @@
               <div class="b-content__losses-table-row text">
                 <p>За день</p>
                 <p>
-                  <span class="data">-112 032,23 $</span>
-                  <span class="percents">23.5%</span>
+                  <span class="data" data-currency="$">-112 032,23</span>
+                  <span class="percents">23.5</span>
                 </p>
               </div>
               <div class="b-content__losses-table-row text">
                 <p>За неделю</p>
                 <p>
-                  <span class="data">-436 032,23 $</span>
-                  <span class="percents">21.5%</span>
+                  <span class="data" data-currency="$">-436 032,23</span>
+                  <span class="percents">21.5</span>
                 </p>
               </div>
               <div class="b-content__losses-table-row text">
                 <p>За 1000 показов</p>
                 <p>
-                  <span class="data">-65,23 грн</span>
-                  <span class="percents">23.45%</span>
+                  <span class="data" data-currency="грн">-65,23</span>
+                  <span class="percents">23.45</span>
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@
               <h2>Восстановлено</h2>
               <div>
                 <h1 data-currency='$'>6 548 650,11</h1>
-                <h1>23.7%</h1>
+                <h1 class="percents">23.7</h1>
               </div>
             </div>
 
@@ -211,10 +211,84 @@
         <div class="wrapp row row-wrap">
           <div class="col sm-4">
             <h2>Используемые блокировщики (десктоп)</h2>
-            <p class="lead">В ноябре 2016 количество пользователей установивших AdBlock увеличилось на 1.05%</p>
-            <p class="lead">Мы помогли нашим клиентам сохранить 87.75% от понесенных потерь</p>
+            <p class="lead">В ноябре 2016 количество пользователей установивших AdBlock увеличилось на <span class="percents">1.05</span></p>
+            <p class="lead">Мы помогли нашим клиентам сохранить <span class="percents">87.75</span> от понесенных потерь</p>
+          </div>
+          <div class="b-content__use-block-circle col sm-2">
+            <canvas></canvas>
+            <p class="percents">56</p>
+            <h2>Adblock Plus</h2>
+          </div>
+          <div class="b-content__use-block-circle col sm-2">
+            <canvas></canvas>
+            <p class="percents">29</p>
+            <h2>Adblock</h2>
+          </div>
+          <div class="b-content__use-block-circle col sm-2">
+            <canvas></canvas>
+            <p class="percents">8</p>
+            <h2>Ghostery</h2>
+          </div>
+          <div class="b-content__use-block-circle col sm-2">
+            <canvas></canvas>
+            <p class="percents">4</p>
+            <h2>Другие</h2>
           </div>
         </div>
+      </section>
+
+      <section class="b-content__traffic">
+        <div class="wrapp">
+
+          <div class="b-content__traffic-filter">
+            <div class="b-add-car__form-item droplist">
+              <input type="text" id="parameter" value="Все" hidden>
+              <span class="droplist-current text bold tab-input">Трафик</span>
+              <ul class="droplist-block">
+                <li class="droplist-item text">1</li>
+                <li class="droplist-item text">2</li>
+                <li class="droplist-item text">3</li>
+              </ul>
+            </div>
+
+            <div class="b-filter__switch category">
+              <span class="b-filter__switch-item text" data-filter-category="all-traffic">Весь трафик</span>
+              <span class="b-filter__switch-item text" data-filter-category="with-block">С блокировщиком</span>
+              <span class="b-filter__switch-item text" data-filter-category="without-block">Без блокировщика</span>
+              <span class="b-filter__switch-item text" data-filter-category="rebuilt">Восстановленный</span>
+            </div>
+
+            <div class="b-filter__switch display">
+              <span class="b-filter__switch-item text" data-filter-category="absolute-value">123</span>
+              <span class="b-filter__switch-item text" data-filter-category="relative-value">%</span>
+            </div>
+          </div>
+
+          <canvas></canvas>
+        </div>
+      </section>
+
+      <section class="b-content__contact">
+        <div class="wrapp">
+        <h1>Узнайте сколько теряет ваш сайт!</h1>
+        <p class="text">Интегрируйте наш счётчик бесплатно и оцените потери сайта из-за блокировщиков.</p>
+        <div class="row row-wrap">
+          <form action="email_submit" accept-charset="utf-8" class="form-contact col sm-offset-3 sm-6 xs-offset-2 xs-8" name="contact-email">
+            <span class="input input--akira">
+            <input class="input__field input__field--akira" type="email" id="e-mail"  name="email" />
+            <label class="input__label input__label--akira" for="e-mail">
+              <span class="input__label-content input__label-content--akira">Ваш e-mail</span>
+            </label>
+            </span>
+            <input type="submit" value="Получить счетчик">
+          </form>
+        </div>
+        <p class="text">
+          <span>Уже установили счётчик?</span>
+          <a href="#" class="link login-button button-open">Войти в личный кабинет</a>
+        </p>
+        </div>
+
       </section>
 
     </main>

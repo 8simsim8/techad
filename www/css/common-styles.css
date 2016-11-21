@@ -812,7 +812,7 @@ footer {
 /* Кнопка вверх */
 .button-to-top {
   position: fixed;
-  bottom: 300px;
+  bottom: 100px;
   left: 40px;
   width: 90px;
   height: 40px;
