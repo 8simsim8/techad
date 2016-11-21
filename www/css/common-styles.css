@@ -502,6 +502,7 @@ textarea.input__field {
 /* Попапы входа/регистрации */
 .l-popup {
   position: fixed;
+  display: -webkit-flex;
   display: flex;
   top: 0;
   bottom: 0;
