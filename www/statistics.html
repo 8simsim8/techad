@@ -46,17 +46,17 @@
     <header class="l-header">
       <nav class="wrapp row row-center">
         <a href="index.html" title="Main" class="header-logo col sm-2"></a>
-        <ul class="header-nav col sm-offset-2 sm-6">
+        <ul class="header-nav col sm-offset-1 sm-5 lg-offset-2 lg-6">
           <li><a href="#" title="" class="link text">Примеры</a></li>
-          <li><a href="#" title="" class="link text">Статистика</a></li>
+          <li><a href="statistics.html" title="" class="link text">Статистика</a></li>
           <li><a href="help.html" title="" class="link text">Помощь</a></li>
           <li><a href="vacancies.html" title="" class="link text">Вакансии</a></li>
           <li><a href="contacts.html" title="" class="link text">Контакты</a></li>
         </ul>
-        <p class="header-register col sm-1">
+        <p class="header-register col lg-1 sm-2">
           <a href="#" title="Вход" class="link login-button button-open">Вход</a>
         </p>
-        <p class="header-register col sm-1">
+        <p class="header-register col lg-1 sm-2">
           <a href="#" title="Регистрация" class="link register-button button-open">Регистрация</a>
         </p>
       </nav>
@@ -122,6 +122,12 @@
                 <span class="input__label-content input__label-content--akira">Пароль</span>
               </label>
             </span>
+            <span class="input input--akira">
+              <input class="input__field input__field--akira" type="text" id="register-address" name="site" />
+              <label class="input__label input__label--akira" for="register-address">
+                <span class="input__label-content input__label-content--akira">Адресс сайта</span>
+              </label>
+            </span>
             <input type="submit" name="submit" value="Зарегистрироваться">
             <p class="annotation">Зарегистрируйтесь через соцсети:</p>
             <p class="enter-social-wrapp">
@@ -163,46 +169,40 @@
             </div>
           </div>
           <div class="b-content__losses-right col sm-8">
-            <div class="b-content__losses-table-title">
-              <h2>Всего потери</h2>
-              <div>
-                <h1 data-currency='$'>8 239 940,43</h1>
-                <h1 class='percents'>27.5</h1>
-              </div>
-            </div>
 
-            <div class="b-content__losses-table">
-              <div class="b-content__losses-table-row text">
-                <p>За день</p>
-                <p>
-                  <span class="data" data-currency="$">-112 032,23</span>
-                  <span class="percents">23.5</span>
-                </p>
-              </div>
-              <div class="b-content__losses-table-row text">
-                <p>За неделю</p>
-                <p>
-                  <span class="data" data-currency="$">-436 032,23</span>
-                  <span class="percents">21.5</span>
-                </p>
-              </div>
-              <div class="b-content__losses-table-row text">
-                <p>За 1000 показов</p>
-                <p>
-                  <span class="data" data-currency="грн">-65,23</span>
-                  <span class="percents">23.45</span>
-                </p>
-              </div>
-            </div>
-
-            <div class="b-content__losses-table-result">
-              <h2>Восстановлено</h2>
-              <div>
-                <h1 data-currency='$'>6 548 650,11</h1>
-                <h1 class="percents">23.7</h1>
-              </div>
-            </div>
-
+            <table>
+              <thead>
+                <tr>
+                  <th><h2>Всего потери</h2></th>
+                  <th><h1 data-currency='$'>8 239 940,43</h1></th>
+                  <th><h1 class='percents'>27.5</h1></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text">За день</span></td>
+                  <td><span class="text data" data-currency="$">-112 032,23</span></td>
+                  <td><span class="text percents">23.5</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text">За неделю</span></td>
+                  <td><span class="text data" data-currency="$">-436 032,23</span></td>
+                  <td><span class="text percents">21.5</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text">За 1000 показов</span></td>
+                  <td><span class="text data" data-currency="$">-65,23</span></td>
+                  <td><span class="text percents">23.45</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td><h2>Восстановлено</h2></td>
+                  <td><h1 data-currency='$'>6 548 650,11</h1></td>
+                  <td><h1 class="percents">23.7</h1></td>
+                </tr> 
+               </tfoot>
+            </table>
           </div>
         </div>
       </section>
@@ -215,22 +215,22 @@
             <p class="lead">Мы помогли нашим клиентам сохранить <span class="percents">87.75</span> от понесенных потерь</p>
           </div>
           <div class="b-content__use-block-circle col sm-2">
-            <canvas></canvas>
+            <canvas id="circle-chart_1"></canvas>
             <p class="percents">56</p>
             <h2>Adblock Plus</h2>
           </div>
           <div class="b-content__use-block-circle col sm-2">
-            <canvas></canvas>
+            <canvas id="circle-chart_2"></canvas>
             <p class="percents">29</p>
             <h2>Adblock</h2>
           </div>
           <div class="b-content__use-block-circle col sm-2">
-            <canvas></canvas>
+            <canvas id="circle-chart_3"></canvas>
             <p class="percents">8</p>
             <h2>Ghostery</h2>
           </div>
           <div class="b-content__use-block-circle col sm-2">
-            <canvas></canvas>
+            <canvas id="circle-chart_4"></canvas>
             <p class="percents">4</p>
             <h2>Другие</h2>
           </div>
