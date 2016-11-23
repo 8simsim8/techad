@@ -22,6 +22,9 @@
     <link rel="stylesheet" type="text/css" href="css/common-styles.css">
     <link rel="stylesheet" type="text/css" href="css/styles-statistics.css">
     <!-- Scripts -->
+    <!--[if lte IE 8]>
+      <script src="excanvas.js"></script>
+    <![endif]-->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
@@ -30,6 +33,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.18/autosize.min.js"></script>
     <script type="text/javascript" src="js/iOS-scroll.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script src="js/chartjs.js"></script>
+    <script type="text/javascript" src="js/chartCircle.js"></script>
+    <script type="text/javascript" src="js/chartLine.js"></script>
     <script type="text/javascript" src="js/script-statistics.js"></script>
   </head>
   <body>
@@ -215,23 +221,39 @@
             <p class="lead">Мы помогли нашим клиентам сохранить <span class="percents">87.75</span> от понесенных потерь</p>
           </div>
           <div class="b-content__use-block-circle col sm-2">
-            <canvas id="circle-chart_1"></canvas>
-            <p class="percents">56</p>
+            <div class="circle">
+              <p>
+                <canvas width="140" height="140"></canvas>
+              </p>
+            </div>
+            <p class="percents"></p>
             <h2>Adblock Plus</h2>
           </div>
           <div class="b-content__use-block-circle col sm-2">
-            <canvas id="circle-chart_2"></canvas>
-            <p class="percents">29</p>
+            <div class="circle">
+              <p>
+                <canvas width="140" height="140"></canvas>
+              </p>
+            </div>
+            <p class="percents"></p>
             <h2>Adblock</h2>
           </div>
           <div class="b-content__use-block-circle col sm-2">
-            <canvas id="circle-chart_3"></canvas>
-            <p class="percents">8</p>
+            <div class="circle">
+              <p>
+                <canvas width="140" height="140"></canvas>
+              </p>
+            </div>
+            <p class="percents"></p>
             <h2>Ghostery</h2>
           </div>
           <div class="b-content__use-block-circle col sm-2">
-            <canvas id="circle-chart_4"></canvas>
-            <p class="percents">4</p>
+            <div class="circle">
+              <p>
+                <canvas width="140" height="140"></canvas>
+              </p>
+            </div>
+            <p class="percents"></p>
             <h2>Другие</h2>
           </div>
         </div>
@@ -242,12 +264,12 @@
 
           <div class="b-content__traffic-filter">
             <div class="b-add-car__form-item droplist">
-              <input type="text" id="parameter" value="Все" hidden>
-              <span class="droplist-current text bold tab-input">Трафик</span>
+              <span class="droplist-current text bold tab-input"></span>
               <ul class="droplist-block">
-                <li class="droplist-item text">1</li>
-                <li class="droplist-item text">2</li>
-                <li class="droplist-item text">3</li>
+                <li class="droplist-item text">Весь трафик</li>
+                <li class="droplist-item text">Украина</li>
+                <li class="droplist-item text">Европа</li>
+                <li class="droplist-item text">Азия</li>
               </ul>
             </div>
 
@@ -264,7 +286,7 @@
             </div>
           </div>
 
-          <canvas></canvas>
+          <canvas id="chart-line" height="370"></canvas>
         </div>
       </section>
 

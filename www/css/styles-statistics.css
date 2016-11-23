@@ -87,10 +87,14 @@
             font-size : 2.9rem;
             font-family : 'AABebasNeue', sans-serif;
           }
-          .b-content__losses-right table tr > th:nth-child(2) h1,
-        .b-content__losses-right table tfoot tr > td:nth-child(2) h1 {
+          .b-content__losses-right table tr > th:nth-child(2) h1 {
             color: #666666;
           }
+          .b-content__losses-right table tfoot tr > td:nth-child(2) h1 {
+            color: #39B54A;
+          }
+          
+          
           .b-content__losses-right table tbody tr > td:nth-child(2) span {
             padding-left: 10px;
           }
@@ -174,16 +178,24 @@
         }
     .b-content__use-block-circle {
     }
-      .b-content__use-block-circle canvas {
-        margin: 0 calc((100% - 140px) / 2);
-        /* background-color: #CECECE; */
-/*         max-width: 140px;
-        max-height: 140px; */
-        height: 140px;
-        width: 140px;
+      .circle {
         margin-bottom: 35px;
       }
-      .b-content__use-block-circle:nth-child(2) canvas {
+    .circle p {
+      margin: 0 auto;
+      height: 132px;
+      width: 132px;
+      border: 1px solid #CECECE;
+      border-radius: 50%;
+    }
+    .circle canvas {
+        margin: 0 calc((100% - 140px) / 2);
+        height: 140px;
+        width: 140px;
+        margin-top: -5px;
+        margin-left: -5px;
+    }
+/*       .b-content__use-block-circle:nth-child(2) canvas {
         background: url('../img/temp/chart-1.svg') center 100% no-repeat;
       }
       .b-content__use-block-circle:nth-child(3) canvas {
@@ -194,7 +206,7 @@
       }
       .b-content__use-block-circle:nth-child(5) canvas {
         background: url('../img/temp/chart-4.svg') center 100% no-repeat;
-      }
+      } */
       .b-content__use-block-circle .percents {
         text-align: center;
         font-family : 'AABebasNeue', sans-serif;
@@ -368,7 +380,7 @@
       .b-content__traffic canvas {
         height: 370px;
         width: 100%;
-        background: url('../img/temp/chart-5.svg') center 100% no-repeat;
+/*         background: url('../img/temp/chart-5.svg') center 100% no-repeat; */
       }
 
   .b-content__contact {
