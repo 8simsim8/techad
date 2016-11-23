@@ -4,7 +4,7 @@ function chartsCircle(arrayDataChart, isAniamtionCharts) {
     [
       {
         value: arrayDataChart[0],
-        color:"#CC4D23"
+        color: "#CC4D23"
       },
       {
         value : 100 - arrayDataChart[0],
@@ -14,7 +14,7 @@ function chartsCircle(arrayDataChart, isAniamtionCharts) {
     [
       {
         value: arrayDataChart[1],
-        color:"#CC4D23"
+        color: "#CC4D23"
       },
       {
         value : 100 - arrayDataChart[1],
@@ -24,7 +24,7 @@ function chartsCircle(arrayDataChart, isAniamtionCharts) {
     [
       {
         value: arrayDataChart[2],
-        color:"#CC4D23"
+        color: "#CC4D23"
       },
       {
         value : 100 - arrayDataChart[2],
@@ -34,7 +34,7 @@ function chartsCircle(arrayDataChart, isAniamtionCharts) {
     [
       {
         value: arrayDataChart[3],
-        color:"#F38630"
+        color: "#CC4D23"
       },
       {
         value : 100 - arrayDataChart[3],

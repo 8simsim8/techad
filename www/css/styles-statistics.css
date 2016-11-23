@@ -1,6 +1,7 @@
 /* Таблица стилей к странице статистики */
   .b-content__title {
-    padding: 80px 0 60px;
+    padding-top: 80px;
+    padding-bottom: 60px;
     background-color: #EAEFF1;
   }
     .b-content__title h1 {
@@ -15,10 +16,11 @@
   .b-content__losses {
   }
   .b-content__losses .wrapp {
-    padding: 70px 0 40px; 
+    padding-top: 70px;
+    padding-bottom: 40px;
     border-bottom: 1px solid #E6E6E6;
   }
-    .b-content__losses .col.sm-4{
+    .b-content__losses-left {
       background-color: #F7F7F7;
       border-radius: 10px;
     }
@@ -156,7 +158,8 @@
   .b-content__use-block {
   }
     .b-content__use-block .wrapp {
-      padding: 70px 0 50px;
+      padding-top: 70px;
+      padding-bottom: 50px;
       border-bottom: 1px solid #E6E6E6;
     }
     .b-content__use-block h2:first-child {
@@ -195,18 +198,6 @@
         margin-top: -5px;
         margin-left: -5px;
     }
-/*       .b-content__use-block-circle:nth-child(2) canvas {
-        background: url('../img/temp/chart-1.svg') center 100% no-repeat;
-      }
-      .b-content__use-block-circle:nth-child(3) canvas {
-        background: url('../img/temp/chart-2.svg') center 100% no-repeat;
-      }
-      .b-content__use-block-circle:nth-child(4) canvas {
-        background: url('../img/temp/chart-3.svg') center 100% no-repeat;
-      }
-      .b-content__use-block-circle:nth-child(5) canvas {
-        background: url('../img/temp/chart-4.svg') center 100% no-repeat;
-      } */
       .b-content__use-block-circle .percents {
         text-align: center;
         font-family : 'AABebasNeue', sans-serif;
@@ -223,7 +214,8 @@
   .b-content__traffic {
   }
     .b-content__traffic .wrapp {
-      padding: 50px 0 100px;
+      padding-top: 50px;
+      padding-bottom: 100px;
     }
     .b-content__traffic-filter {
       display: -ms-flexbox;
@@ -239,6 +231,9 @@
       margin-bottom: 25px;
       border-bottom: 1px solid #E6E6E6;
     }
+  .b-add-car__form-item.droplist[category] {
+    display: none;
+  }
       /* Дроплист */
   .droplist {
     -ms-flex: 1 0 140px;
@@ -384,7 +379,8 @@
       }
 
   .b-content__contact {
-    padding: 60px 0 70px;
+    padding-top: 60px;
+    padding-bottom: 70px;
     background : rgba(185, 203, 209, 0.3);
   }
     .b-content__contact h1 {
@@ -412,13 +408,132 @@
       text-align: center;
     }
 
+  @media (max-width: 1025px) {
+    section .wrapp {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .b-content__losses .wrapp {
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+      .b-content__losses-right table tr > th h1,
+      .b-content__losses-right table tfoot tr > td h1 {
+        font-size: 1.9rem;
+      }
+      .b-content__losses-right table tr > th:nth-child(3),
+      .b-content__losses-right table tr > td:nth-child(3) {
+        padding-left: 10px;
+      }
+    .b-content__use-block .wrapp {
+      padding-top: 40px;
+    }
+      .b-content__use-block h2:first-child {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .b-content__use-block p.lead {
+        text-align: center;
+      }
+      .b-content__use-block p.lead:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      .b-content__use-block p.lead:last-child {
+        margin-bottom: 40px;
+      }
+  }
 
   @media (max-width: 768px) {
-
+    .b-content__losses-right table:after {
+      bottom: 60px;
+    }
+    .b-content__traffic .wrapp {
+      padding-top: 30px;
+    }
+    .b-content__traffic-filter {
+      justify-content: inherit;
+    }
+    .b-add-car__form-item.droplist[traffic] {
+      flex: 0 0 41.666666667%;
+      max-width: calc(41.666666667% - 10px);
+      margin-right: 10px;
+      margin-left: 8.333333%;
+      margin-top: 20px;
+      text-align: center;
+      order: 1;
+    }
+    .b-add-car__form-item.droplist[category] {
+      display: block;
+      flex: 0 0 41.666666667%;
+      max-width: calc(41.666666667% - 10px);
+      margin-left: 10px;
+      margin-top: 20px;
+      order: 2;
+    }
+    .b-filter__switch.category {
+      display: none;
+    }
+    .b-filter__switch.display {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+      margin-top: 20px;
+      margin-left: 33.333333%;
+      order: 3;
+    }
   }
 
   @media (max-width: 550px) {
-
-  }
+    .b-content__losses .wrapp {
+      padding-top: 10px;
+    }
+    .b-content__losses-left {
+      margin-bottom: 30px;
+    }
+      .b-content__losses-left-item {
+        margin: 0 10px;
       }
-          }
+    .b-content__losses-right.col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .b-content__losses-right table tr > th h1, .b-content__losses-right table tfoot tr > td h1 {
+        font-size: 1.3rem;
+    }
+    .b-content__use-block .wrapp {
+      padding-bottom: 20px;
+    }
+    .b-content__use-block-circle.col {
+      margin-bottom: 40px;
+    }
+    .b-content__use-block-circle .circle {
+      margin-bottom: 15px;
+    }
+
+    .b-content__traffic .wrapp {
+      padding-bottom: 50px;
+    }
+    .b-add-car__form-item.droplist[traffic] {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0;
+    }
+    .b-add-car__form-item.droplist[category] {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0;
+    }
+  .b-filter__switch.display {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0;
+  }
+
+    .b-content__contact .input.input--akira {
+      height: 40px;
+      width: 100%;
+    }
+    .b-content__contact input[type="submit"] {
+      height: 40px;
+      width: 100%;
+    }
+  }

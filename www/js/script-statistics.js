@@ -14,20 +14,17 @@ $(document).ready(function(){
     var linkToFileCircleChart         = '/test/chartsCircle.json';
 
   // Ссылка на .json файлы данных категории для отображения данных в линейном графике
-    var linkToFileLinerChart = '/test/chartsAll.json';
+    var linkToFileLinerChart          = '/test/chartsAll.json';
 
   // Переключатель отображения процентов в линейном графике выключен
-    var isPercents                  = false;
+    var isPercents                    = false;
 
 // Стартовая загрузка графиков / перерисовка при изменении размера экрана 
     $(window).on('load resize orientationchange', function(){
 
-      var widthWindow = window.outerWidth;
-      var heightWindow = window.outerHeight;
-      var widthWrapp = document.getElementsByClassName('wrapp')[0].offsetWidth;
-      console.log(widthWindow);
-      $('.circle canvas').attr("width", 140);
-      $('.circle canvas').attr("height", 140);
+      var widthWindow                 = window.outerWidth;
+      var heightWindow                = window.outerHeight;
+      var widthWrapp                  = document.getElementsByClassName('wrapp')[0].offsetWidth;
       $('#chart-line').attr("width", widthWrapp);
       $('#chart-line').attr("height", 370);
 
@@ -42,7 +39,7 @@ $(document).ready(function(){
         type: 'GET',
         dataType: 'json',
         success: function(res) {
-          dataCircleChart             = res.slice();
+          dataCircleChart              = res.slice();
           chartsCircle(dataCircleChart, isAniamtionChartsCircle);
           isAniamtionChartsCircle      = false;
         },
@@ -59,15 +56,16 @@ $(document).ready(function(){
         dataType: 'json',
         success: function(res) {
 
-          dataLineChart                 = res.slice();
+          dataLineChart                = res.slice();
           var widthWindow = window.outerWidth;
           var heightWindow = window.outerHeight;
           var widthWrapp = document.getElementsByClassName('wrapp')[0].offsetWidth;
+          var heightCanvas;
+          heightCanvas = (window.outerWidth <= WIDTH_MOBILE_DEVICE) ? 280 : 370;
           $('#chart-line').attr("width", widthWrapp);
-          $('#chart-line').attr("height", 370);
+          $('#chart-line').attr("height", heightCanvas);
           chartsLine(dataLineChart, chartColorChanged, isAniamtionChartsLine, isPercents);
-          isAniamtionChartsLine         = false;
-
+          isAniamtionChartsLine        = false;
         },
         error: function(req,status,err) {
           console.log("Error " + req,status,err);
@@ -84,7 +82,7 @@ $(document).ready(function(){
       "rgba(179,179,179,1)"
     ]
 
-    var chartColorChanged = colorLine.slice(); // Дублирующий массив цветов линий
+    var chartColorChanged              = colorLine.slice(); // Дублирующий массив цветов линий
 
     /*
       Переключатели 'Фильтров': 
@@ -99,28 +97,28 @@ $(document).ready(function(){
       var currentAttr;
 
       if($(this)[0].hasAttribute('data-filter-category')) {
-        currentAttr = 'data-filter-category';
+        currentAttr                    = 'data-filter-category';
       }
       resultCaregory = $(this).attr(currentAttr); // Выбранный вариант
 
       switch(resultCaregory) {
         case "all-traffic":
-          chartColorChanged = colorLine.slice();
+          chartColorChanged            = colorLine.slice();
           break;
         case "with-block":
-          chartColorChanged = colorLine.slice();
+          chartColorChanged            = colorLine.slice();
           for(var i = 0; i < colorLine.length; i++) {
             if(i != 0) chartColorChanged[i] = "transparent";
           }
           break;
         case "without-block":
-          chartColorChanged = colorLine.slice();
+          chartColorChanged            = colorLine.slice();
           for(var i = 0; i < colorLine.length; i++) {
             if(i != 1) chartColorChanged[i] = "transparent";
           }
           break;
         case "rebuilt":
-          chartColorChanged = colorLine.slice();
+          chartColorChanged            = colorLine.slice();
           for(var i = 0; i < colorLine.length; i++) {
             if(i != 2) chartColorChanged[i] = "transparent";
           }
@@ -200,8 +198,11 @@ $(document).ready(function(){
   /*
     При загрузке страницы проверить, выбран ли выпадающий список, если нет, выбрать первый пункт
   */
-    if(!$('.droplist-current').html()) {
-      $('.droplist-item').eq(0).trigger('click');
-    }
+    $('.droplist-current').each(function(index,el){
+      if(!$(el).html()) {
+        $(el).parent().find('.droplist-item').eq(0).trigger('click');
+      }
+    });
+    
 
 });

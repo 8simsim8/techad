@@ -72,6 +72,7 @@ function chartsLine(arrayDataChart, colorLine, isAniamtionCharts, isPercents) {
       ]
   }
 
+  var strLegend = isPercents ? "<%=value%>%" : "<%=value%>";
 
   var chartLine = document.getElementById('chart-line');
   var ctx = chartLine.getContext("2d");
@@ -82,7 +83,7 @@ function chartsLine(arrayDataChart, colorLine, isAniamtionCharts, isPercents) {
     animation : isAniamtionCharts,
 
     //Interpolated JS string - can access value
-    scaleLabel : "<%=value%>",
+    scaleLabel : strLegend,
 
     //String - Scale label font declaration for the scale label
     scaleFontFamily : "'Raleway'",
