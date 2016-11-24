@@ -398,7 +398,7 @@
     .b-content__counter-digits p {
       font-size : 4.7rem;
       padding: 0 10px;
-      width: 2.4rem;
+      width: 3rem;
       }
       .b-content__counter-digits:after {
         margin-left: 10px;
@@ -464,6 +464,9 @@
     }
     .b-content__contact-percent {
       text-align: center;
+    }
+    .blog-item__inner {
+      margin-bottom: 10px;
     }
 
   }

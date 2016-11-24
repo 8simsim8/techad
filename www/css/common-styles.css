@@ -167,7 +167,7 @@ a.text {
     font-size : 0.8rem;
     line-height : 1.625em;
     width : 100%;
-    height : 2.3rem;
+    height : 46px;
     background : rgba(57,181,74,1);
     font-family : 'RalewayBold';
     color : #FFFFFF;
@@ -252,7 +252,7 @@ textarea.input__field {
   font-size: 0.8rem;
   color: #383838;
   opacity: 0.7;
-  padding: 0.75em 0;
+  line-height: 46px;
   width: 100%;
 }
 
@@ -272,7 +272,7 @@ textarea.input__field {
   
 /* Akira */
 .input--akira {
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
   background-color: #FFFFFF;
 }
 
@@ -290,6 +290,7 @@ textarea.input__field {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   padding: 0;
   width: 100%;
   color: #cc6055;
@@ -339,9 +340,9 @@ textarea.input__field {
 .input--filled .input__label-content--akira {
   opacity: 0.6;
   font-size: 0.65rem;
-  -ms-transform: translateY(-2.2em);
-  -webkit-transform: translateY(-2.2em);
-  transform: translateY(-2.2em);
+  -ms-transform: translateY(-1.6rem);
+  -webkit-transform: translateY(-1.6rem);
+  transform: translateY(-1.6rem);
 }
    /* Error */
    label.error {
@@ -468,7 +469,7 @@ textarea.input__field {
         width: 30px;
         height: 6px;
         border-radius: 2px;
-        background-color: rgba(0,0,0,0.5);
+        background-color: #808080;
       }
         .top-panel .button-menu p:last-child {
           margin-bottom: 0;
@@ -541,7 +542,7 @@ textarea.input__field {
       display: block;
     }
     .form-wrapp {
-      padding: 3rem 5rem 0;
+      padding: 2rem 5rem 0;
     }
     .b-popup__window h1 {
       text-align: center;
@@ -888,6 +889,15 @@ footer {
     margin: 0 auto;
   }
 
+  .input__field--akira:focus + .input__label--akira .input__label-content--akira,
+  .input--filled .input__label-content--akira {
+    opacity: 0.6;
+    font-size: 0.65rem;
+    -ms-transform: translateY(-2.2rem);
+    -webkit-transform: translateY(-2.2rem);
+    transform: translateY(-2.2rem);
+  }
+
   .top-panel {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -1017,17 +1027,51 @@ footer {
   .b-popup__window {
     height: 100%;
     width: 100%;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-radius: 0;
     box-shadow: none;
   }
+  .open-popup.b-popup__window {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .form-wrapp {
-    padding: 80px 30px 0;
-    background-size: 3.5rem 3.5rem;
-    background-position: center 1.5rem;
+    padding: 60px 30px 0;
+  }
+  .register.b-popup__window .form-wrapp {
+    padding: 20px 30px 0;
+  }
+  .enter-social-wrapp {
+    margin-bottom: 20px;
   }
   .enter-social-wrapp a {
     width: calc(50% - 5px);
     background-size: auto 0.8rem;
     background-position: 10px center;
+  }
+  .b-popup__register h1 {
+    margin-bottom: 0;
+  }
+  label.input-checkbox {
+    margin-bottom: 10px;
+  }
+  .input-checkbox input[type='checkbox'] + span:before{
+    top: 7px;
+  }
+  span + input[type="submit"] {
+    margin-top: 10px;
+  }
+  .b-popup__window p.annotation {
+    margin-top: 10px;
+  }
+  .b-popup__bottom.text {
+    padding: 1em 10px;
   }
 
   header {
@@ -1047,6 +1091,15 @@ footer {
     background-size: 30px 30px;
     opacity: 0.7;
     border-radius: 4px;
+  }
+  
+  .input__field--akira:focus + .input__label--akira .input__label-content--akira,
+  .input--filled .input__label-content--akira {
+    opacity: 0.6;
+    font-size: 0.65rem;
+    -ms-transform: translateY(-2.2rem);
+    -webkit-transform: translateY(-2.2rem);
+    transform: translateY(-2.2rem);
   }
 
 }

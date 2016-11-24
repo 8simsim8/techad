@@ -150,6 +150,9 @@ var Chart = function(context){
 		context.canvas.height = height * window.devicePixelRatio;
 		context.canvas.width = width * window.devicePixelRatio;
 		context.scale(window.devicePixelRatio, window.devicePixelRatio);
+	} else {
+		width = context.canvas.width;
+		height = context.canvas.height;
 	}
 
 	this.PolarArea = function(data,options){
