@@ -36,7 +36,7 @@
     
   }
     .b-content__site .wrapp {
-      padding: 40px 0;
+      padding: 40px 0 40px 10px;
       border-bottom: 1px solid #E6E6E6;
     }
       .b-content__site .droplist {
@@ -88,7 +88,8 @@
           border-radius : 5px;
           border: none;
           height: 30px;
-          width: 160px;
+          max-width: 160px;
+          width: calc(50% - 10px);
           border: 2px solid #FFE9E3;
           cursor: pointer;
           box-shadow: 0px 1px 1px rgba(112,30,11,0.35);
@@ -294,11 +295,11 @@
         text-align: center;
         line-height: 46px;
         color: #FFFFFF;
-        transition: box-shadow 0.2s ease;
+        transition: background-color 0.2s ease;
       }
         .b-content__losses-right-plug .button:hover {
           color: #FFFFFF;
-          box-shadow: 0px 1px 3px rgba(112,30,11,0.8);
+          background-color: rgba(57,181,74,0.8);
         }
 
   .b-content__use-block {

@@ -25,7 +25,7 @@ $(document).ready(function(){
       var widthWindow                 = window.outerWidth;
       var heightWindow                = window.outerHeight;
       var widthWrapp                  = document.getElementsByClassName('wrapp')[0].offsetWidth;
-      $('#chart-line').attr("max-width", widthWrapp);
+      $('#chart-line').attr("max-width", widthWrapp-40);
       $('#chart-line').attr("max-height", 370);
 
       loadDataCircleChart(linkToFileCircleChart); // Отрисока круговых диаграмм
@@ -65,7 +65,7 @@ $(document).ready(function(){
           if(isTabletDevice) {
             $('#chart-line').attr("width", widthWrapp-40);
           } else {
-            $('#chart-line').attr("width", widthWrapp);
+            $('#chart-line').attr("width", widthWrapp-40);
           }
 
           $('#chart-line').attr("height", heightCanvas);
