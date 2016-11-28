@@ -4,22 +4,115 @@
 }
   .b-content__title {
     padding-top: 180px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     background-color: #EAEFF1;
   }
-    .b-content__title h1 {
-      text-align: center;
-      color: #000000;
-      margin-bottom: 30px;
+    .b-content__title picture {
+      display: block;
+      margin: 0 auto;
+      width: 90px;
+      margin-bottom: 25px;
     }
+    .b-content__title picture source {
+    }
+      .b-content__title picture img {
+        height: 90px;
+        width: 90px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
     .b-content__title p.lead {
+      margin-bottom: 10px;
       text-align: center;
     }
+    .b-content__title-settings {
+      text-align: center;
+    }
+      .b-content__title-settings .annotation {
+        color : #0071BC;
+      }
+
+  .b-content__site {
+    
+  }
+    .b-content__site .wrapp {
+      padding: 40px 0;
+      border-bottom: 1px solid #E6E6E6;
+    }
+      .b-content__site .droplist {
+      }
+        .b-content__site .droplist-current.text {
+          padding-left: 50px;
+          border: 1px solid #000000;
+          text-align: center;
+          color: #0071BC;
+          background-color: #FFFFFF;
+          border-radius: 4px;
+        }
+          .b-content__site .no-display.droplist-current:after {
+            display: none;
+          }
+          .b-content__site .droplist-current:after {
+            width: 10px;
+            background-image: url('../img/icon-droplist-pointter-dark.svg');
+          }
+          .b-content__site .droplist-current {
+            background-size: 24px 24px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+          }
+          .b-content__site .droplist-block {
+            text-align: center;
+          }
+          .b-content__site .droplist-item {
+            padding-left: 50px;
+            background-size: 24px 24px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+          }
+      .b-content__site .annotation {
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        text-align: center;
+      }
+      .b-content__site-buttons {
+        text-align: right;
+      }
+        .b-content__site-buttons button {
+          font-family : "RalewayBold", sans-serif;
+          font-size : 0.7rem;
+          line-height : 1.7em;
+          outline: none;
+          border-radius : 5px;
+          border: none;
+          height: 30px;
+          width: 160px;
+          border: 2px solid #FFE9E3;
+          cursor: pointer;
+          box-shadow: 0px 1px 1px rgba(112,30,11,0.35);
+          transition: box-shadow 0.2s ease;
+        }
+        .b-content__site-buttons button:hover {
+          box-shadow: 0px 1px 3px rgba(112,30,11,0.8);
+        }
+        .b-content__site-buttons button:last-child {
+          margin-left: 15px;
+        }
+        .b-content__site-buttons button[data-remove-site] {
+          color : #CC4D23;
+          background-color: #FFE9E3;
+        }
+        .b-content__site-buttons button[data-add-site] {
+          color : #333333;
+          background-color: #FFFFFF;
+        }
 
   .b-content__losses {
   }
   .b-content__losses .wrapp {
-    padding-top: 70px;
+    padding-top: 40px;
     padding-bottom: 40px;
     border-bottom: 1px solid #E6E6E6;
   }
@@ -58,10 +151,13 @@
           }
 
     .b-content__losses-right.col {
-      padding-left: 40px;
+      padding-left: 20px;
     }
       .b-content__losses-right table {
         width: 100%;
+      }
+      .b-content__losses-right table.no-tfoot tfoot {
+        display: none;
       }
         .b-content__losses-right table tr {
           vertical-align: bottom;
@@ -101,8 +197,6 @@
           .b-content__losses-right table tfoot tr > td:nth-child(2) h1 {
             color: #39B54A;
           }
-          
-          
           .b-content__losses-right table tbody tr > td:nth-child(2) span {
             padding-left: 10px;
           }
@@ -151,7 +245,7 @@
               .b-content__losses-right table {
                   position: relative;
                }
-               .b-content__losses-right table:after {
+               .b-content__losses-right table:not(.no-tfoot):after {
                   position: absolute;
                   bottom: 90px;
                   left: 0;
@@ -160,6 +254,52 @@
                   display: block;
                   border-bottom: 1px solid #E6E6E6;
                 }
+    .b-content__losses-right-plug {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-line-pack: center;
+      -webkit-align-content: center;
+      align-content: center;
+      margin-top: 45px;
+      padding: 13px 20px;
+      width: 100%;
+      background-color: #EBF7ED;
+      border-radius: 10px;
+    }
+      .b-content__losses-right-plug p.text {
+        -webkit-flex: 0 0 65%;
+        -ms-flex: 0 0 65%;
+        flex: 0 0 65%;
+        max-width: 65%;
+        font-size: 0.77rem;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+      }
+      .b-content__losses-right-plug .button {
+        display: inline-block;
+        height: 46px;
+        width: 190px;
+        background-color: #39B54A;
+        -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 46px;
+        color: #FFFFFF;
+        transition: box-shadow 0.2s ease;
+      }
+        .b-content__losses-right-plug .button:hover {
+          color: #FFFFFF;
+          box-shadow: 0px 1px 3px rgba(112,30,11,0.8);
+        }
 
   .b-content__use-block {
   }
@@ -240,96 +380,20 @@
   .b-add-car__form-item.droplist[category] {
     display: none;
   }
-      /* Дроплист */
-  .droplist {
+  .b-content__traffic-filter .droplist {
     -ms-flex: 1 0 140px;
     -webkit-flex: 1 0 140px;
     flex: 1 0 140px;
-    position: relative;
-    height: 40px;
     max-width: 140px;
   }
-    .droplist-title {
-      position: absolute;
-      top: -20px;
-      left: 20px;
-      font-size: 0.7rem;
-    }
-    .droplist-current.text {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 40px;
-      padding: 0 23px 0 18px;
-      font-size: 0.7rem;
-      line-height: 40px;
+    .b-content__traffic-filter .droplist-current.text {
       text-align: center;
       color: #FFFFFF;
       background: #39B54A;
       border-radius: 4px;
-      z-index: 1;
-      cursor: pointer;
     }
-    .droplist-current:after {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 7px;
-      display: block;
-      content: '';
-      height: 100%;
-      width: 9px;
-      background-image: url('../img/icon-droplist-pointter.svg');
-      background-position: right center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      transition: -webkit-transform 0.2s ease;
-      transition: transform 0.2s ease;
-      transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    .b-content__traffic-filter .droplist-block {
     }
-      .m-open-droplist.droplist-current:after {
-        -ms-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-      }
-    .droplist-block {
-      position: absolute;
-      top: 50px;
-      left: 0;
-      opacity: 0;
-      pointer-events: none;
-      width: 100%;
-      max-height: 300px;
-      background: #FFFFFF;
-      border-radius: 4px;
-      box-shadow: 0px 0px 5px rgba(130, 130, 130, 0.2);
-      z-index: 100;
-      overflow-y: auto;
-      transition: opacity 0.2s ease;
-      -webkit-transition: opacity 0.2s ease;
-    }
-      .droplist-item {
-        padding: 7px 18px;
-        border-bottom: 1px dotted #CECECE;
-        cursor: pointer;
-      }
-        .droplist-item:hover,
-        .droplist-item_select {
-          background: #f7f7f7;
-        }
-      .droplist-item:first-child {
-        border-radius: 4px 4px 0 0;
-      }
-      .droplist-item:last-child {
-        border-bottom: none;
-        border-radius: 0 0 4px 4px;
-      }
-      .m-open-droplist.droplist-block {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
       .b-filter__switch {
         display: -ms-flexbox;
         display: -webkit-flex;
@@ -381,7 +445,6 @@
       .b-content__traffic canvas {
         height: 370px;
         width: 100%;
-/*         background: url('../img/temp/chart-5.svg') center 100% no-repeat; */
       }
 
   .b-content__contact {

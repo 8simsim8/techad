@@ -20,18 +20,24 @@
     <link rel="stylesheet" type="text/css" href="css/gird-column.css">
     <link rel="stylesheet" type="text/css" href="css/reset-min.css">
     <link rel="stylesheet" type="text/css" href="css/common-styles.css">
-    <link rel="stylesheet" type="text/css" href="css/styles-blog.css">
+    <link rel="stylesheet" type="text/css" href="css/styles-cabinet.css">
     <!-- Scripts -->
+    <!--[if lte IE 8]>
+      <script src="excanvas.js"></script>
+    <![endif]-->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Detect.js/2.2.2/detect.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
     <script type="text/javascript" src="js/iOS-scroll.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/script-blog.js"></script>
+    <script src="js/chartjs.js"></script>
+    <script type="text/javascript" src="js/chartCircle.js"></script>
+    <script type="text/javascript" src="js/chartLine.js"></script>
+    <script type="text/javascript" src="js/script-cabinet.js"></script>
+
   </head>
   <body>
 
@@ -150,78 +156,194 @@
 
       <section class="b-content__title">
         <div class="wrapp">
-          <h1>Наш блог</h1>
-          <div class="row">
-            <p class="lead col sm-offset-1 sm-10">Наша цель — сделать доставку рекламных материалов более эффективной, быстрой и надежной.</p>
-          </div>
-          <p class="tag-container">
-            <a href="#" class="tag">Разработка</a>
-            <a href="#" class="tag" data-current>NoAdTech</a>
-            <a href="#" class="tag">Adblock</a>
-            <a href="#" class="tag">Рекламные сети</a>
-            <a href="#" class="tag">Стартап</a>
-            <a href="#" class="tag">Софт</a>
-            <a href="#" class="tag">Реклама</a>
-            <a href="#" class="tag">Браузер</a>
-            <a href="#" class="tag">Anti Adblobk Script</a>
-          </p>
+          <picture>
+            <source srcset="img/temp/2.jpg">
+            <img src="img/bg-img-logo.svg" alt="No logo">
+          </picture>
+          <p class="lead">nik.petrov@gmail.com</p>
+          <p class="b-content__title-settings"><a href="" title="" class="annotation">Настройки профиля</a></p>
         </div>
       </section>
 
-      <section>
-        <div class="b-content__container wrapp row row-wrap">
-          <!-- <a href="#" class="blog-item__inner col sm-4 xs-6">
-            <div class="blog-item__bg">
-              <img src="img/temp/blog_1.jpg" alt="">
-            </div>
-            <p class="text bold">23 июля</p>
-            <h2>Adblock Plus продает рекламу</h2>
-            <p class="text"><span>Блокировщики рекламы заняли первые места в App Store через день после запуска iOS 9</span></p>
-          </a>
-          <a href="#" class="blog-item__inner col sm-4 xs-6">
-            <div class="blog-item__bg">
-              <img src="img/temp/blog_2.jpg" alt="">
-            </div>
-            <p class="text bold">23 июля</p>
-            <p class="text"><span>Adblock Plus начнет продавать рекламу</span></p>
-          </a>
-          <a href="#" class="blog-item__inner col sm-4 xs-6">
-            <div class="blog-item__bg">
-              <img src="img/temp/blog_3.jpg" alt="">
-            </div>
-            <p class="text bold">23 июля</p>
-            <p class="text"><span>7 сервисов для блокировки сайтов, которые мешают работе</span></p>
-          </a>
-          <a href="#" class="blog-item__inner col sm-4 xs-6">
-            <div class="blog-item__bg">
-              <img src="img/temp/blog_4.jpg" alt="">
-            </div>
-            <p class="text bold">12 июля</p>
-            <p class="text"><span>Кейсы: как наш клиент чуть было не потерял 70% своего онлайн-бизнеса</span></p>
-          </a> -->
+      <section class="b-content__site">
+        <div class="wrapp row row-wrap">
+          <div class="b-content__site-droplits droplist col sm-4 xs-12">
+            <span class="droplist-current text bold tab-input"></span>
+            <ul class="droplist-block">
+              <li class="droplist-item text" data-src-icon-site='img/temp/icon-site.jpg'>Українська правда</li>
+             <!--  <li class="droplist-item text">другие сайты</li> -->
+            </ul>
+          </div>
+          <p class="col sm-4 xs-12 annotation">Статистика обновляется каждые 15 минут</p>
+          <div class="b-content__site-buttons col sm-4 xs-12">
+            <button type="button" class="button" data-remove-site>Удалить этот сайт</button>
+            <button type="button" class="button" data-add-site>Добавить сайт</button>
+          </div>
         </div>
-        <p class="b-content__paginator">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-        </p>
+      </section>
+
+      <section class="b-content__losses">
+        <div class="wrapp row row-wrap row-center">
+          <div class="b-content__losses-left col xs-4">
+            <div class="b-content__losses-left-item">
+              <p class="text">6 612 043 пользователей не устанавливали блокировщик</p>
+              <h1 class='percents'>64</h1>
+            </div>
+            <div class="b-content__losses-left-item">
+              <p class="text">4 352 032 пользователей блокируют рекламу</p>
+              <h1 class='percents'>36</h1>
+            </div>
+          </div>
+          <div class="b-content__losses-right col xs-8">
+
+            <table>
+              <thead>
+                <tr>
+                  <th><h2>Всего потери</h2></th>
+                  <th><h1 data-currency='$'>-8 239 940,43</h1></th>
+                  <th><h1 class='percents'>27.5</h1></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text">За день</span></td>
+                  <td><span class="text data" data-currency="$">-112 032,23</span></td>
+                  <td><span class="text percents">23.5</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text">За неделю</span></td>
+                  <td><span class="text data" data-currency="$">-436 032,23</span></td>
+                  <td><span class="text percents">21.5</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text">За 1000 показов</span></td>
+                  <td><span class="text data" data-currency="$">-65,23</span></td>
+                  <td><span class="text percents">23.45</span></td>
+                </tr>
+              </tbody>
+<!--                <tfoot>
+                <tr>
+                  <td><h2>Восстановлено</h2></td>
+                  <td><h1 data-currency='$'>6 548 650,11</h1></td>
+                  <td><h1 class="percents">23.7</h1></td>
+                </tr> 
+               </tfoot> -->
+            </table>
+            <div class="b-content__losses-right-plug">
+              <p class="text bold">Продолжаете терять деньги? NoAdTech восстановит доход!</p>
+              <a href="#" title="Подключить защиту" class="button text bold">Подключить защиту</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="b-content__use-block">
+        <div class="wrapp row row-wrap">
+          <div class="col sm-4 xs-12">
+            <h2>Используемые блокировщики (десктоп)</h2>
+            <p class="lead">В ноябре 2016 количество пользователей установивших AdBlock увеличилось на <span class="percents">1.05</span></p>
+            <p class="lead">Мы помогли нашим клиентам сохранить <span class="percents">87.75</span> от понесенных потерь</p>
+          </div>
+          <div class="b-content__use-block-circle col sm-2">
+            <div class="circle">
+              <p>
+                <canvas width="140" height="140"></canvas>
+              </p>
+            </div>
+            <p class="percents"></p>
+            <h2>Adblock Plus</h2>
+          </div>
+          <div class="b-content__use-block-circle col sm-2">
+            <div class="circle">
+              <p>
+                <canvas width="140" height="140"></canvas>
+              </p>
+            </div>
+            <p class="percents"></p>
+            <h2>Adblock</h2>
+          </div>
+          <div class="b-content__use-block-circle col sm-2">
+            <div class="circle">
+              <p>
+                <canvas width="140" height="140"></canvas>
+              </p>
+            </div>
+            <p class="percents"></p>
+            <h2>Ghostery</h2>
+          </div>
+          <div class="b-content__use-block-circle col sm-2">
+            <div class="circle">
+              <p>
+                <canvas width="140" height="140"></canvas>
+              </p>
+            </div>
+            <p class="percents"></p>
+            <h2>Другие</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="b-content__traffic">
+        <div class="wrapp">
+
+          <div class="b-content__traffic-filter">
+
+            <div class="b-add-car__form-item droplist" traffic>
+              <span class="droplist-current text bold tab-input"></span>
+              <ul class="droplist-block">
+                <li class="droplist-item text">Все страны</li>
+                <li class="droplist-item text">Украина</li>
+                <li class="droplist-item text">Европа</li>
+                <li class="droplist-item text">Азия</li>
+              </ul>
+            </div>
+
+            <div class="b-add-car__form-item droplist" category>
+              <span class="droplist-current text bold tab-input"></span>
+              <ul class="droplist-block">
+                <li class="droplist-item b-filter__switch-item text" data-filter-category="all-traffic">Весь трафик</li>
+                <li class="droplist-item b-filter__switch-item text" data-filter-category="with-block">С блокировщиком</li>
+                <li class="droplist-item b-filter__switch-item text" data-filter-category="without-block">Без блокировщика</li>
+                <li class="droplist-item b-filter__switch-item text" data-filter-category="rebuilt">Восстановленный</li>
+              </ul>
+            </div>
+
+            <div class="b-filter__switch category">
+              <span class="b-filter__switch-item text" data-filter-category="all-traffic">Весь трафик</span>
+              <span class="b-filter__switch-item text" data-filter-category="with-block">С блокировщиком</span>
+              <span class="b-filter__switch-item text" data-filter-category="without-block">Без блокировщика</span>
+              <span class="b-filter__switch-item text" data-filter-category="rebuilt">Восстановленный</span>
+            </div>
+
+            <div class="b-filter__switch display">
+              <span class="b-filter__switch-item text" data-filter-category="absolute-value">123</span>
+              <span class="b-filter__switch-item text" data-filter-category="relative-value">%</span>
+            </div>
+          </div>
+
+          <canvas id="chart-line" height="370"></canvas>
+        </div>
       </section>
 
       <section class="b-content__contact">
         <div class="wrapp">
-        <h1>Узнайте больше, как мы боремся с блокировщиками рекламы!</h1>
-          <div class="row row-wrap">
-            <form action="email_submit" accept-charset="utf-8" class="form-contact col sm-offset-3 sm-6 xs-offset-2 xs-8" name="contact-email">
-              <span class="input input--akira">
-                <input class="input__field input__field--akira" type="email" id="e-mail"  name="email" />
-                <label class="input__label input__label--akira" for="e-mail">
-                  <span class="input__label-content input__label-content--akira">Ваш e-mail</span>
-                </label>
-              </span>
-              <input type="submit" value="Получить рассылку">
-            </form>
-          </div>
-
+        <h1>Узнайте сколько теряет ваш сайт!</h1>
+        <p class="text">Интегрируйте наш счётчик бесплатно и оцените потери сайта из-за блокировщиков.</p>
+        <div class="row row-wrap">
+          <form action="email_submit" accept-charset="utf-8" class="form-contact col sm-offset-3 sm-6 xs-offset-2 xs-8" name="contact-email">
+            <span class="input input--akira">
+            <input class="input__field input__field--akira" type="email" id="e-mail"  name="email" />
+            <label class="input__label input__label--akira" for="e-mail">
+              <span class="input__label-content input__label-content--akira">Ваш e-mail</span>
+            </label>
+            </span>
+            <input type="submit" value="Получить счетчик">
+          </form>
+        </div>
+        <p class="text">
+          <span>Уже установили счётчик?</span>
+          <a href="#" class="link login-button button-open">Войти в личный кабинет</a>
+        </p>
         </div>
 
       </section>

@@ -1,5 +1,24 @@
 $(document).ready(function(){
 
+    // Загрузка данных через 15 мин
+    // var linkMainData = 
+    // var loadData = setTimeout(function runLoad() {
+    // $.ajax(linkFile, {
+    //   type: 'GET',
+    //   dataType: 'json',
+    //   success: function(res) {
+    //     dataCircleChart              = res.slice();
+    //     chartsCircle(dataCircleChart, isAniamtionChartsCircle);
+    //     isAniamtionChartsCircle      = false;
+    //   },
+    //   error: function(req,status,err) {
+    //     console.log("Error " + req,status,err);
+    //   }
+    // });
+    //     setTimeout(runCount, 500);
+    //   }
+    // }, 500);
+
   // Разрешать анимацию графиков
     var isAniamtionChartsCircle     = true;
     var isAniamtionChartsLine       = true;
@@ -152,6 +171,15 @@ $(document).ready(function(){
       }
     });
 
+    $('.b-content__site .droplist-item').each(function(index, el){
+      if($(el).attr('data-src-icon-site')){
+        var srcIcon = $(el).attr('data-src-icon-site');
+        $(this).css({
+            'background-image': 'url(' + srcIcon + ')'
+          });
+      }
+    });
+
     // Закрыть дропдаун по клику на странице
     $(document).on('click', function(){
       $('.m-open-droplist').removeClass('m-open-droplist');
@@ -180,7 +208,14 @@ $(document).ready(function(){
       $(this).parent().siblings().filter('.droplist-current').html(selectStr);
       $('.m-open-droplist').removeClass('m-open-droplist');
       var currentList = $(this).parent().parent();
-      
+
+      if($this.attr('data-src-icon-site')) {
+        var attrSrcIcon = $this.attr('data-src-icon-site');
+        $(this).parent().siblings().filter('.droplist-current').css({
+          'background-image': 'url(' + attrSrcIcon + ')'
+        });
+      }
+
       switch(selectStr) {
         case "Все страны":
             linkToFileLinerChart = '/test/chartsAll.json';
@@ -208,6 +243,17 @@ $(document).ready(function(){
         $(el).parent().find('.droplist-item').eq(0).trigger('click');
       }
     });
-    
+
+    if($('.b-content__site .droplist-item').length <= 1) {
+      $('.b-content__site .droplist-block').hide();
+      $('.b-content__site .droplist-current').addClass('no-display');
+    }
+
+    if(!$('.b-content__losses-right table tfoot').length) {
+      $('.b-content__losses-right table').addClass('no-tfoot');
+      $('.b-content__losses-right-plug').show();
+    } else {
+      $('.b-content__losses-right-plug').hide();
+    }
 
 });

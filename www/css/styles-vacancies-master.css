@@ -1,77 +1,93 @@
-/* Таблица стилей к странице контактов */
-  .b-content__title {
-    padding: 140px 0 100px;
-    background-image: url('../img/bg-tittle-vacancies.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* Таблица стилей к странице вакансий */
+  .b-content__appeal {
+    
   }
-    .b-content__title h1 {
-      text-align: center;
-      font-size: 2.4rem;
-      color: #FFFFFF;
-      margin-bottom: 25px;
+    .b-content__appeal-top {
+      background-color: #EAEFF1;
     }
-    .b-content__title p.lead {
-      text-align: center;
-      margin-bottom: 50px;
-      color: #FFFFFF;
+      .b-content__appeal-top .wrapp {
+        padding: 95px 0 50px;
+        border-bottom: 1px solid rgba(185, 203, 209, 0.4);
+      }
+      .b-content__appeal-top-text {
+      }
+        .b-content__appeal-top-text h1 {
+          margin-bottom: 25px;
+          color : #39B54A
+        }
+      .b-content__appeal-top-img {
+        position: relative;
+      }
+        .b-content__appeal-top-img > div {
+          position: absolute;
+          -webkit-transform: translate3d(0, 100px, 0);
+          transform: translate3d(0, 100px, 0);
+          opacity: 0;
+          top: 40px;
+          left: -15%;
+          height: 300px;
+          width: 505px;
+          background-image: url('../img/bg-notebook.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: opacity 0.3s ease,
+                      -webkit-transform 0.5s ease;
+          transition: transform 0.5s ease,
+                      opacity 0.3s ease;
+          transition: transform 0.5s ease,
+                      opacity 0.3s ease,
+                      -webkit-transform 0.5s ease;
+        }
+        .start-animation.b-content__appeal-top-img > div {
+          opacity: 1;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+    .b-content__appeal-bottom {
+      padding: 35px 0 15px;
     }
 
-.b-content__transitions {
-  padding: 45px 0 80px;
-}
-  .b-content__transitions-link-item {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 30px;
-    padding: 25px;
-    width: 100%;
-    border: 1px Solid #E6E6E6;
-    border-radius: 10px;
-    transition: box-shadow 0.2s ease;
+  .b-content__knowledge {
+    padding: 35px 0;
   }
-    .b-content__transitions-link-item:hover {
-      box-shadow : 4px 6px 7px rgba(14, 65, 68, 0.35);
+    .b-content__knowledge h1 {
+      margin-bottom: 40px;
+      padding: 0 10px;
     }
-    .b-content__transitions-link-item:last-child {
-      margin-bottom: 0px;
-    }
-    .b-content__transitions-link-item-info {
-      -webkit-flex: 0 0 33%;
-      -ms-flex: 0 0 33%;
-      flex: 0 0 33%;
-      max-width: 33%;
-    }
-      .b-content__transitions-link-item-info h2 {
+      .b-content__knowledge-inner {
         margin-bottom: 10px;
-        font-size: 0.9rem;
-        color: #0071BC;
       }
-      .b-content__transitions-link-item-info .annotation {
-        color : #999999;
-        line-height: 1.6em;
+        .b-content__knowledge-item {
+          margin-bottom: 40px;
+        }
+          .b-content__knowledge-item h2 {
+            margin-bottom: 20px;
+          }
+      .b-content__knowledge-debugging.col {
+        padding-left: 16.6667%;
+        padding-right: 8.3333%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: #FCEAE9;
+        border-radius : 10px;
+        background-image: url('../img/bg-debugging.svg');
+        background-size: 105px 105px;
+        background-repeat: no-repeat;
+        background-position: 20px center;
       }
-    .b-content__transitions-link-item-note {
-      -webkit-flex: 0 0 64%;
-      -ms-flex: 0 0 64%;
-      flex: 0 0 64%;
-      max-width: 64%;
-    }
+        .b-content__knowledge-debugging h2 {
+          margin-bottom: 10px;
+        }
 
-  .b-content__offer,
-  .b-content__social {
-    background-color: #F8FAFA;
+  .b-content__offer {
+    
   }
+    .b-content__offer h1 {
+      padding: 0 10px;
+      margin-bottom: 50px;
+    }
     .b-content__offer-inner {
-      padding: 50px 0 0;
       
     }
       .b-content__offer-inner-item {
@@ -89,7 +105,7 @@
       }
         .m-content__offer-inner-item_1.b-content__offer-inner-item {
           background-position: center top;
-          background-size: 80px 48px;
+          background-size: 80px 45px;
           background-image: url('../img/bg-offer-1.svg');
           transition: opacity 0.3s ease,
                      -webkit-transform 0.3s ease;
@@ -141,11 +157,19 @@
         opacity: 0.4;
       }
 
-  .b-content__social {
+  .b-content__contact {
+    padding: 25px 0 110px;
   }
-    .b-content__social .wrapp {
-      padding: 40px 0 30px;
+    .b-content__contact h1 {
+      text-align: center;
+      margin-bottom: 10px;
     }
+    .b-content__contact-form {
+      margin-bottom: 40px;
+    }
+      .b-content__contact-form input:not(:last-child) {
+        margin-bottom: 20px;
+      }
 
   @media (max-width: 768px) {
     h1 {
@@ -164,8 +188,15 @@
       background-position: center top;
       text-align: center;
     }
-  }
-
-  @media (max-width: 550px) {
-
+    .b-content__appeal-top-img {
+      height: 300px;
+    }
+      .b-content__appeal-top-img > div {
+        width: 100%;
+        left: 0;
+      }
+    .b-content__knowledge-debugging.col {
+      padding: 25px;
+      background-image: none;
+    }
   }

@@ -25,8 +25,10 @@
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Detect.js/2.2.2/detect.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.18/autosize.min.js"></script>
     <script type="text/javascript" src="js/iOS-scroll.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/script-vacancies.js"></script>
@@ -45,14 +47,14 @@
     <header class="l-header">
       <nav class="wrapp row row-center">
         <a href="index.html" title="Main" class="header-logo col sm-2"></a>
-        <ul class="header-nav col sm-offset-1 sm-5 lg-offset-2 lg-6">
+        <ul class="header-nav col sm-offset-1 sm-6 lg-offset-2 lg-6">
           <li><a href="#" title="" class="link text">Примеры</a></li>
           <li><a href="statistics.html" title="" class="link text">Статистика</a></li>
           <li><a href="help.html" title="" class="link text">Помощь</a></li>
           <li><a href="vacancies.html" title="" class="link text">Вакансии</a></li>
           <li><a href="contacts.html" title="" class="link text">Контакты</a></li>
         </ul>
-        <p class="header-register col lg-1 sm-2">
+        <p class="header-register col lg-1 sm-1">
           <a href="#" title="Вход" class="link login-button button-open">Вход</a>
         </p>
         <p class="header-register col lg-1 sm-2">
@@ -146,58 +148,52 @@
 
 <!-- Main content   -->
 
-      <section class="b-content__appeal">
-        <div class="b-content__appeal-top">
-          <div class="wrapp row row-wrap">
-            <div class="b-content__appeal-top-text col sm-6 xs-12">
-              <h1>Javascript master</h1>
-              <p class="lead">Мы ищем опытного Javascript разработчика, хорошо знающего как работает браузер и имеющего страсть к исследованиям.</p>
-            </div>
-            <div class="b-content__appeal-top-img col sm-offset-1 sm-5 xs-12">
-              <div></div>
-            </div>
-          </div>
-        </div>
-        <div class="b-content__appeal-bottom wrapp row">
-          <div class="col sm-6 xs-12">
-            <p class="text">Если отладчик ваш лучший друг и вы любите reverse engineering, хитрые решения и постоянный драйв, то мы будем рады видеть вас в нашей команде, чтобы вместе участвовать в интересном и высокотехнологичном проекте на рынке интернет-рекламы.</p>
+      <section class="b-content__title">
+        <div class="wrapp">
+          <h1>Вакансии</h1>
+          <div class="row">
+            <p class="lead col sm-offset-2 sm-8">Мы разрабатываем решения, помогающие улучшать показ различных рекламных форматов на сайтах. Присоединяйся к нашей команде — вместе мы изменим рекламную индустрию к лучшему!</p>
           </div>
         </div>
       </section>
 
-      <section class="b-content__knowledge">
-        <div class="wrapp">
-          <h1>Нужно знать</h1>
-          <div class="b-content__knowledge-inner row row-wrap">
-            <div class="b-content__knowledge-item col sm-6 xs-12">
-              <h2>VanillaJS</h2>
-              <p class="text">Наш код достаточно низкоуровневый. Опыт использования js фреймворков, конечно, приветствуется, но нужно уметь работать и с чистым js.</p>
-            </div>
-            <div class="b-content__knowledge-item col sm-6 xs-12">
-              <h2>Внутренности браузера</h2>
-              <p class="text">Нужно понимать, как браузер загружает скрипты, стили, картинки, где потом хранит и как получить к этому доступ. Желательно понимать и различные механизмы хуков (например, MutationObserver), как работают ограничения безопасности и как их обходить.</p>
-            </div>
-            <div class="b-content__knowledge-item col sm-6 xs-12">
-              <h2>CSS и QuerySelector</h2>
-              <p class="text">Селекторы вроде #container > #center > div:not([id^="main-"]) не должны быть сюрпризом, иногда приходится сталкиваться с ними и разбираться, что они делают.</p>
-            </div>
-            <div class="b-content__knowledge-item col sm-6 xs-12">
-              <h2>Архитектура</h2>
-              <p class="text">Нам нужно будет врезаться в разные жизненного цикла веб-страницы, учитывать нюансы разных сайтов. Все это не должно стать жуткой мешаниной в коде. Разработка эффективной и лаконичной архитектуры станет одной из главнейших задач в начале работы.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="b-content__knowledge-debugging col sm-offset-1 sm-10 xs-12">
-              <h2>Отладка, отладка, отладка.</h2>
-              <p class="text">За ней придется проводить много времени, отлаживать свои скрипты, чужие, расширения и все это в разных браузерах. Экзотика не критична, но с популярными браузерами обязательно нужно уметь работать.</p>
-            </div>
+      <section class="b-content__transitions">
+        <div class="wrapp row">
+          <div class="col sm-offset-2 sm-8 xs-12">
+
+            <a href="vacancies-master.html" title="JS Master" class="b-content__transitions-link-item">
+              <div class="b-content__transitions-link-item-info">
+                <h2>Javascript Master</h2>
+                <p class="annotation">Полная занятость</p>
+                <p class="annotation">Киев, в офис</p>
+              </div>
+              <p class="b-content__transitions-link-item-note text">Мы ищем опытного javascript разработчика, хорошо знающего как работает браузер и имеющего страсть к исследованиям.</p>
+            </a>
+
+            <a href="vacancies-master.html" title="JS Master" class="b-content__transitions-link-item">
+              <div class="b-content__transitions-link-item-info">
+                <h2>Javascript Junior</h2>
+                <p class="annotation">Полная занятость</p>
+                <p class="annotation">Киев, в офис</p>
+              </div>
+              <p class="b-content__transitions-link-item-note text">Возьмём в компанду frontend (js) разработчиков начального уровня, который уже понимает как работает отладчик, механизмы загрузки внешних модулей, cookie, CORS, jsonp.</p>
+            </a>
+
+            <a href="vacancies-master.html" title="JS Master" class="b-content__transitions-link-item">
+              <div class="b-content__transitions-link-item-info">
+                <h2>Support master</h2>
+                <p class="annotation">Полная или частичная занятость</p>
+                <p class="annotation">Киев, в офис или удалённо</p>
+              </div>
+              <p class="b-content__transitions-link-item-note text">Ищем инженера поддержки для оказания помощи при внедрении продуктов NoAdTech и дальнейшего сопровождения клиентов и партнёров.</p>
+            </a>
+
           </div>
         </div>
       </section>
-      
+
       <section class="b-content__offer">
         <div class="wrapp">
-          <h1>Мы предлагаем</h1>
           <div class="b-content__offer-inner row row-wrap">
             <p class="b-content__offer-inner-item m-content__offer-inner-item_1 text col sm-3 xs-12">
               Адекватную рынку денежную компенсацию
@@ -218,45 +214,15 @@
           </div>
         </div>
       </section>
-
-      <section class="b-content__contact">
+      
+      <section class="b-content__social">
         <div class="wrapp">
-          <h1>Присоединяйтесь! Будет сложно, но весело!</h1>
-          <div class="row">
-            <form action="vacancies_submit" method="get" accept-charset="utf-8" class="b-content__contact-form col sm-offset-4 sm-4 xs-offset-2 xs-8">
-              <span class="input input--akira">
-                <input class="input__field input__field--akira" type="text" id="name" name="name" />
-                <label class="input__label input__label--akira" for="name">
-                  <span class="input__label-content input__label-content--akira">Ваше имя</span>
-                </label>
-              </span>
-              <span class="input input--akira">
-                <input class="input__field input__field--akira" type="email" id="e-mail"  name="email" />
-                <label class="input__label input__label--akira" for="e-mail">
-                  <span class="input__label-content input__label-content--akira">Ваш e-mail</span>
-                </label>
-              </span>
-              <span class="input input--akira">
-                <input class="input__field input__field--akira"" type="tel" id="tel" name="phone" />
-                <label class="input__label input__label--akira" for="tel">
-                  <span class="input__label-content input__label-content--akira">Номер телефона</span>
-                </label>
-              </span>
-              <input type="submit" name="submit" value="Откликнуться на вакансию">
-            </form>
+          <div class="b-content__contact-social-inner">
+            <a href="#" title="Facebook" class="b-content__contact-social-item"></a>
+            <a href="#" title="Instagram" class="b-content__contact-social-item"></a>
+            <a href="#" title="Twitter" class="b-content__contact-social-item"></a>
+            <a href="#" title="Vkontakte" class="b-content__contact-social-item"></a>
           </div>
-          <div class="row">
-            <div class="b-content__contact-social col sm-offset-4 sm-4 xs-12">
-              <p class="text">или расскажи друзьям!</p>
-              <div class="b-content__contact-social-inner">
-                <a href="#" title="Facebook" class="b-content__contact-social-item"></a>
-                <a href="#" title="Instagram" class="b-content__contact-social-item"></a>
-                <a href="#" title="Twitter" class="b-content__contact-social-item"></a>
-                <a href="#" title="Vkontakte" class="b-content__contact-social-item"></a>
-              </div>
-            </div>
-          </div>
-          
         </div>
       </section>
 
@@ -286,7 +252,7 @@
             <ul>
               <li><a href="#" title="" class="annotation">FAQ</a></li>
               <li><a href="#" title="" class="annotation">Материалы</a></li>
-              <li><a href="blog.html" title="Наш блог" class="annotation">Наш блог</a></li>
+              <li><a href="#" title="" class="annotation">Наш блог</a></li>
             </ul>
           </div>
           <div class="b-footer__column-item col sm-2 xs-6">

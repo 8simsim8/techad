@@ -5,6 +5,18 @@ $(document).ready(function(){
   window.DISTANCE_SMALL_HEADER    = 200;
   window.DISTANCE_SHOW_BUTTON_TOP = 500;
 
+  // Опредение устройства
+  var user = detect.parse(navigator.userAgent);
+  window.isCompactDevice = (user.device.type == 'Tablet' || user.device.type == "Mobile") ? true : false;
+  window.isMobileDevice = (user.device.type == "Mobile") ? true : false;
+  window.isTabletDevice = (user.device.type == 'Tablet') ? true : false;
+
+  if(isCompactDevice) {
+    $('body').addClass('compactDevice');
+  } else {
+    $('body').removeClass('compactDevice');
+  }
+
   var menuHeader                  = new makeHeader();
 
   var buttonToTop                 = new makeButtonToTop();  // Кнопка "вверх"
@@ -15,7 +27,6 @@ $(document).ready(function(){
 // Попапы регистрации и входа
   var backgroundPopup             = document.getElementsByClassName('l-popup')[0];
   var popup                       = new MakePopup(backgroundPopup);
-
 
 // *** Меню ***
   function makeHeader(){
@@ -37,7 +48,9 @@ $(document).ready(function(){
 
     // Проскроливание фиксорованного меню
       $(window).scroll(function () {
-        $header.css("left", -$(this).scrollLeft() + "px");
+        if(window.innerWidth > WIDTH_TABLET_DEVICE || isCompactDevice) {
+          $header.css("left", -$(this).scrollLeft() + "px");
+        }
       });
 
     }
