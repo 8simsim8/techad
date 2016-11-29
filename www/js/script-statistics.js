@@ -20,7 +20,14 @@ $(document).ready(function(){
     var isPercents                    = false;
 
 // Стартовая загрузка графиков / перерисовка при изменении размера экрана 
-    $(window).on('load resize orientationchange', function(){
+    $(window).on('load', function(){
+
+      loadDataCircleChart(linkToFileCircleChart); // Отрисока круговых диаграмм
+
+    });
+
+// Стартовая загрузка графиков / перерисовка при изменении размера экрана 
+    $(window).on('resize orientationchange', function(){
 
       var widthWindow                 = window.outerWidth;
       var heightWindow                = window.outerHeight;

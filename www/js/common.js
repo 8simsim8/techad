@@ -90,9 +90,10 @@ $(document).ready(function(){
       var target                  = e.target;
       var form                    = backgroundPopup.querySelector('form');
 
-      $(form).each(function(index, el){
-        $(el).data('validator').resetForm();
-      });
+      // Сброс формы при открытии
+      // $(form).each(function(index, el){
+      //   $(el).data('validator').resetForm();
+      // });
 
       if(target.matches('.register-button')) {
         backgroundPopup.querySelector('.login').classList.remove(classOpenPopup);

@@ -213,7 +213,9 @@
     .lead {
       max-width: 100%;
     }
-    
+    .b-content__accordeon-category {
+      margin-bottom: 120px;
+    }
   }
 
   @media (max-width: 550px) {

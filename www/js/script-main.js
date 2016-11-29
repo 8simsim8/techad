@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+var linkToFileLinerChart;  // Адресс с данными для графика линейной диаграммы
+
 //******************** Счетчик *************************************
   var $counterBlock = $('.b-content__counter-digits');
   var startDigits = 540220.00;
@@ -117,6 +119,109 @@ $(document).ready(function(){
     return +number;
   }
 // *********** /Счетчик *********************************
+
+// *********** График установки блокировщиков ***********
+
+  var isAniamtionChartsLine = true;
+
+// Стартовая загрузка графиков / перерисовка при изменении размера экрана 
+    $(window).on('resize orientationchange', function(){
+
+      var widthWindow                 = window.outerWidth;
+      var heightWindow                = window.outerHeight;
+      var widthWrapp                  = document.getElementsByClassName('b-content__contact-statistics')[0].offsetWidth;
+      $('#chart-line').attr("max-width", widthWrapp-40);
+      $('#chart-line').attr("max-height", 370);
+
+      loadDataLineChart(linkToFileLinerChart); // Отрисовка линейной диаграммы
+
+    });
+
+  // Отрисовка и загрузка данных линейного графика
+    function loadDataLineChart(linkFile){
+      $.ajax(linkFile, {
+        type: 'GET',
+        dataType: 'json',
+        success: function(res) {
+
+          dataLineChart                = res.slice();
+          var widthWindow = window.outerWidth;
+          var heightWindow = window.outerHeight;
+          var widthWrapp                  = document.getElementsByClassName('b-content__contact-statistics')[0].offsetWidth;
+          var heightCanvas;
+          heightCanvas = (window.outerWidth <= WIDTH_MOBILE_DEVICE) ? 150 : 200;
+          if(isCompactDevice) {
+            $('#chart-line').attr("max-width", widthWrapp-40);
+            $('#chart-line').attr("width", widthWrapp-40);
+          } else {
+            $('#chart-line').attr("max-width", widthWrapp);
+            $('#chart-line').attr("width", widthWrapp);
+          }
+
+          $('#chart-line').attr("min-height", heightCanvas);
+          chartsLine(dataLineChart, chartColorChanged, isAniamtionChartsLine, false, "#FDEBEA");
+          isAniamtionChartsLine        = false;
+        },
+        error: function(req,status,err) {
+          console.log("Error " + req,status,err);
+        }
+      });
+    }
+
+  // Массив цветов линний для линейного графика
+    var colorLine = [
+      "rgba(220,220,220,1)",
+      "rgba(151,187,205,1)",
+      "rgba(179,179,179,1)"
+    ]
+
+    var chartColorChanged              = colorLine.slice(); // Дублирующий массив цветов линий
+
+    /*
+      Переключатели 'Фильтров': 
+      В результате клика на элементе фильтра - навешивается класс "m-filter__switch-item_active", 
+      значение выбранного элемента в переменной "resultCaregory"
+  */
+
+    $('.b-filter__switch-item').on('click', function(){
+
+      $(this).siblings().removeClass('m-filter__switch-item_active');
+      $(this).addClass('m-filter__switch-item_active');
+      var currentAttr;
+
+      if($(this)[0].hasAttribute('data-filter-category')) {
+        currentAttr                    = 'data-filter-category';
+      }
+      resultCaregory = $(this).attr(currentAttr); // Выбранный вариант
+
+      switch(resultCaregory) {
+        case "year":
+          linkToFileLinerChart = '/test/chartsYear.json';
+          break;
+        case "month":
+          linkToFileLinerChart = '/test/chartsMonth.json';
+          break;
+        case "week":
+          linkToFileLinerChart = '/test/chartsWeek.json';
+          break;
+      }
+
+      loadDataLineChart(linkToFileLinerChart);
+
+      return false;
+
+    });
+
+  /*
+    При загрузке страницы проверить на наличие классов "m-filter__switch-item_active" на фильтрах, указывающих на то, какая сортировка, соответственно, имеющиие его пропустить
+  */
+
+    $('.b-filter__switch').each(function(index,el){
+      if(!$(el).find('.b-filter__switch-item').hasClass('m-filter__switch-item_active')) {
+        $(el).find('.b-filter__switch-item').eq(0).trigger('click');
+      }
+    });
+// *********** /График установки блокировщиков ***********
 
 
 // *********** Cчетчик процетов *************************

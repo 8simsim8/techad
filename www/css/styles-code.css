@@ -1,0 +1,88 @@
+/* Таблица стилей к странице статистики */
+.l-content {
+  padding-top: 0;
+}
+  .b-content__title {
+    padding-top: 180px;
+    padding-bottom: 50px;
+    background-color: #EAEFF1;
+  }
+    .b-content__title picture {
+      display: block;
+      margin: 0 auto;
+      width: 90px;
+      margin-bottom: 25px;
+    }
+    .b-content__title picture source {
+    }
+      .b-content__title picture img {
+        height: 90px;
+        width: 90px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    .b-content__title p.lead {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .b-content__title-settings {
+      text-align: center;
+    }
+      .b-content__title-settings .annotation {
+        color : #0071BC;
+      }
+
+  .b-content__code {
+    
+  }
+    .b-content__code .wrapp {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+      .b-content__code-inner {
+      }
+        .b-content__code-inner h1 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .b-content__code-inner p.text {
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        .b-content__code-block {
+          padding: 20px 40px;
+          background-color: #E5E5E5;
+          border-radius: 10px;
+        }
+          .b-content__code-block pre {
+            white-space: pre-wrap;
+          }
+          .b-content__code-block .annotation {
+            color: #333333;
+          }
+
+  @media (max-width: 1025px) {
+    section .wrapp {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  @media (max-width: 769px) {
+    .b-content__title {
+      padding-top: 120px;
+    }
+
+  }
+
+  @media (max-width: 670px) {
+}
+
+  @media (max-width: 550px) {
+    .b-content__title {
+      padding-top: 80px;
+    }
+      .b-content__code-block {
+        padding: 20px 10px;
+      }
+  }

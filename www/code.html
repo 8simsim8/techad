@@ -20,18 +20,21 @@
     <link rel="stylesheet" type="text/css" href="css/gird-column.css">
     <link rel="stylesheet" type="text/css" href="css/reset-min.css">
     <link rel="stylesheet" type="text/css" href="css/common-styles.css">
-    <link rel="stylesheet" type="text/css" href="css/styles-contacts.css">
+    <link rel="stylesheet" type="text/css" href="css/styles-code.css">
     <!-- Scripts -->
+    <!--[if lte IE 8]>
+      <script src="excanvas.js"></script>
+    <![endif]-->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Detect.js/2.2.2/detect.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.18/autosize.min.js"></script>
     <script type="text/javascript" src="js/iOS-scroll.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/script-contacts.js"></script>
+    <script type="text/javascript" src="js/script-code.js"></script>
+
   </head>
   <body>
 
@@ -161,53 +164,34 @@
 
       <section class="b-content__title">
         <div class="wrapp">
-          <h1>Контакты</h1>
-          <div class="row">
-            <p class="lead col sm-offset-1 sm-10">Вы всегода можете задать интересующие вас вопросы через форму обратной связи. Наши специалисты свяжутся с вам в ближайшее время</p>
-          </div>
+          <picture>
+            <source srcset="img/temp/2.jpg">
+            <img src="img/bg-img-logo.svg" alt="No logo">
+          </picture>
+          <p class="lead">nik.petrov@gmail.com</p>
+          <p class="b-content__title-settings"><a href="" title="" class="annotation">Настройки профиля</a></p>
         </div>
       </section>
 
-      <section class="b-content__form">
-        <div class="wrapp row row-wrap">
-          <div class="col sm-offset-2 sm-4 xs-6">
-            <h2>Свяжитесь с нами</h2>
-            <ul class="b-content__form-our-contacts">
-              <li class="tel"><a href="tel:+78512335766" title="Позвоните нам" >&#177; 78512335766</a></li>
-              <li class="email"><a href="mailto:hello@noadtech.com?subject=feedback" title="Напишите нам" >hello@noadtech.com</a></li>
-              <li class="skype"><a href="skype:no.ad.tech" title="Скайп" >no.ad.tech</a></li>
-            </ul>
-          </div>
-          <div class="b-content__form-container col sm-4 xs-6">
-            <form>
-              <h2>Напишите нам!</h2>
-              <span class="input input--akira">
-                <input class="input__field input__field--akira" type="text" id="name" name="name" />
-                <label class="input__label input__label--akira" for="name">
-                  <span class="input__label-content input__label-content--akira">Имя</span>
-                </label>
-              </span>
-              <span class="input input--akira">
-                <input class="input__field input__field--akira" type="email" id="e-mail"  name="email" />
-                <label class="input__label input__label--akira" for="e-mail">
-                  <span class="input__label-content input__label-content--akira">E-mail</span>
-                </label>
-              </span>
-              <span class="textarea input--akira">
-                <textarea class="input__field input__field--akira" name="message" /></textarea>
-                <label class="input__label input__label--akira" for="e-mail">
-                  <span class="input__label-content input__label-content--akira">Текст сообщения</span>
-                </label>
-              </span>
-              <input type="submit" name="submit" value="Отправить">
-            </form>
-
-            <div class="b-content__form-finish">
-              <div class="b-content__form-finish-inner">
-                <h2>Сообщение отправлено!</h2>
-                <p class="text">В ближайшее время мы дадим Вам ответ.</p>
-              </div>
+      <section class="b-content__code">
+        <div class="wrapp row">
+          <div class="b-content__code-inner col sm-offset-2 sm-8">
+            <h1>Установите счётчик</h1>
+            <p class="text">Интегрируйте наш счётчик бесплатно и оцените потери сайта из-за блокировщиков.</p>
+            <div class="b-content__code-block">
+              <pre><code class="annotation">var f = function() {
+      $this.text($this.data('counterup-nums').shift());
+      if ($this.data('counterup-nums').length) {
+        setTimeout($this.data('counterup-func'), $settings.delay);
+      } else {
+        delete $this.data('counterup-nums');
+        $this.data('counterup-nums', null);
+        $this.data('counterup-func', null);
+      }
+  };
+  $this.data('counterup-func', f);</code></pre>
             </div>
+
           </div>
         </div>
       </section>

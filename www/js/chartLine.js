@@ -1,4 +1,6 @@
-function chartsLine(arrayDataChart, colorLine, isAniamtionCharts, isPercents) {
+function chartsLine(arrayDataChart, colorLine, isAniamtionCharts, isPercents, colorFill) {
+
+  colorFill = colorFill || 'transparent';
 
   var newArray = [];
 
@@ -49,25 +51,25 @@ function chartsLine(arrayDataChart, colorLine, isAniamtionCharts, isPercents) {
       labels : arrayDataChart[0],
       datasets : [
         {
-          fillColor : "transparent",
+          fillColor : colorFill,
           strokeColor : colorLine[0],
           pointColor : colorLine[0],
           pointStrokeColor : "#fff",
           data : newArray[0] || arrayDataChart[1]
         },
         {
-          fillColor : "transparent",
+          fillColor : colorFill,
           strokeColor : colorLine[1],
           pointColor : colorLine[1],
           pointStrokeColor : "#fff",
-          data : newArray[1] || arrayDataChart[2]
+          data : newArray[1] || arrayDataChart[2] || 0
         },
         {
-          fillColor : "transparent",
+          fillColor : colorFill,
           strokeColor : colorLine[2],
           pointColor : colorLine[2],
           pointStrokeColor : "#fff",
-          data : newArray[2] || arrayDataChart[3]
+          data : newArray[2] || arrayDataChart[3] || 0
         }
       ]
   }

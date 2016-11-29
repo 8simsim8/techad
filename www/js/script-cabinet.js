@@ -3,18 +3,18 @@ $(document).ready(function(){
     // Загрузка данных через 15 мин
     // var linkMainData = 
     // var loadData = setTimeout(function runLoad() {
-    // $.ajax(linkMainData, {
-    //   type: 'GET',
-    //   dataType: 'json',
-    //   success: function(res) {
-    //     dataCircleChart              = res.slice();
-    //     chartsCircle(dataCircleChart, isAniamtionChartsCircle);
-    //     isAniamtionChartsCircle      = false;
-    //   },
-    //   error: function(req,status,err) {
-    //     console.log("Error " + req,status,err);
-    //   }
-    // });
+      // $.ajax(linkMainData, {
+      //   type: 'GET',
+      //   dataType: 'json',
+      //   success: function(res) {
+      //     dataCircleChart              = res.slice();
+      //     chartsCircle(dataCircleChart, isAniamtionChartsCircle);
+      //     isAniamtionChartsCircle      = false;
+      //   },
+      //   error: function(req,status,err) {
+      //     console.log("Error " + req,status,err);
+      //   }
+      // });
     //     setTimeout(runCount, 500);
     //   }
     // }, 500);
@@ -39,7 +39,14 @@ $(document).ready(function(){
     var isPercents                    = false;
 
 // Стартовая загрузка графиков / перерисовка при изменении размера экрана 
-    $(window).on('load resize orientationchange', function(){
+    $(window).on('load', function(){
+
+      loadDataCircleChart(linkToFileCircleChart); // Отрисока круговых диаграмм
+
+    });
+
+// Стартовая загрузка графиков / перерисовка при изменении размера экрана 
+    $(window).on('resize orientationchange', function(){
 
       var widthWindow                 = window.outerWidth;
       var heightWindow                = window.outerHeight;
@@ -247,13 +254,6 @@ $(document).ready(function(){
     if($('.b-content__site .droplist-item').length <= 1) {
       $('.b-content__site .droplist-block').hide();
       $('.b-content__site .droplist-current').addClass('no-display');
-    }
-
-    if(!$('.b-content__losses-right table tfoot').length) {
-      $('.b-content__losses-right table').addClass('no-tfoot');
-      $('.b-content__losses-right-plug').show();
-    } else {
-      $('.b-content__losses-right-plug').hide();
     }
 
 });

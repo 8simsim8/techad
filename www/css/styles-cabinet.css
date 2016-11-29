@@ -157,9 +157,6 @@
       .b-content__losses-right table {
         width: 100%;
       }
-      .b-content__losses-right table.no-tfoot tfoot {
-        display: none;
-      }
         .b-content__losses-right table tr {
           vertical-align: bottom;
         }
@@ -243,18 +240,6 @@
             .b-content__losses-right table tfoot td {
                 padding-top: 80px;
              }
-              .b-content__losses-right table {
-                  position: relative;
-               }
-               .b-content__losses-right table:not(.no-tfoot):after {
-                  position: absolute;
-                  bottom: 90px;
-                  left: 0;
-                  right: 0;
-                  content: '';
-                  display: block;
-                  border-bottom: 1px solid #E6E6E6;
-                }
     .b-content__losses-right-plug {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -362,7 +347,7 @@
   }
     .b-content__traffic .wrapp {
       padding-top: 50px;
-      padding-bottom: 100px;
+      padding-bottom: 70px;
     }
     .b-content__traffic-filter {
       display: -ms-flexbox;
@@ -448,36 +433,6 @@
         width: 100%;
       }
 
-  .b-content__contact {
-    padding-top: 60px;
-    padding-bottom: 70px;
-    background : rgba(185, 203, 209, 0.3);
-  }
-    .b-content__contact h1 {
-      text-align: center;
-      color: #000000;
-      margin-bottom: 20px;
-    }
-    .b-content__contact h1 + p.text {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .form-contact {
-      margin-bottom: 50px;
-    }
-      .b-content__contact .input.input--akira {
-        float: left;
-        width: 55%;
-      }
-      .b-content__contact input[type="submit"] {
-        margin-top: 1.5rem;
-        float: right;
-        width: 40%;
-      }
-    .b-content__contact .row + p.text {
-      text-align: center;
-    }
-
   @media (max-width: 1025px) {
     section .wrapp {
       padding-left: 10px;
@@ -514,6 +469,15 @@
   }
 
   @media (max-width: 769px) {
+    .b-content__title {
+      padding-top: 120px;
+    }
+    .b-content__site-droplits + p.annotation {
+      margin-bottom: 20px;
+    }
+      .b-content__site-buttons button {
+        height: 40px;
+      }
     .b-content__losses-left-item {
         margin: 0 20px;
       }
@@ -585,6 +549,16 @@
     }
 
   @media (max-width: 550px) {
+    .b-content__title {
+      padding-top: 80px;
+    }
+    .b-content__site .wrapp {
+      padding: 40px 10px;
+    }
+      .b-content__site .annotation {
+        height: 40px;
+        line-height: 40px;
+      }
     .b-content__losses .wrapp {
       padding-top: 10px;
     }
@@ -601,6 +575,27 @@
     .b-content__losses-right table tr > th h1, .b-content__losses-right table tfoot tr > td h1 {
         font-size: 1.3rem;
     }
+    .b-content__losses-right table tr > th:nth-child(1), .b-content__losses-right table tbody tr > td:nth-child(1), .b-content__losses-right table tfoot tr > td:nth-child(1) {
+      width: 45%;
+    }
+    .b-content__losses-right-plug {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+      .b-content__losses-right-plug p.text,
+      .b-content__losses-right-plug .button {
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        width: 100%;
+      }
+      .b-content__losses-right-plug .button {
+        margin-top: 20px;
+      }
     .b-content__use-block .wrapp {
       padding-bottom: 20px;
     }

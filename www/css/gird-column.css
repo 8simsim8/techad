@@ -145,7 +145,17 @@ select
 	align-self : center;
 }
 
-.row .col.xs-offset-1
+.xs-visible,
+.sm-visible,
+.md-visible,
+.lg-visible
+{
+	display : none !important;
+}
+
+@media (max-width : 768px)
+{
+	.row .col.xs-offset-1
 {
 	margin-left : 8.3333%;
 }
@@ -295,17 +305,6 @@ select
 	flex      : 0 0 100%;
 	max-width : 100%;
 }
-
-.xs-visible,
-.sm-visible,
-.md-visible,
-.lg-visible
-{
-	display : none !important;
-}
-
-@media (max-width : 768px)
-{
 	.xs-visible
 	{
 		display : block !important;
