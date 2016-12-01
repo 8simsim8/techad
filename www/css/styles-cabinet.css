@@ -500,6 +500,7 @@
       padding-top: 120px;
     }
     .b-content__site-droplits + p.annotation {
+      margin-top: 20px;
       margin-bottom: 20px;
     }
       .b-content__site-buttons button {

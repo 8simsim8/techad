@@ -177,5 +177,28 @@ main.show {
     .b-content__title {
       padding-top: 80px;
     }
-  }
+    .b-content__form .wrapp {
+      padding-top: 20px;
+    }
+      .b-content__form-set {
+        margin-right: 10px;
+        margin-left: 10px;
       }
+      .b-content__form-set-item-label p.text {
+        display: block;
+        width: 100%;
+        line-height: normal;
+      }
+      .b-content__form-set span.input {
+        margin-top: 10px;
+        width: 100%;
+      }
+      .wrapp-button.submit {
+        margin-left: 0;
+        width: 49%;
+      }
+      .b-content__form-set .wrapp-button.delete {
+        margin-left: 0;
+        margin-top: 50px;
+      }
+  }
