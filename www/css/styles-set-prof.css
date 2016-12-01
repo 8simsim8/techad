@@ -1,0 +1,181 @@
+/* Таблица стилей к странице мой кабинет */
+main {
+  transition: opacity 0.2s ease;
+}
+main.show {
+  pointer-events: none;
+  opacity: 0.7;
+}
+.connection.b-popup__window {
+  width: 460px;
+}
+  .connection.b-popup__window .form-wrapp {
+    padding: 150px 2rem 2rem 2rem;
+    background-image: url('../img/icon-popup-connection.svg');
+    background-position: center 40px;
+    background-repeat: no-repeat;
+    background-size: auto 75px;
+  }
+    .connection.b-popup__window .form-wrapp h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .connection.b-popup__window .form-wrapp h1 + p.text {
+      text-align: center;
+    }
+
+.l-content {
+  padding-top: 0;
+}
+  .b-content__title {
+    padding-top: 180px;
+    padding-bottom: 50px;
+    background-color: #EAEFF1;
+  }
+    .b-content__title picture {
+      display: block;
+      margin: 0 auto;
+      width: 90px;
+      margin-bottom: 25px;
+    }
+    .b-content__title picture source {
+    }
+      .b-content__title picture img {
+        height: 90px;
+        width: 90px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    .b-content__title p.lead {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .b-content__title-settings {
+      text-align: center;
+    }
+      .b-content__title-settings .annotation {
+        color : #0071BC;
+      }
+      .b-content__title-settings .annotation:first-child {
+        margin-right: 30px;
+      }
+
+  .b-content__form {
+  }
+    .b-content__form .wrapp {
+      padding: 40px 0 50px;
+    }
+      .b-content__form-set {
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+      .b-content__form-set .input__field {
+        font-weight: normal;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+      }
+      .input-site {
+        margin: 1rem 0 1rem;
+      }
+        .b-content__form-set .input__field:focus {
+          opacity: 1;
+        }
+      .b-content__form-set-item-label {
+        font-size: 0;
+      }
+      .b-content__form-set-item-label p.text {
+        display: inline-block;
+        margin-top: 1.5rem;
+        line-height: 46px;
+      }
+      .b-content__form-set-item-label p.text,
+      .wrapp-button.submit {
+        width: 32%;
+      }
+      .b-content__form-set span.input {
+        font-size: 0;
+        width: 66.666666%;
+      }
+    .wrapp-button {
+      display: inline-block;
+    }
+      .show.wrapp-button[data-action]:after {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        display: block;
+        height: auto;
+        content: attr(data-action);
+        background-color: #39B54A;
+        padding: 15px 0;
+        font-family: 'RalewayBold', sans-serif;
+        color: #FFFFFF;
+        font-size: 0.8rem;
+        line-height: 1.625em;
+        text-align: center;
+        box-shadow: 1px 1px 15px -2px rgba(0,0,0,0.5);
+        z-index: 10000;
+      }
+      .wrapp-button.submit {
+        margin-left: 32%;
+      }
+      .wrapp-button.submit,
+      .wrapp-button.reset {
+        width: 32%;
+      }
+      .wrapp-button.reset {
+        text-align: right;
+      }
+    .b-content__form-set input[type='submit'] {
+      width: 80%;
+    }
+    .b-content__form-set input[type='reset'] {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #B3B3B3;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+      .b-content__form-set input[type='reset']:hover {
+        color: #7F6363;
+      }
+    .b-content__form-set .wrapp-button.delete {
+      margin-left: 32%;
+      display: block;
+      margin-top: 80px;
+      line-height: 46px;
+    }
+      .b-content__form-set .wrapp-button.delete button {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: #FF3B3B;
+        cursor: pointer;
+      }
+        .b-content__form-set .wrapp-button.delete button:hover {
+          color: #A51515;
+        }
+
+  @media (max-width: 1025px) {
+    section .wrapp {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  @media (max-width: 769px) {
+    .b-content__title {
+      padding-top: 120px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .b-content__title {
+      padding-top: 80px;
+    }
+  }
+      }

@@ -1,4 +1,22 @@
-/* Таблица стилей к странице статистики */
+/* Таблица стилей к странице мой кабинет */
+.connection.b-popup__window {
+  width: 460px;
+}
+  .connection.b-popup__window .form-wrapp {
+    padding: 150px 2rem 2rem 2rem;
+    background-image: url('../img/icon-popup-connection.svg');
+    background-position: center 40px;
+    background-repeat: no-repeat;
+    background-size: auto 75px;
+  }
+    .connection.b-popup__window .form-wrapp h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .connection.b-popup__window .form-wrapp h1 + p.text {
+      text-align: center;
+    }
+
 .l-content {
   padding-top: 0;
 }
@@ -31,6 +49,12 @@
       .b-content__title-settings .annotation {
         color : #0071BC;
       }
+        .b-content__title-settings .annotation:hover {
+          color : #177FC5;
+        }
+      .b-content__title-settings .annotation:first-child {
+        margin-right: 30px;
+      }
 
   .b-content__site {
     
@@ -43,7 +67,7 @@
       }
         .b-content__site .droplist-current.text {
           padding-left: 50px;
-          border: 1px solid #000000;
+          border: 1px solid #E6E6E6;
           text-align: center;
           color: #0071BC;
           background-color: #FFFFFF;
@@ -271,6 +295,8 @@
         display: inline-block;
         height: 46px;
         width: 190px;
+        outline: none;
+        border: none;
         background-color: #39B54A;
         -webkit-flex: 0 0 30%;
         -ms-flex: 0 0 30%;
@@ -280,6 +306,7 @@
         text-align: center;
         line-height: 46px;
         color: #FFFFFF;
+        cursor: pointer;
         transition: background-color 0.2s ease;
       }
         .b-content__losses-right-plug .button:hover {

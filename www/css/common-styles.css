@@ -765,6 +765,7 @@ footer {
         align-items: center;
       }
         .header-register {
+          line-height: 1.625em;
           text-align: center;
         }
         .header-user {

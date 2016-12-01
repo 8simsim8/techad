@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="css/gird-column.css">
     <link rel="stylesheet" type="text/css" href="css/reset-min.css">
     <link rel="stylesheet" type="text/css" href="css/common-styles.css">
-    <link rel="stylesheet" type="text/css" href="css/styles-cabinet.css">
+    <link rel="stylesheet" type="text/css" href="css/styles-download-counter.css">
     <!-- Scripts -->
     <!--[if lte IE 8]>
       <script src="excanvas.js"></script>
@@ -30,13 +30,7 @@
     <![endif]-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Detect.js/2.2.2/detect.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/iOS-scroll.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
-    <script src="js/chartjs.js"></script>
-    <script type="text/javascript" src="js/chartCircle.js"></script>
-    <script type="text/javascript" src="js/chartLine.js"></script>
-    <script type="text/javascript" src="js/script-cabinet.js"></script>
+    <script type="text/javascript" src="js/script-download-counter.js"></script>
 
   </head>
   <body>
@@ -75,7 +69,7 @@
             <source srcset="img/temp/2.jpg">
             <img src="img/bg-img-logo.svg" alt="No logo">
           </picture>
-          <a href="download-counter.html" class="annotation" title="Мой кабинет">nik.petrov@gmail.com</a>
+          <a href="my-cabinet.html" class="annotation" title="Мой кабинет">nik.petrov@gmail.com</a>
         </div>
       </nav>
     </header>
@@ -159,32 +153,6 @@
           <a href="#" class="link login-button button-open">Войти</a>
         </p>
       </div>
-
-<!-- Попап запроса на добавление счетчика -->
-      <div class="connection b-popup__window">
-        <p class="button-close"></p>
-        <div class="form-wrapp">
-          <form action="" class="b-popup__connection" name="connection">
-            <h1>Подключение к NoAdtech</h1>
-            <p class="text">Мы свяжемся с вами, чтобы выяснить детали</p>
-            <span class="input input--akira">
-              <input class="input__field input__field--akira" type="text" id="connection-name" name="name" />
-              <label class="input__label input__label--akira" for="connection-name">
-                <span class="input__label-content input__label-content--akira">Ваше имя</span>
-              </label>
-            </span>
-            <span class="input input--akira">
-              <input class="input__field input__field--akira" type="tel" id="connection-phone" name="phone" />
-              <label class="input__label input__label--akira" for="connection-phone">
-                <span class="input__label-content input__label-content--akira">Номер телефона</span>
-              </label>
-            </span>
-
-            <input type="submit" name="submit" value="Отправить запрос">
-          </form>
-        </div>
-      </div>
-
     </div>
 
     <main class="l-content">
@@ -205,156 +173,21 @@
         </div>
       </section>
 
-      <section class="b-content__site">
-        <div class="wrapp row row-wrap">
-          <div class="b-content__site-droplits droplist col sm-4 xs-12">
-            <span class="droplist-current text bold tab-input"></span>
-            <ul class="droplist-block">
-              <li class="droplist-item text" data-src-icon-site='img/temp/icon-site.jpg'>Українська правда</li>
-             <li class="droplist-item text">другие сайты</li>
-            </ul>
-          </div>
-          <p class="col sm-4 xs-12 annotation">Статистика обновляется каждые 15 минут</p>
-          <div class="b-content__site-buttons col sm-4 xs-12">
-            <button type="button" class="button" data-remove-site>Удалить этот сайт</button>
-            <button type="button" class="button" data-add-site>Добавить сайт</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="b-content__losses">
-        <div class="wrapp row row-wrap row-center">
-          <div class="b-content__losses-left col sm-4 xs-5">
-            <div class="b-content__losses-left-item">
-              <p class="text">6 612 043 пользователей не устанавливали блокировщик</p>
-              <h1 class='percents'>64</h1>
-            </div>
-            <div class="b-content__losses-left-item">
-              <p class="text">4 352 032 пользователей блокируют рекламу</p>
-              <h1 class='percents'>36</h1>
-            </div>
-          </div>
-          <div class="b-content__losses-right col sm-8 xs-7">
-
-            <table>
-              <thead>
-                <tr>
-                  <th><h2>Всего потери</h2></th>
-                  <th><h1 data-currency='$'>-8 239 940,43</h1></th>
-                  <th><h1 class='percents'>27.5</h1></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="text">За день</span></td>
-                  <td><span class="text data" data-currency="$">-112 032,23</span></td>
-                  <td><span class="text percents">23.5</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text">За неделю</span></td>
-                  <td><span class="text data" data-currency="$">-436 032,23</span></td>
-                  <td><span class="text percents">21.5</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text">За 1000 показов</span></td>
-                  <td><span class="text data" data-currency="$">-65,23</span></td>
-                  <td><span class="text percents">23.45</span></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="b-content__losses-right-plug">
-              <p class="text bold">Продолжаете терять деньги? NoAdTech восстановит доход!</p>
-              <button title="Подключить защиту" class="connection-protect button-open button text bold">Подключить защиту</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="b-content__use-block">
-        <div class="wrapp row row-wrap">
-          <div class="col sm-4 xs-12">
-            <h2>Используемые блокировщики (десктоп)</h2>
-            <p class="lead">В ноябре 2016 количество пользователей установивших AdBlock увеличилось на <span class="percents">1.05</span></p>
-            <p class="lead">Мы помогли нашим клиентам сохранить <span class="percents">87.75</span> от понесенных потерь</p>
-          </div>
-          <div class="b-content__use-block-circle col sm-2">
-            <div class="circle">
-              <p>
-                <canvas width="140" height="140"></canvas>
-              </p>
-            </div>
-            <p class="percents"></p>
-            <h2>Adblock Plus</h2>
-          </div>
-          <div class="b-content__use-block-circle col sm-2">
-            <div class="circle">
-              <p>
-                <canvas width="140" height="140"></canvas>
-              </p>
-            </div>
-            <p class="percents"></p>
-            <h2>Adblock</h2>
-          </div>
-          <div class="b-content__use-block-circle col sm-2">
-            <div class="circle">
-              <p>
-                <canvas width="140" height="140"></canvas>
-              </p>
-            </div>
-            <p class="percents"></p>
-            <h2>Ghostery</h2>
-          </div>
-          <div class="b-content__use-block-circle col sm-2">
-            <div class="circle">
-              <p>
-                <canvas width="140" height="140"></canvas>
-              </p>
-            </div>
-            <p class="percents"></p>
-            <h2>Другие</h2>
-          </div>
-        </div>
-      </section>
-
-      <section class="b-content__traffic">
+      <section class="b-content__counter">
         <div class="wrapp">
-
-          <div class="b-content__traffic-filter">
-
-            <div class="b-add-car__form-item droplist" traffic>
-              <span class="droplist-current text bold tab-input"></span>
-              <ul class="droplist-block">
-                <li class="droplist-item text">Все страны</li>
-                <li class="droplist-item text">Украина</li>
-                <li class="droplist-item text">Европа</li>
-                <li class="droplist-item text">Азия</li>
-              </ul>
-            </div>
-
-            <div class="b-add-car__form-item droplist" category>
-              <span class="droplist-current text bold tab-input"></span>
-              <ul class="droplist-block">
-                <li class="droplist-item b-filter__switch-item text" data-filter-category="all-traffic">Весь трафик</li>
-                <li class="droplist-item b-filter__switch-item text" data-filter-category="with-block">С блокировщиком</li>
-                <li class="droplist-item b-filter__switch-item text" data-filter-category="without-block">Без блокировщика</li>
-                <li class="droplist-item b-filter__switch-item text" data-filter-category="rebuilt">Восстановленный</li>
-              </ul>
-            </div>
-
-            <div class="b-filter__switch category">
-              <span class="b-filter__switch-item text" data-filter-category="all-traffic">Весь трафик</span>
-              <span class="b-filter__switch-item text" data-filter-category="with-block">С блокировщиком</span>
-              <span class="b-filter__switch-item text" data-filter-category="without-block">Без блокировщика</span>
-              <span class="b-filter__switch-item text" data-filter-category="rebuilt">Восстановленный</span>
-            </div>
-
-            <div class="b-filter__switch display">
-              <span class="b-filter__switch-item text" data-filter-category="absolute-value">123</span>
-              <span class="b-filter__switch-item text" data-filter-category="relative-value">%</span>
-            </div>
+          <h1 style="background-image: url('img/temp/icon-site.jpg');">
+            www.ukrpravda.com</h1>
+          <p class="text">Интегрируйте наш счётчик бесплатно и оцените потери сайта из-за блокировщиков.</p>
+          <div class="b-content__message b-content__counter-download">
+            <p>
+              <a href="install-counter.html" title="Скачать счетчик" class="text">noadtech_counter_and_manual.zip</a><br />
+              <span class="annotation">23 kb</span>
+            </p>
+            <a href="install-counter.html" title="Скачать счетчик" class="button text bold download-counter">Скачать</a>
           </div>
-
-          <canvas id="chart-line" height="370"></canvas>
+          <p class="b-content__help">
+            <a href="help.html" title="Помощь" class="text">Помощь</a>
+          </p>
         </div>
       </section>
 

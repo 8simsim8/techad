@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  // Открыть попап
+    $('connection-protect').on('click', function(){
+      
+    });
+
     // Загрузка данных через 15 мин
     // var linkMainData = 
     // var loadData = setTimeout(function runLoad() {
@@ -251,6 +256,10 @@ $(document).ready(function(){
       }
     });
 
+  /*
+    При загрузке проверить, если всего один сайт,
+    отключить дроплист и убрать кнопку "Добавить сайт"
+  */
     if($('.b-content__site .droplist-item').length <= 1) {
       $('.b-content__site .droplist-block').hide();
       $('.b-content__site .droplist-current').addClass('no-display');

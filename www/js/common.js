@@ -101,6 +101,8 @@ $(document).ready(function(){
       } else if(target.matches('.login-button')) {
         backgroundPopup.querySelector('.register').classList.remove(classOpenPopup);
         currentPopup              = backgroundPopup.querySelector('.login');
+      } else if(target.matches('.connection-protect')) {
+        currentPopup              = backgroundPopup.querySelector('.connection');
       } else {
         return;
       }
@@ -139,21 +141,45 @@ $(document).ready(function(){
       e.preventDefault();
     }
 
-  // Валидация формы входа
+// Валидация формы входа
     $.validator.setDefaults({
       submitHandler: function(form) {
-
+ 
         var form                  = currentPopup.querySelectorAll('form');
         var formData              = new FormData(form);
-
+ 
         $.ajax({
-          url: '/PHPmailer.php',
+          url: '/login',
           type: 'POST',
           contentType: false,
           processData: false,
           data: formData,
           success: function(data) {
-            
+           
+          },
+          error: function(e) {
+            console.log('error: ', e);
+          }
+        });
+      }
+    });
+ 
+  // Валидация формы регистрации
+    $.validator.setDefaults({
+      focusCleanup: true,
+      submitHandler: function(form) {
+ 
+        var form                   = currentPopup.querySelector('form');
+        var formData               = new FormData(form);
+ 
+        $.ajax({
+          url: '/reg',
+          type: 'POST',
+          contentType: false,
+          processData: false,
+          data: formData,
+          success: function(data) {
+           
           },
           error: function(e) {
             console.log('error: ', e);
@@ -162,13 +188,12 @@ $(document).ready(function(){
       }
     });
 
-  // Валидация формы регистрации
+  // Валидация формы запроса счетчика
     $.validator.setDefaults({
-      focusCleanup: true,
       submitHandler: function(form) {
 
-        var form                   = currentPopup.querySelector('form');
-        var formData               = new FormData(form);
+        var form                  = currentPopup.querySelector('form');
+        var formData              = new FormData(form);
 
         $.ajax({
           url: '/PHPmailer.php',
@@ -199,6 +224,11 @@ $(document).ready(function(){
           },
           password: {
             required: true
+          },
+          phone: {
+            required: true,
+            number: true,
+            minlength: 5
           }
         },
         messages: {
@@ -211,6 +241,11 @@ $(document).ready(function(){
           },
           password: {
             required: 'Вы не ввели пароль',
+          },
+          phone: {
+            required: 'Вы не ввели номер телефона',
+            number: 'Пожалуйста введите корректный номер',
+            minlength: 'Пожалуйста введите корректный номер'
           }
         }
       });
