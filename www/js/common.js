@@ -103,6 +103,13 @@ $(document).ready(function(){
         currentPopup              = backgroundPopup.querySelector('.login');
       } else if(target.matches('.connection-protect')) {
         currentPopup              = backgroundPopup.querySelector('.connection');
+      } else if(target.matches('.connection.b-popup__window input[type="submit"]')) {
+        $(currentPopup).hide(200);
+        currentPopup.classList.remove(classOpenPopup);
+        currentPopup              = backgroundPopup.querySelector('.confirm');
+        $(currentPopup).animate({
+          opacity: 1
+        },200);
       } else {
         return;
       }
@@ -123,7 +130,10 @@ $(document).ready(function(){
       buttonClosePopup.addEventListener('click', closePopup);
 
       disableScroll();
-      e.preventDefault();
+
+      if(!currentPopup.matches('.confirm')) {
+        e.preventDefault();
+      }
     }
 
     function closePopup(e){
@@ -132,6 +142,15 @@ $(document).ready(function(){
       for(var i = 0; i < allOpenPopup.length; i++) {
         allOpenPopup[i].classList.remove(classOpenPopup);
       }
+
+      if(currentPopup.matches('.confirm')) {
+        var $parentNode = $(this).parents('.connection.b-popup__window');
+        $parentNode.next().animate({
+          opacity: 1
+        },200);
+      }
+
+      
       document.body.classList.remove(disableScrollClass);
 
       var buttonClosePopup        = currentPopup.querySelector('.button-close');
@@ -179,7 +198,6 @@ $(document).ready(function(){
           processData: false,
           data: formData,
           success: function(data) {
-           
           },
           error: function(e) {
             console.log('error: ', e);
@@ -202,7 +220,6 @@ $(document).ready(function(){
           processData: false,
           data: formData,
           success: function(data) {
-            
           },
           error: function(e) {
             console.log('error: ', e);

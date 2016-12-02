@@ -16,6 +16,29 @@
     .connection.b-popup__window .form-wrapp h1 + p.text {
       text-align: center;
     }
+.confirm.b-popup__window {
+  opacity: 0;
+  width: 460px;
+  padding: 150px 2rem 2rem 2rem;
+  background-image: url('../img/icon-popup-confirm.svg');
+  background-position: center 65px;
+  background-repeat: no-repeat;
+  background-size: auto 28px;
+}
+  .confirm.b-popup__window h1 {
+    margin-bottom: 10px;
+  }
+  .confirm.b-popup__window p.text {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .b-popup__window-confirm-link {
+    text-align: center;
+    color: #0071BC;
+  }
+    .b-popup__window-confirm-link a:hover {
+      color: #177FC5;
+    }
 
 .l-content {
   padding-top: 0;

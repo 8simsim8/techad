@@ -1,9 +1,6 @@
 $(document).ready(function(){
 
-  // Открыть попап
-    $('connection-protect').on('click', function(){
-      
-    });
+
 
     // Загрузка данных через 15 мин
     // var linkMainData = 
