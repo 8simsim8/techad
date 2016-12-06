@@ -90,11 +90,6 @@ $(document).ready(function(){
       var target                  = e.target;
       var form                    = backgroundPopup.querySelector('form');
 
-      // Сброс формы при открытии
-      // $(form).each(function(index, el){
-      //   $(el).data('validator').resetForm();
-      // });
-
       if(target.matches('.register-button')) {
         backgroundPopup.querySelector('.login').classList.remove(classOpenPopup);
         currentPopup              = backgroundPopup.querySelector('.register');
@@ -103,13 +98,6 @@ $(document).ready(function(){
         currentPopup              = backgroundPopup.querySelector('.login');
       } else if(target.matches('.connection-protect')) {
         currentPopup              = backgroundPopup.querySelector('.connection');
-      } else if(target.matches('.connection.b-popup__window input[type="submit"]')) {
-        $(currentPopup).hide(200);
-        currentPopup.classList.remove(classOpenPopup);
-        currentPopup              = backgroundPopup.querySelector('.confirm');
-        $(currentPopup).animate({
-          opacity: 1
-        },200);
       } else {
         return;
       }
@@ -131,9 +119,6 @@ $(document).ready(function(){
 
       disableScroll();
 
-      if(!currentPopup.matches('.confirm')) {
-        e.preventDefault();
-      }
     }
 
     function closePopup(e){
@@ -150,7 +135,6 @@ $(document).ready(function(){
         },200);
       }
 
-      
       document.body.classList.remove(disableScrollClass);
 
       var buttonClosePopup        = currentPopup.querySelector('.button-close');
@@ -160,77 +144,29 @@ $(document).ready(function(){
       e.preventDefault();
     }
 
-// Валидация формы входа
-    $.validator.setDefaults({
-      submitHandler: function(form) {
- 
-        var form                  = currentPopup.querySelectorAll('form');
-        var formData              = new FormData(form);
- 
-        $.ajax({
-          url: '/login',
-          type: 'POST',
-          contentType: false,
-          processData: false,
-          data: formData,
-          success: function(data) {
-           
-          },
-          error: function(e) {
-            console.log('error: ', e);
-          }
-        });
-      }
-    });
- 
+
   // Валидация формы регистрации
-    $.validator.setDefaults({
-      focusCleanup: true,
-      submitHandler: function(form) {
- 
-        var form                   = currentPopup.querySelector('form');
-        var formData               = new FormData(form);
- 
-        $.ajax({
-          url: '/reg',
-          type: 'POST',
-          contentType: false,
-          processData: false,
-          data: formData,
-          success: function(data) {
-          },
-          error: function(e) {
-            console.log('error: ', e);
-          }
-        });
-      }
-    });
+      var formRegister = document.forms.register;
+      $(formRegister).validate({
+        focusCleanup: true,
+        submitHandler: function(form) {
+          console.log('register');
+          var form                   = currentPopup.querySelector('form');
+          var formData               = new FormData(form);
 
-  // Валидация формы запроса счетчика
-    $.validator.setDefaults({
-      submitHandler: function(form) {
-
-        var form                  = currentPopup.querySelector('form');
-        var formData              = new FormData(form);
-
-        $.ajax({
-          url: '/PHPmailer.php',
-          type: 'POST',
-          contentType: false,
-          processData: false,
-          data: formData,
-          success: function(data) {
-          },
-          error: function(e) {
-            console.log('error: ', e);
-          }
-        });
-      }
-    });
-
-    var form = backgroundPopup.querySelectorAll('form');
-    $(form).each(function(index, el){
-      $(el).validate({
+          $.ajax({
+            url: '/reg',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: formData,
+            success: function(data) {
+            },
+            error: function(e) {
+              console.log('error: ', e);
+            }
+          });
+        },
         rules: {
           name : {
             required: true
@@ -266,8 +202,105 @@ $(document).ready(function(){
           }
         }
       });
+
+  // Валидация формы входа
+       var formLogin = document.forms.login;
+       $(formLogin).validate({
+        focusCleanup: true,
+        submitHandler: function(form) {
+          console.log('login');
+          var form                   = currentPopup.querySelector('form');
+          var formData               = new FormData(form);
+
+          $.ajax({
+            url: '/login',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: formData,
+            success: function(data) {
+            },
+            error: function(e) {
+              console.log('error: ', e);
+            }
+          });
+        },
+        rules: {
+          email: {
+            required: true,
+            email: true
+          },
+          password: {
+            required: true
+          }
+        },
+        messages: {
+          email: {
+            required: 'Вы не ввели свой e-mail',
+            email: 'Пожалуйста, проверьте адресс'
+          },
+          password: {
+            required: 'Вы не ввели пароль',
+          }
+        }
+      });
+
+  // Валидация формы запроса счетчика
+  // Страница "Моего кабинета"
+    var formConnect = document.forms.connection;
+    $(formConnect).validate({
+      submitHandler: function(form) {
+
+        var form                  = currentPopup.querySelector('form');
+        var formData              = new FormData(form);
+
+        $.ajax({
+          url: '/PHPmailer.php',
+          type: 'POST',
+          contentType: false,
+          processData: false,
+          data: formData,
+          success: function(data) {
+          },
+          error: function(e) {
+            console.log('error: ', e);
+          }
+        });
+
+        $(currentPopup).hide(200);
+        currentPopup.classList.remove(classOpenPopup);
+        currentPopup              = backgroundPopup.querySelector('.confirm');
+        currentPopup.classList.add(classOpenPopup);
+        $(currentPopup).animate({
+          opacity: 1
+        },200);
+
+        var buttonClosePopup         = currentPopup.querySelector('.button-close');
+        buttonClosePopup.addEventListener('click', closePopup);
+
+      },
+      rules: {
+        name : {
+          required: true
+        },
+        phone: {
+          required: true,
+          number: true,
+          minlength: 5
+        }
+      },
+      messages: {
+        name: {
+          required: 'Как Вас зовут',
+        },
+        phone: {
+          required: 'Вы не ввели номер телефона',
+          number: 'Пожалуйста введите корректный номер',
+          minlength: 'Пожалуйста введите корректный номер'
+        }
+      }
     });
-  }
+   }
 
 
 // Кнопка "ВВЕРХ"
