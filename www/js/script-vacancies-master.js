@@ -21,57 +21,53 @@ $(document).ready(function(){
     $('.b-content__offer,.b-content__appeal-top-img').addClass('start-animation');
   }
 
-
-// Валидация формы
-  $.validator.setDefaults({
-    submitHandler: function(form) {
-
-      var form = $('form')[0];
-      var formData = new FormData(form);
-
-      $.ajax({
-        url: '/PHPmailer.php',
-        type: 'POST',
-        contentType: false,
-        processData: false,
-        data: formData,
-        success: function(data) {
-          console.log('success!', data);
+      var formVacancies = document.forms.vacancies;
+      $(formVacancies).validate({
+        focusCleanup: true,
+        submitHandler: function(form) {
+          var formData               = new FormData(form);
+          $(form).slideUp(200);
+          $('.b-content__contact .title').slideUp(200);
+          $('.message-confirm').show(200);
+          $.ajax({
+            url: '/PHPmailer.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: formData,
+            success: function(data) {
+            },
+            error: function(e) {
+              console.log('error: ', e);
+            }
+          });
         },
-        error: function(e) {
-          console.log('error: ', e);
+        rules: {
+          name: {
+            required: true
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          phone: {
+            required: true,
+            number: true,
+            minlength: 5
+          },
+        },
+        messages: {
+          name: {
+            required: 'Вы не ввели свое имя',
+          },
+          email: {
+            required: 'Вы не ввели свой e-mail',
+            email: 'Пожалуйста, проверьте адресс'
+          },
+          phone: {
+            required: 'Вы не ввели свой номер телефона',
+          },
         }
       });
-    }
-  });
-
-  $('form').validate({
-    rules: {
-      name: {
-        required: true
-      },
-      email: {
-        required: true,
-        email: true
-      },
-      phone: {
-        required: true,
-        number: true,
-        minlength: 5
-      },
-    },
-    messages: {
-      name: {
-        required: 'Вы не ввели свое имя',
-      },
-      email: {
-        required: 'Вы не ввели свой e-mail',
-        email: 'Пожалуйста, проверьте адресс'
-      },
-      phone: {
-        required: 'Вы не ввели свой номер телефона',
-      },
-    }
-  });
 
 });

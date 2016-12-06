@@ -1,4 +1,4 @@
-/* Таблица стилей к странице статистики */
+/* Таблица стилей к странице загрузки кода */
 .l-content {
   padding-top: 0;
 }
@@ -42,14 +42,16 @@
     
   }
     .b-content__counter .wrapp {
-      padding: 70px 0 80px;
+      padding-top: 70px;
+      padding-bottom: 80px;
     }
       section h1 {
         display: table;
         margin: 0 auto;
-        padding-left: 64px;
+        padding-left: 34px;
         margin-bottom: 20px;
         text-align: center;
+        font-size: 1rem;
         color: #000000;
         background-repeat: no-repeat;
         background-size: 24px 24px;
@@ -69,6 +71,8 @@
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         padding: 10px 0;
         padding-right: 20px;
@@ -141,22 +145,3 @@
 
   @media (max-width: 670px) {
 }
-
-  @media (max-width: 550px) {
-    .b-content__title {
-      padding-top: 80px;
-    }
-    .b-content__message {
-      margin: 0 10px;
-      margin-bottom: 40px;
-      width: calc(100% - 20px);
-    }
-    .b-content__counter-download a.button {
-      margin-top: 20px;
-      margin-left: 20px;
-      padding: 0;
-      width: 100%;
-      text-align: center;
-      background-image: none;
-    }
-  }

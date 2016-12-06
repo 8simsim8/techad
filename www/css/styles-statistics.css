@@ -199,8 +199,8 @@
     }
     .circle canvas {
         margin: 0 calc((100% - 140px) / 2);
-        height: 140px;
-        width: 140px;
+        max-height: 140px;
+        max-width: 140px;
         margin-top: -5px;
         margin-left: -5px;
     }
@@ -379,7 +379,7 @@
             background-color: #E6E6E6;
           }
       .b-content__traffic canvas {
-        height: 370px;
+        max-height: 370px;
         width: 100%;
 /*         background: url('../img/temp/chart-5.svg') center 100% no-repeat; */
       }
@@ -519,68 +519,3 @@
       font-size: 1.1rem;
     }
     }
-
-  @media (max-width: 550px) {
-    .b-content__losses .wrapp {
-      padding-top: 10px;
-    }
-    .b-content__losses-left {
-      margin-bottom: 30px;
-    }
-      .b-content__losses-left-item {
-        margin: 0 10px;
-      }
-    .b-content__losses-right.col {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    .b-content__losses-right table tr > th h1, .b-content__losses-right table tfoot tr > td h1 {
-        font-size: 1.3rem;
-    }
-    .b-content__use-block .wrapp {
-      padding-bottom: 20px;
-    }
-    .b-content__use-block-circle.col {
-      margin-bottom: 40px;
-    }
-    .b-content__use-block-circle .circle {
-      margin-bottom: 15px;
-    }
-
-    .b-content__traffic .wrapp {
-      padding-bottom: 50px;
-    }
-    .b-add-car__form-item.droplist[traffic] {
-      -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin-left: 0;
-      margin-bottom: 20px;
-    }
-    .b-add-car__form-item.droplist[category] {
-      -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin-left: 0;
-      margin-bottom: 20px;
-    }
-  .b-filter__switch.display {
-      -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin-left: 0;
-  }
-
-    .b-content__contact .input.input--akira {
-      height: 46px;
-      width: 100%;
-    }
-    .b-content__contact input[type="submit"] {
-      height: 46px;
-      width: 100%;
-    }
-  }
-  }

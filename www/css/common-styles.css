@@ -930,15 +930,12 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;
-  opacity: 0;
-  pointer-events: none;
   cursor: pointer;
   z-index: 9999;
   transition: opacity 0.1s ease;
 }
   .show-button.button-to-top {
     opacity: 0.7;
-    pointer-events: auto;
   }
   .show-button.button-to-top:hover {
     opacity: 1;
@@ -982,9 +979,6 @@ footer {
       }
 
 @media (max-width: 768px) {
-  html {
-    font-size: 16px;
-  }
 
   h1,
   h2,
@@ -1009,9 +1003,9 @@ footer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
@@ -1020,8 +1014,11 @@ footer {
     .top-panel .header-logo {
       display: block;
       height: 40px;
+      background-position: center;
     }
     .top-panel .button-menu {
+      position: absolute;
+      
       display: block;
     }
 
@@ -1139,8 +1136,14 @@ footer {
 }
   
 @media (max-width: 550px) {
+  .l-header .row {
+    padding: 15vh 10px;
+  }
+  .header-user a {
+    font-size: 1rem;
+  }
   .header-register.col {
-    margin: 20px 0;
+    margin: 5px 0;
   }
   .b-popup__window {
     height: 100%;
@@ -1219,5 +1222,28 @@ footer {
     -webkit-transform: translateY(-2.2rem);
     transform: translateY(-2.2rem);
   }
+
+  footer {
+    
+  }
+    .b-footer__column-item .text.bold {
+      display: table;
+      padding-right: 30px;
+      margin-bottom: 20px;
+      background-image: url('../img/icon-open-accordeon.svg');
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 10px auto;
+      transition: background-image 0.2s ease;
+    }
+      .open-accordeon.b-footer__column-item .text.bold {
+        background-image: url('../img/icon-close.svg');
+      }
+      .l-footer .b-footer__column-item ul {
+        display: none;
+      }
+      .b-footer__column-item li:not(:last-child) {
+        margin-bottom: 10px;
+      }
 
 }

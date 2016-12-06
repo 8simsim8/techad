@@ -1,0 +1,39 @@
+/* Таблица стилей к странице загрузки кода */
+  .b-content__title p.lead {
+    margin-bottom: 20px;
+  }
+    .b-content__title-settings .annotation:first-child {
+      margin-right: 0;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .b-content__title {
+      padding-top: 80px;
+    }
+    .b-content__counter .wrapp {
+      padding: 30px 10px;
+    }
+    section h1 + p.text {
+      margin-bottom: 30px;
+    }
+    .b-content__message {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+    .b-content__counter-download > p {
+      margin: 0 auto;
+      padding: 10px 5px;
+      background-image: none;
+    }
+    .b-content__counter a.text {
+      font-size: 0.7rem;
+    }
+    .b-content__counter-download a.button {
+      margin-top: 20px;
+      margin-left: 20px;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      background-image: none;
+    }

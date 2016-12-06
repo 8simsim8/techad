@@ -1,0 +1,168 @@
+/* Таблица стилей к главной странице */
+.b-content__counter {
+  padding: 100px 0 50px;
+}
+    .b-content__counter-digits {
+      padding-right: 35px;
+    }
+    .b-content__counter-digits p {
+      font-size : 2rem;
+      padding: 0 0.1em;
+      width: 0.7em;
+      }
+      .b-content__counter-digits:after {
+        margin-left: 10px;
+        font-size: 1rem;
+        line-height: 2.4rem;
+      }
+  .b-content__scheme .wrapp {
+    padding: 30px 0 30px;
+  }
+    .b-content__scheme h1 {
+      margin-bottom: 20px;
+    }
+    .b-content__scheme .b-content__scheme-item {
+      margin-bottom: 125px;
+      background-position: center top;
+    }
+      .b-content__scheme .b-content__scheme-item:after {
+        bottom: -70px;
+      }
+    .m-content__scheme-item_1.b-content__scheme-item {
+      padding-top: 115px;
+    }
+    .m-content__scheme-item_2.b-content__scheme-item,
+    .m-content__scheme-item_3.b-content__scheme-item {
+      padding-top: 150px;
+    }
+    .m-content__scheme-item_4.b-content__scheme-item {
+      padding-top: 125px;
+    }
+    .b-content__scheme-item-circle {
+      margin: 15px auto 10px;
+    }
+    .m-content__scheme-item_tagline.b-content__scheme-item {
+      padding-top: 0;
+      margin-bottom: 20px;
+    }
+      .m-content__scheme-item_tagline.b-content__scheme-item:after {
+        top: -65px;
+      }
+    .m-content__scheme-item_register .button {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 15px 65px 15px 20px;
+    }
+      .m-content__scheme-item_register .button h2 {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+    a.b-content__work-example {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+    .button {
+      width: 100%;
+    }
+  .b-content__excellence {
+    padding: 30px 0 30px;
+  }
+    .b-content__excellence h1 {
+      margin-bottom: 20px;
+    }
+    .b-content__excellence-detail .b-content__excellence-detail-item {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .b-content__excellence-detail .b-content__excellence-detail-item:last-child {
+      margin-bottom: 0;
+    }
+    .m-content__excellence-detail-item_1.b-content__excellence-detail-item {
+      padding-top: 80px;
+    }
+    .m-content__excellence-detail-item_2.b-content__excellence-detail-item {
+      padding-top: 65px;
+    }
+    .m-content__excellence-detail-item_4.b-content__excellence-detail-item  {
+      padding-top: 85px;
+    }
+    .b-content__excellence h2 {
+      display: inline-block;
+      text-align: center;
+      display: table;
+      margin-bottom: 7px;
+    }
+
+  .b-content__work {
+    padding: 30px 0 30px;
+  }
+    .b-content__work h1 {
+      margin-bottom: 20px;
+    }
+    .b-content__work-item {
+      padding-top: 0;
+      padding-bottom: 20px;
+    }
+    .b-content__work-item h2 {
+      text-align: center;
+    }
+    .b-content__work-item h2, .b-content__work-item .lead {
+      margin-bottom: 10px;
+    }
+
+  .b-content__contact .wrapp {
+    padding: 30px 0;
+  }
+
+    .b-content__contact-statistics > p.text.bold {
+      text-align: center;
+      float: none;
+      margin-right: 0;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+    .b-content__contact-statistics canvas {
+      margin-top: 20px;
+    }
+    .b-content__contact-statistics {
+      margin-bottom: 0;
+    }
+    .b-content__contact-percent,
+    .b-content__contact-percent + .text.bold {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .form-contact {
+      margin-top: 0;
+    }
+  .b-content__contact .row-bottom + p {
+    margin-top: 30px;
+  }
+
+  .b-content__blog {
+    padding: 30px 0;
+  }
+    .b-content__blog h1 {
+      margin-bottom: 20px;
+    }
+      .blog-item__inner {
+        margin-bottom: 20px;
+      }
+      .blog-item__bg {
+        margin-bottom: 5px;
+      }
+      .blog-item__inner .text.bold {
+        margin-bottom: 0;
+      }
+    .blog-container {
+      margin-bottom: 10px;
+    }

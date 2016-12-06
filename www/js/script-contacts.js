@@ -4,12 +4,16 @@ $(document).ready(function(){
 
   var $sectionForm = $('.b-content__form');
 
-// Валидация формы
-  $.validator.setDefaults({
-    submitHandler: function(form) {
 
-      var form = $('form')[0];
-      var formData = new FormData(form);
+  var formContact = document.forms.contact;
+  $(formContact).validate({
+    focusCleanup: true,
+    submitHandler: function(form) {
+      var formData               = new FormData(form);
+
+      $(form).slideUp(200);
+      $('.b-content__contact .title').slideUp(200);
+      $('.b-content__form-finish').show(200);
 
       $.ajax({
         url: '/PHPmailer.php',
@@ -18,16 +22,12 @@ $(document).ready(function(){
         processData: false,
         data: formData,
         success: function(data) {
-          $sectionForm.addClass('message-sent');
         },
         error: function(e) {
-          console.log('error: ', e);
+           console.log('error: ', e);
         }
       });
-    }
-  });
-
-  $('form').validate({
+    },
     rules: {
       name : {
         required: true
@@ -47,6 +47,5 @@ $(document).ready(function(){
       }
     }
   });
-
 
 });

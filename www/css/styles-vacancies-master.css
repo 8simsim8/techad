@@ -164,6 +164,10 @@
       text-align: center;
       margin-bottom: 10px;
     }
+    .b-content__contact h1.message-confirm {
+      display: none;
+      margin-bottom: 30px;
+    }
     .b-content__contact-form {
       margin-bottom: 40px;
     }
@@ -198,5 +202,57 @@
     .b-content__knowledge-debugging.col {
       padding: 25px;
       background-image: none;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .b-content__appeal-top .wrapp {
+      padding: 100px 10px 30px;
+    }
+      .b-content__appeal-top-img > div {
+        top: 0;
+        height: 220px;
+      }
+      .b-content__appeal-bottom.wrapp {
+        margin-top: -200px;
+        padding-top: 90px;
+        background-color: #FFFFFF;
+      }
+      .b-content__knowledge {
+        padding: 30px 0;
+      }
+      .b-content__knowledge h1 {
+        margin-bottom: 20px;
+      }
+      .b-content__knowledge-item h2 {
+        margin-bottom: 10px;
+      }
+      .b-content__knowledge-item {
+        margin-bottom: 20px;
+      }
+    .b-content__offer-inner {
+      padding-top: 30px;
+    }
+    .b-content__offer-note {
+      margin: 20px auto;
+      max-width: 100%;
+    }
+    .b-content__contact {
+      padding: 10px 0 30px;
+    }
+    .b-content__contact h1 {
+      margin-bottom: 0;
+    }
+    span + input[type="submit"] {
+      margin-top: 20px;
+    }
+    .b-content__contact-form {
+      margin-bottom: 30px;
+    }
+    .b-content__social .wrapp {
+      padding: 10px 0 30px;
+    }
+    .b-content__contact-social p.text {
+      margin-bottom: 30px;
     }
   }

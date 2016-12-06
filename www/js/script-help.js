@@ -1,17 +1,17 @@
 $(document).ready(function(){
 
-  var classWrapp = document.getElementsByClassName('wrapp-category');
-  var classWrappArticle = document.getElementsByClassName('b-content__accordeon-category-item-article');
+  var classWrapp            = document.getElementsByClassName('wrapp-category');
+  var classWrappArticle     = document.getElementsByClassName('b-content__accordeon-category-item-article');
   var indexCurrentCategory;
   var indexCurrentArticle;
 
   $('.b-content__accordeon-category-title').on('click', function(){
-    var $target = $(this).parent('.b-content__accordeon-category-inner');
-    var index = $target.index();
+    var $target             = $(this).parent('.b-content__accordeon-category-inner');
+    var index               = $target.index();
 
     // Сбросить внутренний аккордеон
 
-    var $parentNode = $('.b-content__accordeon-category-inner').eq(indexCurrentCategory).find('.b-content__accordeon-category-item');
+    var $parentNode         = $('.b-content__accordeon-category-inner').eq(indexCurrentCategory).find('.b-content__accordeon-category-item');
 
     $parentNode.eq(indexCurrentArticle).removeClass('item-current');
     $parentNode.eq(indexCurrentArticle).find(classWrappArticle).slideUp(200);
@@ -38,8 +38,8 @@ $(document).ready(function(){
 
   // Внутренний аккордеон
   $('.b-content__accordeon-category-item-title').on('click', function(){
-    var $target = $(this).parent();
-    var index = $target.index();
+    var $target         = $(this).parent();
+    var index           = $target.index();
 
     if($target.hasClass('item-current')) {
       $target.find(classWrappArticle).slideUp(500);
@@ -55,7 +55,7 @@ $(document).ready(function(){
     }
 
     indexCurrentArticle = index;
-    $lastTarget = $target;
+    $lastTarget         = $target;
     
 
     return false;

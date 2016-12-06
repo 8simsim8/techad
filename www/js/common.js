@@ -19,8 +19,6 @@ $(document).ready(function(){
 
   var menuHeader                  = new makeHeader();
 
-  var buttonToTop                 = new makeButtonToTop();  // Кнопка "вверх"
-
   var disableScrollClass          = 'no-scroll';
   iOSscroll('.no-scroll');
 
@@ -302,37 +300,6 @@ $(document).ready(function(){
     });
    }
 
-
-// Кнопка "ВВЕРХ"
-  function makeButtonToTop() {
-
-    var block               = document.getElementsByTagName('main')[0];
-    var buttonTop           = document.createElement('div');
-
-    buttonTop.classList.add('button-to-top');
-    block.appendChild(buttonTop);
-
-    if(window.pageYOffset >= DISTANCE_SHOW_BUTTON_TOP) {
-      $(buttonTop).addClass('show-button');
-    }
-
-    $(window).on('scroll', function(){
-      var scrollWindow = window.pageYOffset || document.documentElement.scrollTop;
-      if(scrollWindow >= DISTANCE_SHOW_BUTTON_TOP) {
-        $(buttonTop).addClass('show-button');
-      } else {
-        $(buttonTop).removeClass('show-button');
-      }
-    });
-
-    $(buttonTop).on('click', function(){
-      $("html, body").animate({
-        scrollTop: 0
-      }, 200);
-    });
-
-  }
-
 // *** Inputs ***
   $('.input__field').on('focus',function(){
     $(this).parent().addClass('input--filled');
@@ -379,5 +346,29 @@ $(document).ready(function(){
       document.onkeydown = null;
     }
 // *** /Disable scroll ***
+
+  var footer = new MakeFooter();
+
+// *** Футер ***
+  function MakeFooter() {
+    var $containerWrappAccordeond = $('.b-footer__column-item');
+
+    $containerWrappAccordeond.on('click', function(){
+      if(window.innerWidth <= WIDTH_MOBILE_DEVICE) {
+        var $this = $(this);
+        var $prevOpenAccordeon = $containerWrappAccordeond.filter('.open-accordeon');
+
+        if($prevOpenAccordeon && $prevOpenAccordeon.is(':visible') && !$this.hasClass('open-accordeon')) {
+          $prevOpenAccordeon.find('ul').slideUp(200);
+          $prevOpenAccordeon.removeClass('open-accordeon');
+        }
+
+        $this.find('ul').slideToggle(200);
+        $this.toggleClass('open-accordeon');
+
+        return false;
+      }
+    });
+  }
 
 });

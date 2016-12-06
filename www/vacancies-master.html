@@ -222,9 +222,9 @@
 
       <section class="b-content__contact">
         <div class="wrapp">
-          <h1>Присоединяйтесь! Будет сложно, но весело!</h1>
+          <h1 class="title">Присоединяйтесь! Будет сложно, но весело!</h1>
           <div class="row">
-            <form action="vacancies_submit" method="get" accept-charset="utf-8" class="b-content__contact-form col sm-offset-4 sm-4 xs-offset-2 xs-8">
+            <form action="vacancies_submit" method="get" accept-charset="utf-8" name="vacancies" class="b-content__contact-form col sm-offset-4 sm-4 xs-offset-2 xs-8">
               <span class="input input--akira">
                 <input class="input__field input__field--akira" type="text" id="name" name="name" />
                 <label class="input__label input__label--akira" for="name">
@@ -245,6 +245,7 @@
               </span>
               <input type="submit" name="submit" value="Откликнуться на вакансию">
             </form>
+            <h1 class="message-confirm">Сообщение отправлено</h1>
           </div>
           <div class="row">
             <div class="b-content__contact-social col sm-offset-4 sm-4 xs-12">

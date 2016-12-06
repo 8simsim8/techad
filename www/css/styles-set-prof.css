@@ -1,4 +1,4 @@
-/* Таблица стилей к странице мой кабинет */
+/* Таблица стилей к странице редактирования профиля */
 main {
   transition: opacity 0.2s ease;
 }
@@ -178,16 +178,17 @@ main.show {
       padding-top: 80px;
     }
     .b-content__form .wrapp {
-      padding-top: 20px;
+      padding: 10px 10px 30px;
     }
       .b-content__form-set {
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-right: 0;
+        margin-left: 0;
       }
       .b-content__form-set-item-label p.text {
         display: block;
         width: 100%;
         line-height: normal;
+        margin-top: 20px;
       }
       .b-content__form-set span.input {
         margin-top: 10px;

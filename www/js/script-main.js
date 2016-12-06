@@ -158,7 +158,7 @@ var linkToFileLinerChart;  // Адресс с данными для график
             $('#chart-line').attr("width", widthWrapp);
           }
 
-          $('#chart-line').attr("min-height", heightCanvas);
+          $('#chart-line').attr("max-height", heightCanvas);
           chartsLine(dataLineChart, chartColorChanged, isAniamtionChartsLine, false, "#FDEBEA");
           isAniamtionChartsLine        = false;
         },

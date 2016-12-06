@@ -1,0 +1,140 @@
+/* Таблица стилей к странице мой кабинет */
+
+  @media (max-width: 550px) {
+    .b-content__title {
+      padding-top: 80px;
+    }
+    .b-content__title p.lead {
+      margin-bottom: 20px;
+    }
+      .b-content__title-settings .annotation:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+        display: block;
+      }
+    .b-content__site .wrapp {
+      padding: 30px 10px;
+    }
+      .b-content__site .annotation {
+        height: 40px;
+        line-height: 40px;
+      }
+      .b-content__site-buttons {
+        max-width: 100%;
+      }
+      .b-content__site-buttons button {
+        display: inline-block;
+        font-size: 0.6rem;
+      }
+    .b-content__losses .wrapp {
+      padding-top: 10px;
+    }
+    .b-content__losses-left {
+      margin-bottom: 30px;
+    }
+      .b-content__losses-left-item {
+        margin: 0 10px;
+      }
+    .b-content__losses-right.col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .b-content__losses-right table tr > th h1, .b-content__losses-right table tfoot tr > td h1 {
+        font-size: 1.3rem;
+    }
+    .b-content__losses-right table tr > th:nth-child(1), .b-content__losses-right table tbody tr > td:nth-child(1), .b-content__losses-right table tfoot tr > td:nth-child(1) {
+      width: 45%;
+    }
+    .b-content__losses-right table tr > th:nth-child(1) h2,
+    .b-content__losses-right table tbody tr > td:nth-child(1) h2,
+    .b-content__losses-right table tfoot tr > td:nth-child(1) h2 {
+      font-size: 0.7rem;
+    }
+    .b-content__losses-right table tr > th h1, .b-content__losses-right table tfoot tr > td h1 {
+      font-size: 1.1rem;
+    }
+    .b-content__losses-right-plug {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+      .b-content__losses-right-plug p.text,
+      .b-content__losses-right-plug .button {
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        width: 100%;
+      }
+      .b-content__losses-right-plug .button {
+        margin-top: 20px;
+      }
+    .b-content__use-block .wrapp {
+      padding: 30px 0 10px;
+    }
+    .b-content__use-block h2:first-child {
+      margin-bottom: 20px;
+    }
+    .b-content__use-block p.lead:last-child {
+      margin-bottom: 20px;
+    }
+    .b-content__use-block-circle.col {
+      margin-bottom: 20px;
+      padding-left: 30px;
+    }
+    .b-content__use-block-circle .circle {
+      float: left;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+    .b-content__use-block-circle .percents,
+    .b-content__use-block-circle .percents + h2 {
+      text-align: left;
+      margin-top: 0.4em;
+    }
+
+    .b-content__traffic .wrapp {
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+    .b-add-car__form-item.droplist[traffic] {
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+    .b-add-car__form-item.droplist[category] {
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+      .b-add-car__form-item.droplist[category] .droplist-current.text {
+        background-color: #CECECE;
+      }
+    
+  .b-filter__switch.display {
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0;
+  }
+  .b-content__contact {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+    .b-content__contact .input.input--akira {
+      height: 46px;
+      width: 100%;
+    }
+    .b-content__contact input[type="submit"] {
+      height: 46px;
+      width: 100%;
+    }}

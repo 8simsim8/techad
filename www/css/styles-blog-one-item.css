@@ -12,8 +12,13 @@
     }
     .b-content__title p.lead {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       color: #FFFFFF;
+    }
+    .b-content__title .date {
+      text-align: center;
+      color: #FFFFFF;
+      margin-bottom: 50px;
     }
     .tag-container {
       margin-left: 16.6667%;
@@ -138,9 +143,6 @@
       width: 40%;
     }
 
-
-
-
   @media (max-width: 768px) {
     .b-content__contact .input.input--akira  {
       width: 100%;
@@ -148,4 +150,70 @@
     .b-content__contact input[type="submit"] {
       width: 100%;
     }
+  }
+
+  @media (max-width: 550px) {
+    .b-content__title {
+      padding: 100px 0 50px;
+    }
+    .b-content__title .date {
+      margin-bottom: 20px;
+    }
+    .tag-container {
+      margin-left: 0;
+      width: 100%;
+    }
+  .b-content__article .wrapp {
+    padding: 30px 0;
+  }
+    .b-content__article h2 {
+      margin-bottom: 20px;
+    }
+    .b-content__article p.text,
+    .b-content__article li.text {
+      margin-bottom: 10px;
+    }
+    .b-content__article figure {
+      margin-bottom: 10px;
+    }
+      .b-content__article img {
+        margin-top: 0;
+      }
+    .b-content__article p.text + h2 {
+      margin-top: 20px;
+    }
+    .b-content__article ul {
+      margin-bottom: 10px;
+    }
+    .b-content__contact-social {
+      margin-top: 30px;
+    }
+    .b-content__similar {
+      padding: 30px 0 30px;
+    }
+      .b-content__similar h1 {
+        margin-bottom: 20px;
+      }
+      .blog-container .blog-item__inner {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
+        .blog-container .blog-item__inner {
+          padding-left: 0;
+          padding-right: 0;
+          margin-bottom: 30px;
+        }
+          .blog-item__bg {
+            margin-bottom: 10px;
+          }
+          .blog-item__inner .text.bold {
+            margin-bottom: 5px;
+          }
+    .b-content__contact {
+      padding: 30px 0;
+    }
+      .b-content__contact h1 {
+        margin-bottom: 10px;
+      }
   }

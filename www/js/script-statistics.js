@@ -35,7 +35,6 @@ $(document).ready(function(){
       $('#chart-line').attr("max-width", widthWrapp-40);
       $('#chart-line').attr("max-height", 370);
 
-      loadDataCircleChart(linkToFileCircleChart); // Отрисока круговых диаграмм
       loadDataLineChart(linkToFileLinerChart); // Отрисовка линейной диаграммы
 
     });
@@ -47,6 +46,7 @@ $(document).ready(function(){
         dataType: 'json',
         success: function(res) {
           dataCircleChart              = res.slice();
+          $('.circle canvas').attr('max-width', '140');
           chartsCircle(dataCircleChart, isAniamtionChartsCircle);
           isAniamtionChartsCircle      = false;
         },

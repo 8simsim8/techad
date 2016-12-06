@@ -152,7 +152,7 @@
           text-align: center;
           font-family : 'AABebasNeue';
           font-size : 1.3rem;
-          line-height : 2.1rem;
+          line-height : 2.4rem;
           color : #FFFFFF;
           border-radius: 50%;
         }
@@ -400,7 +400,7 @@
           }
       .b-content__contact-statistics canvas {
         margin-top: 50px;
-        height: 370px;
+        max-height: 370px;
         width: 100%;
       }
       .b-content__contact .row-bottom + p {
@@ -496,8 +496,9 @@
     margin-top: 20px;
   }  
       .b-content__excellence h2 {
-        width: 280px;
-        margin: 0 auto;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
       }
       .b-content__excellence h2 + p.text {
         text-align: center;
@@ -528,35 +529,4 @@
       margin-bottom: 10px;
     }
 
-  }
-
-  @media (max-width: 550px) {
-    .b-content__counter-digits {
-      padding-right: 35px;
-    }
-    .b-content__counter-digits p {
-      font-size : 2.3rem;
-      padding: 0 10px;
-      width: 1.75rem;
-      }
-      .b-content__counter-digits:after {
-        margin-left: 10px;
-        font-size: 1rem;
-        line-height: 2.4rem;
-      }
-    .b-content__contact-statistics > p.text.bold {
-      float: none;
-      margin-right: 0;
-    }
-    a.b-content__work-example {
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-    }
-    .button {
-      width: 100%;
-    }
-      .button.get-counter {
-        margin-top: 20px;
-      }
   }
