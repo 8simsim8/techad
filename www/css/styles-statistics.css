@@ -92,7 +92,7 @@
           .b-content__losses-right table tfoot tr > td h1 {
             margin-top: -0.2em;
             margin-bottom: -0.2em;
-            font-size : 2.9rem;
+            font-size : 2.3rem;
             font-family : 'AABebasNeue', sans-serif;
           }
           .b-content__losses-right table tr > th:nth-child(2) h1 {
@@ -414,7 +414,7 @@
       text-align: center;
     }
 
-  @media (max-width: 1025px) {
+  @media (max-width: 1100px) {
     section .wrapp {
       padding-left: 10px;
       padding-right: 10px;
@@ -423,6 +423,9 @@
       padding-top: 50px;
       padding-bottom: 30px;
     }
+      .b-content__losses-right table tr > th:nth-child(1) h2, .b-content__losses-right table tfoot tr > td:nth-child(1) h2 {
+        font-size: 0.7rem;
+      }
       .b-content__losses-right table tr > th h1,
       .b-content__losses-right table tfoot tr > td h1 {
         font-size: 1.9rem;

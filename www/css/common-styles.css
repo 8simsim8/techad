@@ -730,6 +730,9 @@ footer {
 
     header .wrapp {
       padding: 0 10px;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
     }
     header.m-menu_small {
       height: 50px;
@@ -755,7 +758,7 @@ footer {
       .m-menu_small .header-logo {
         height: 30px;
       }
-      .header-nav {
+      .l-header .header-nav {
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
@@ -765,11 +768,16 @@ footer {
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
+        padding: 0 40px;
       }
         .header-register {
           line-height: 1.625em;
           text-align: center;
         }
+          .header-register a {
+            display: inline-block;
+            margin: 0 10px;
+          }
         .header-user {
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -1014,7 +1022,7 @@ footer {
   }
     .top-panel .header-logo {
       display: block;
-      height: 40px;
+      height: 30px;
       background-position: center;
     }
     .top-panel .button-menu {
@@ -1078,6 +1086,10 @@ footer {
           .header-nav a,
           .header-register a {
             font-size: 1.5rem;
+          }
+          .header-register a {
+            display: block;
+            margin-bottom: 0.7em;
           }
           .header-register.col {
             margin: 0;
@@ -1144,7 +1156,7 @@ footer {
   
 @media (max-width: 550px) {
   .l-header .row {
-    padding: 15vh 10px;
+    padding: 70px 10px 20px;
   }
   .header-user a {
     font-size: 1rem;

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>NoAdTech</title>
+    <title>AddCPM</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
@@ -50,19 +50,29 @@
     <header class="l-header">
       <nav class="wrapp row row-center">
         <a href="index.html" title="Main" class="header-logo col sm-2"></a>
-        <ul class="header-nav col sm-offset-1 sm-6 lg-offset-2 lg-6">
+        <ul class="header-nav col lg-8 sm-7">
+          <li><a href="main.html" title="" class="link text">Главная</a></li>
           <li><a href="#" title="" class="link text">Примеры</a></li>
           <li><a href="statistics.html" title="" class="link text">Статистика</a></li>
           <li><a href="help.html" title="" class="link text">Помощь</a></li>
           <li><a href="vacancies.html" title="" class="link text">Вакансии</a></li>
           <li><a href="contacts.html" title="" class="link text">Контакты</a></li>
         </ul>
-        <p class="header-register col lg-1 sm-1">
+
+<!-- Вход не был произведен -->
+        <p class="header-register">
           <a href="#" title="Вход" class="link login-button button-open">Вход</a>
-        </p>
-        <p class="header-register col lg-1 sm-2">
           <a href="#" title="Регистрация" class="link register-button button-open">Регистрация</a>
         </p>
+
+<!-- Вход произведен -->
+<!--         <div class="header-user col lg-2 sm-3 order-xs-1">
+          <picture>
+            <source srcset="img/temp/2.jpg">
+            <img src="img/bg-img-logo.svg" alt="No logo">
+          </picture>
+          <a href="my-cabinet.html" class="annotation" title="Мой кабинет">nik.petrov@gmail.com</a>
+        </div> -->
       </nav>
     </header>
 
@@ -145,6 +155,46 @@
           <a href="#" class="link login-button button-open">Войти</a>
         </p>
       </div>
+
+      <div class="to-action b-popup__window">
+        <p class="button-close"></p>
+           <form name="contact">
+            <h1>Напишите нам!</h1>
+            <span class="input input--akira">
+              <input class="input__field input__field--akira" type="text" id="name" name="name" />
+              <label class="input__label input__label--akira" for="name">
+                <span class="input__label-content input__label-content--akira">Имя</span>
+              </label>
+            </span>
+            <span class="input input--akira">
+              <input class="input__field input__field--akira" type="email" id="e-mail"  name="email" />
+              <label class="input__label input__label--akira" for="e-mail">
+                <span class="input__label-content input__label-content--akira">E-mail</span>
+              </label>
+            </span>
+            <span class="input input--akira">
+              <input class="input__field input__field--akira" type="text" id="company"  name="company" />
+              <label class="input__label input__label--akira" for="company">
+                <span class="input__label-content input__label-content--akira">Компания</span>
+              </label>
+            </span>
+            <span class="textarea input--akira">
+              <textarea class="input__field input__field--akira" name="message" /></textarea>
+              <label class="input__label input__label--akira" for="e-mail">
+                <span class="input__label-content input__label-content--akira">Текст сообщения</span>
+              </label>
+            </span>
+            <input type="submit" name="submit" value="Отправить">
+        </form>
+
+        <div class="b-content__form-finish">
+          <div class="b-content__form-finish-inner">
+            <h2>Сообщение отправлено!</h2>
+            <p class="text">В ближайшее время мы дадим Вам ответ.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <main class="l-content">
@@ -153,7 +203,11 @@
 
       <section class="b-content__counter">
         <div class="row row-wrap wrapp">
-          <h1>Помогаем избавиться от блокировщиков рекламы в вебе</h1>
+          <div class="b-content__counter-title">
+            <h1>Повышайте количество показов рекламы</h1>
+            <p class="lead">Обходите блокировщики рекламы с помощью простой веб технологии</p>
+          </div>
+
           <p class="b-content__counter-digits" data-valuta="грн">
 <!--             <span>5</span>
             <span>4</span>
@@ -174,17 +228,17 @@
           <h1 class="col sm-6 sm-offset-3 xs-12">Как это работает</h1>
           <div class="row row-wrap">
             <div class="b-content__scheme-item m-content__scheme-item_1 col md-3 sm-3 xs-12">
-              <p class="b-content__scheme-item-title">Скрипт NoAdTech</p>
+              <p class="b-content__scheme-item-title">Скрипт AddCPM</p>
               <p class="b-content__scheme-item-circle">1</p>
-              <p class="text">Вы интегрируете короткий JS-код на своем сайте — это не займет более пяти минут</p>
+              <p class="text">Вы интегрируете короткий JS-код на своем сайте — это займет не более пяти минут</p>
             </div>
             <div class="b-content__scheme-item m-content__scheme-item_2 col md-3 sm-3 xs-12">
               <p class="b-content__scheme-item-title">Ваш сайт</p>
               <p class="b-content__scheme-item-circle">2</p>
-              <p class="text">Скрипт в асинхронном режиме обменивается данными с нашем сервером (никак не влияя на скорость работы вашего cайта)</p>
+              <p class="text">Скрипт в асинхронном режиме обменивается данными с нашим сервером (никак не влияя на скорость работы вашего cайта)</p>
             </div>
             <div class="b-content__scheme-item m-content__scheme-item_3 col md-3 sm-3 xs-12">
-              <p class="b-content__scheme-item-title">Сервера NoAdTech</p>
+              <p class="b-content__scheme-item-title">Сервера AddCPM</p>
               <p class="b-content__scheme-item-circle">3</p>
               <p class="text">Мы обрабатываем данные на своей платформе и обходим все возможные блокировщики</p>
             </div>
@@ -193,16 +247,17 @@
               <p class="b-content__scheme-item-circle">4</p>
               <p class="text">Мы уже интегрированы с основными рекламными сетями, что радикально увеличивает шансы на успешный обход блокировщиков</p>
             </div>
-            <p class="b-content__scheme-item m-content__scheme-item_tagline col sm-offset-2 sm-8 xs-12">Выначинаете зарабатывать на <span>30% больше</span> на рекламных показах и возвращаетесь к оптимальным показателям</p>
+            <p class="b-content__scheme-item m-content__scheme-item_tagline col sm-offset-2 sm-8 xs-12">
+            Вы мгновенно начинаете зарабатывать больше за счет роста количества рекламных показов от <span>30%</span></p>
             <div class="m-content__scheme-item_register col md-offset-2 md-8 sm-offset-1 sm-10 xs-12">
-              <div class="button contact-us">
+              <div class="button contact-us call-to-action button-open">
                 <h2>Свяжитесь с нами</h2>
                 <p class="text">чтобы узнать подробности и начать работу</p>
               </div>
-              <div class="button get-counter">
+              <a href="download-counter.html" class="button get-counter">
                 <h2>Получите счётчик</h2>
                 <p class="text">чтобы узнать сколько людей блокируют вашу рекламу</p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -212,20 +267,20 @@
         <div class="wrapp">
           <div class="row row-wrap">
             <h1 class="col sm-6 sm-offset-3 xs-12">Преимущества нашей технологии</h1>
-            <p class="tagline lead col sm-offset-2 sm-8 xs-12">Мы не просим пользователей их отключить и не блокируем доступ к контенту. Реклама просто отображается так, как если бы блокировщика не было.</p>
+            <p class="tagline lead col sm-offset-2 sm-8 xs-12">Мы не просим пользователей отключать блокировщики и не блокируем доступ к контенту. Реклама просто отображается так, как если бы блокировщика не было.</p>
           </div>
           <div class="b-content__excellence-detail row row-wrap">
             <div class="b-content__excellence-detail-item m-content__excellence-detail-item_1 col sm-4 xs-12">
               <h2>Простая интеграция</h2>
-              <p class="text">с существующими системами доставки рекламы, ничего менять не нужно</p>
+              <p class="text">С существующими системами доставки рекламы, ничего менять не нужно</p>
             </div>
             <div class="b-content__excellence-detail-item m-content__excellence-detail-item_2 col sm-4 xs-12">
               <h2>Сохраняем данные</h2>
-              <p class="text">о посетителе (даже в браузерах с выключенными кроссдоменными куками), ретаргетинг и тд.</p>
+              <p class="text">О посетителе (даже в браузерах с выключенными кроссдоменными куками), ретаргетинг и тд.</p>
             </div>
             <div class="b-content__excellence-detail-item m-content__excellence-detail-item_3 col sm-4 xs-12">
               <h2>Регулярные обновления</h2>
-              <p class="text">вслед за блокировщиками и при этом не требует регулярного обновления кода на сайтах.</p>
+              <p class="text">Вслед за блокировщиками и при этом не требует регулярного обновления кода на сайтах.</p>
             </div>
           </div>
         </div>
@@ -237,14 +292,14 @@
           <div class="row row-wrap">
             <div class="b-content__work-item col sm-4 xs-12">
               <h2>Рекламные сети</h2>
-              <p class="lead">Увеличте охват сети на 25-30% показывая рекламу тем, кто сейчас ее блокирует.</p>
-              <p class="text">Эта аудитория имеет даже лучшие показатели конверсии за счет того, что большую часть рекламы в сети они не видят w их взгляд не замылен. И ее очень хотят монетизировать ваши паблишеры </p>
+              <p class="lead">Увеличьте охват сети на 25-30%, показывая рекламу тем, кто сейчас ее блокирует.</p>
+              <p class="text">Эта аудитория демонстрирует высокие показатели конверсии, так как большую часть рекламы в сети она не видит. Дайте возможность Вашим партнерам повысить монетизацию сайтов за счет дополнительного рекламного трафика.</p>
               <a href="#" title="Примеры" class="b-content__work-example">Примеры</a>
             </div>
             <div class="b-content__work-item col sm-4 xs-12">
               <h2>Системы управления рекламой</h2>
               <p class="lead">Позвольте вашим клиентам монетизировать больше рекламного инвентяря.</p>
-              <p class="text">Потеря трети аудитории является большой проблемой для сайтов. Они скажут большое спасибо за возможность вернуть возможность показывать рекламу этим пользователям. Иммунитет к блокировщикам — неплохое конкурентное преимущество для системы управляения рекламой!</p>
+              <p class="text">Потеря трети аудитории является большой проблемой для сайтов. Иммунитет к блокировщикам — неплохое конкурентное преимущество для системы управляения рекламой!</p>
             </div>
             <div class="b-content__work-item col sm-4 xs-12">
               <h2>Крупные сайты</h2>
@@ -262,15 +317,10 @@
               <p class="b-content__contact-percent"></p>
               <p class="text bold">пользователей блокировало рекламу за последние 7 дней</p>
               <p class="text">Если потери 1/3 аудитории из-за блокировщиков является для вас проблемой — напишите нам!</p>
-              <form action="email_submit" accept-charset="utf-8" class="form-contact" name="contact-email">
-                <span class="input input--akira">
-                  <input class="input__field input__field--akira" type="email" id="e-mail"  name="email" />
-                  <label class="input__label input__label--akira" for="e-mail">
-                    <span class="input__label-content input__label-content--akira">Ваш e-mail</span>
-                  </label>
-                </span>
-                <input type="submit" value="Отправить">
-              </form>
+              <div class="button contact-us call-to-action button-open">
+                <h2>Свяжитесь с нами</h2>
+                <p class="text">чтобы узнать подробности и начать работу</p>
+              </div>
             </div>
             <div class="b-content__contact-statistics col sm-offset-1 sm-7 order-xs-1 xs-12">
               <p class="text bold">Трафик  с установленным блокировщиком</p>
@@ -365,11 +415,11 @@
             <ul>
               <li><a href="tel:+380444364312" title="" class="annotation">+3 8 044 436-43-12 (Украина)</a></li>
               <li><a href="tel:+74954319020" title="" class="annotation">+7 495 431-90-20 (Россия, Казахстан)</a></li>
-              <li><a href="mailto:hello@noadtech.com" title="" class="annotation">hello@noadtech.com</a></li>
+              <li><a href="mailto:demo@addcpm.com" title="" class="annotation">demo@addcpm.com</a></li>
             </ul>
           </div>
         </div>
-        <p class="annotation"><span>NoAdTech.</span> <span>Помогаем избавиться от блокировщиков рекламы!</span></p>
+        <p class="annotation"><span>AddCPM.</span> <span>Помогаем избавиться от блокировщиков рекламы!</span></p>
       </div>
     </footer>
 

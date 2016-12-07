@@ -10,8 +10,17 @@
     background : linear-gradient(254.1deg, rgba(92, 224, 152, 1) 0%, rgba(66, 86, 134, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5CE098',endColorstr='#425686' , GradientType=1);
   }
+  .b-content__counter-title {
+    width: 100%;
+  }
     .b-content__counter h1 {
-      max-width: 580px;
+      margin: 0 auto;
+      color: #FFFFFF;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    .b-content__counter h1 + p.lead {
       margin: 0 auto;
       color: #FFFFFF;
       text-align: center;
@@ -334,11 +343,15 @@
       .b-content__contact-percent + .text.bold {
         margin-bottom: 30px;
       }
-      .form-contact {
-        margin-top: 10px;
+      .b-content__contact .button.contact-us {
+        margin-top: 30px;
       }
-        input[type="email"] {
-          margin-bottom: 20px;
+        .b-content__contact .button.contact-us h2 {
+          margin-bottom: 10px;
+          line-height: 0.9em;
+        }
+        .b-content__contact .button.contact-us .text {
+            line-height: 1.125em;
         }
     .b-content__contact-statistics {
       -webkit-align-self: flex-end;
@@ -421,6 +434,53 @@
     .blog-container + p {
       text-align: center;
     }
+
+/* Попап call-to-action */
+  .to-action {
+    width: 480px;
+  }
+    .to-action form {
+      margin: 2rem;
+    }
+      .to-action form h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+        .to-action .textarea,
+        .to-action form textarea {
+          font-weight: normal;
+        }
+      .message-sent .to-action form {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .b-content__form-finish {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 280px;
+        width: 370px;
+        margin: 0 auto;
+        display: none
+      }
+       .b-content__form-finish-inner {
+        margin-top: 2.9rem;
+        padding-top: 115px;
+        background-image: url('../img/bg-send-message.svg');
+        background-size: 100px 75px;
+        background-repeat: no-repeat;
+        background-position: center top;
+       }
+        .b-content__form-finish-inner h2 {
+          text-align: center;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          color: #39B54A;
+        }
+        .b-content__form-finish-inner p {
+          text-align: center;
+          font-size: 1rem;
+        }
 
 @media (max-width: 1024px) {
     .b-content__counter-digits {
