@@ -164,6 +164,9 @@
       background-position: center top;
       text-align: center;
     }
+    .b-content__offer-note {
+      max-width: 75%;
+    }
   }
 
   @media (max-width: 550px) {

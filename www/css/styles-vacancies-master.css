@@ -195,13 +195,26 @@
     .b-content__appeal-top-img {
       height: 300px;
     }
+    .b-content__appeal-top .wrapp {
+      padding: 100px 10px 30px;
+    }
       .b-content__appeal-top-img > div {
         width: 100%;
         left: 0;
+        top: 20px;
+        height: 220px;
+      }
+      .b-content__appeal-bottom.wrapp {
+        margin-top: -200px;
+        padding-top: 130px;
+        background-color: #FFFFFF;
       }
     .b-content__knowledge-debugging.col {
       padding: 25px;
       background-image: none;
+    }
+    .b-content__contact {
+      padding-bottom: 50px;
     }
   }
 

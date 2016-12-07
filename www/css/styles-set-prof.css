@@ -167,10 +167,20 @@ main.show {
     }
   }
 
-  @media (max-width: 769px) {
+  @media (max-width: 768px) {
     .b-content__title {
       padding-top: 120px;
     }
+    .b-content__form-set {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .b-content__form-set .wrapp-button.delete {
+      margin-top: 60px;
+    }
+      .b-content__form-set .wrapp-button.delete button {
+        margin: 0;
+      }
   }
 
   @media (max-width: 550px) {
@@ -201,5 +211,8 @@ main.show {
       .b-content__form-set .wrapp-button.delete {
         margin-left: 0;
         margin-top: 50px;
+      }
+      .b-content__form-set .wrapp-button.delete button {
+        margin: 0 auto;
       }
   }

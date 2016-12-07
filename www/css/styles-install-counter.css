@@ -126,6 +126,9 @@
     .b-content__title {
       padding-top: 120px;
     }
+    .b-content__getstats-site {
+      margin-bottom: 60px;
+    }
   }
 
   @media (max-width: 670px) {

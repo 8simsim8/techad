@@ -79,9 +79,12 @@
     .b-content__excellence h1 {
       margin-bottom: 20px;
     }
+    .b-content__excellence-detail {
+      margin-top: 40px;
+    }
     .b-content__excellence-detail .b-content__excellence-detail-item {
-      margin-top: 0;
-      margin-bottom: 20px;
+      margin-top: 0px;
+      margin-bottom: 40px;
     }
     .b-content__excellence-detail .b-content__excellence-detail-item:last-child {
       margin-bottom: 0;
@@ -154,7 +157,9 @@
     .b-content__blog h1 {
       margin-bottom: 20px;
     }
-      .blog-item__inner {
+      .blog-container .blog-item__inner {
+        padding-left: 0;
+        padding-right: 0;
         margin-bottom: 20px;
       }
       .blog-item__bg {

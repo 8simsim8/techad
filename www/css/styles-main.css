@@ -443,7 +443,7 @@
 
   @media (max-width: 768px) {
     .b-content__counter {
-      padding: 90px 0 95px;
+      padding: 90px 0 50px;
     }
 
     .b-content__counter-digits {
