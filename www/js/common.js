@@ -20,11 +20,74 @@ $(document).ready(function(){
   var menuHeader                  = new makeHeader();
 
   var disableScrollClass          = 'no-scroll';
+  var classOpenPopup            = 'open-popup';
   iOSscroll('.no-scroll');
 
 // Попапы регистрации и входа
   var backgroundPopup             = document.getElementsByClassName('l-popup')[0];
   var popup                       = new MakePopup(backgroundPopup);
+
+  // Проверка появления виртуальной клавиатуры
+  var normalHeightWindow = window.innerHeight;
+
+  var inputElements = [];
+  var inputElementsTemp = document.getElementsByTagName('input');
+  var textareaElementsTemp = document.getElementsByTagName('textarea');
+  var heightDocument;
+  var scrollLocation;
+  var currentPopup;
+  var popupHeight;
+  var popupWidth;
+
+  for( var i = 0; i < inputElementsTemp.length; i++ ) {
+    inputElements.push(inputElementsTemp[i]);
+  }
+  for( var i = 0; i < textareaElementsTemp.length; i++ ) {
+    inputElements.push(textareaElementsTemp[i]);
+  }
+
+  for(var  i = 0; i < inputElements.length; i++) {
+    inputElements[i].addEventListener('focus', checkKeyboard);
+    inputElements[i].addEventListener('blur', checkKeyboard);
+  }
+
+  function checkKeyboard(e){
+    if(isMobileDevice && backgroundPopup.matches('.'+classOpenPopup)) {
+      var target = e.target;
+      var typeEvent = e.type;
+      if(typeEvent == 'focus') {
+        document.body.classList.remove(disableScrollClass);
+        enableScroll();
+        setTimeout(function() {
+          // if(document.documentElement.clientHeight < normalHeightWindow) {
+            // keyboard open
+            currentPopup.style.position = 'absolute';
+            // currentPopup.style.marginTop = scrollLocation + 'px';
+            currentPopup.style.width = popupWidth + 'px';
+            currentPopup.style.heigth = popupHeight + 'px';
+            currentPopup.style.bottom = 'auto';
+
+              backgroundPopup.style.position = 'absolute';
+              backgroundPopup.style.height = heightDocument + 'px';
+          // }
+        }, 50);
+      }
+      if(typeEvent == 'blur') {
+        document.body.classList.add(disableScrollClass);
+        disableScroll();
+        // keyboard close
+        currentPopup.style.position = '';
+        currentPopup.style.marginTop = '';
+        currentPopup.style.width = '';
+        currentPopup.style.heigth = '';
+        currentPopup.style.bottom = '';
+
+          backgroundPopup.style.position = '';
+          backgroundPopup.style.height = '';
+      }
+      e.stopPropagation();
+    }
+  }
 
 // *** Меню ***
   function makeHeader(){
@@ -38,7 +101,6 @@ $(document).ready(function(){
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if(scrolled > DISTANCE_SMALL_HEADER) {
           $header.addClass('m-menu_small');
-          // alert('small');
         } else {
           $header.removeClass('m-menu_small');
         }
@@ -74,30 +136,29 @@ $(document).ready(function(){
 
     var classButtonOpenPopup      = '.button-open';
     var classWindowModal          = '.b-popup__window';
-    var classOpenPopup            = 'open-popup';
-    var currentPopup;
+
     var isOpenPopup = false;
 
-    document.addEventListener('click', function(e) {
-      var target = e.target;
+    document.addEventListener('click', function(event) {
+      var target = event.target;
       var enableClosePopup = isOpenPopup;
-      while(target !== document) {
+      while(target !== document ) {
         if(isOpenPopup && target.matches(classWindowModal)) {
           enableClosePopup = false;
         }
         if(target && target.matches(classButtonOpenPopup)) {
           isOpenPopup = true;
-          openPopup(target,e);
+          openPopup(target, event);
           break;
         }
         target = target.parentNode;
       }
       if(isOpenPopup && enableClosePopup) {
-        closePopup(e);
+        closePopup(event);
       }
     });
 
-    function openPopup(target,e){
+    function openPopup(target, e){
       var form                    = backgroundPopup.querySelector('form');
 
       if(target.matches('.register-button')) {
@@ -127,6 +188,11 @@ $(document).ready(function(){
       document.body.classList.add(disableScrollClass);
       backgroundPopup.classList.add(classOpenPopup);
       currentPopup.classList.add(classOpenPopup);
+
+      popupWidth = currentPopup.offsetWidth;
+      popupHeight = currentPopup.offsetHeight;
+      scrollLocation =  window.pageYOffset || document.documentElement.scrollTop;
+      heightDocument = document.body.offsetHeight;
 
       var buttonClosePopup         = currentPopup.querySelector('.button-close');
       buttonClosePopup.addEventListener('click', closePopup);
@@ -163,7 +229,6 @@ $(document).ready(function(){
       $(formRegister).validate({
         focusCleanup: true,
         submitHandler: function(form) {
-          console.log('register');
           var form                   = currentPopup.querySelector('form');
           var formData               = new FormData(form);
 
@@ -221,7 +286,6 @@ $(document).ready(function(){
        $(formLogin).validate({
         focusCleanup: true,
         submitHandler: function(form) {
-          console.log('login');
           var form                   = currentPopup.querySelector('form');
           var formData               = new FormData(form);
 

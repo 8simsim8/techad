@@ -1164,6 +1164,11 @@ footer {
   .header-register.col {
     margin: 5px 0;
   }
+  .l-popup {
+    height: 100%;
+    width: 100%;
+    bottom: auto;
+  }
   .b-popup__window {
     height: 100%;
     width: 100%;

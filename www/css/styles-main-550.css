@@ -48,6 +48,9 @@
       .m-content__scheme-item_tagline.b-content__scheme-item:after {
         top: -65px;
       }
+      .m-content__scheme-item_register {
+        min-height: 1px;
+      }
     .m-content__scheme-item_register .button {
       display: -webkit-flex;
       display: -ms-flexbox;
