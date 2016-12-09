@@ -38,6 +38,7 @@ $(document).ready(function(){
   var currentPopup;
   var popupHeight;
   var popupWidth;
+  // var isOpenKeyBoard = false;
 
   for( var i = 0; i < inputElementsTemp.length; i++ ) {
     inputElements.push(inputElementsTemp[i]);
@@ -61,10 +62,12 @@ $(document).ready(function(){
         setTimeout(function() {
           // if(document.documentElement.clientHeight < normalHeightWindow) {
             // keyboard open
+            isOpenKeyBoard = true;
             currentPopup.style.position = 'absolute';
+            // window.scrollTo(0,0);
             // currentPopup.style.marginTop = scrollLocation + 'px';
             currentPopup.style.width = popupWidth + 'px';
-            currentPopup.style.heigth = popupHeight + 'px';
+            currentPopup.style.height = popupHeight + 'px';
             currentPopup.style.bottom = 'auto';
 
               backgroundPopup.style.position = 'absolute';
@@ -75,12 +78,13 @@ $(document).ready(function(){
       if(typeEvent == 'blur') {
         document.body.classList.add(disableScrollClass);
         disableScroll();
-        // keyboard close
+      //   // keyboard close
         currentPopup.style.position = '';
-        currentPopup.style.marginTop = '';
+      //   currentPopup.style.marginTop = '';
         currentPopup.style.width = '';
-        currentPopup.style.heigth = '';
-        currentPopup.style.bottom = '';
+        currentPopup.style.height = '';
+        // currentPopup.style.bottom = '';
+        // window.scrollTo(0,0);
 
           backgroundPopup.style.position = '';
           backgroundPopup.style.height = '';
@@ -143,12 +147,13 @@ $(document).ready(function(){
       var target = event.target;
       var enableClosePopup = isOpenPopup;
       while(target !== document ) {
-        if(isOpenPopup && target.matches(classWindowModal)) {
+        if(isOpenPopup && target.matches(classWindowModal) ) {
           enableClosePopup = false;
         }
         if(target && target.matches(classButtonOpenPopup)) {
           isOpenPopup = true;
           openPopup(target, event);
+          enableClosePopup = false;
           break;
         }
         target = target.parentNode;
@@ -217,6 +222,11 @@ $(document).ready(function(){
 
       var buttonClosePopup        = currentPopup.querySelector('.button-close');
       buttonClosePopup.removeEventListener('click', closePopup);
+
+    // // Если клавиатура открывалась, промотать до места открытия попапа
+    //   if(isOpenKeyBoard) {
+    //     window.scrollBy(0,scrollLocation);
+    //   }
 
       isOpenPopup = false;
       enableScroll();

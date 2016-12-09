@@ -585,6 +585,10 @@
     .b-content__contact-percent {
       text-align: center;
     }
+    .b-content__contact .button.contact-us {
+      margin-left: auto;
+      margin-right: auto;
+    }
     .blog-item__inner {
       margin-bottom: 10px;
     }
