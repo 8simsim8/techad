@@ -1,6 +1,20 @@
 /* Таблица стилей к странице контактов */
+.not-active,
+.not-active *,
+.not-active .b-content__transitions-link-item-info h2,
+.not-active .b-content__transitions-link-item-info .annotation {
+  pointer-events: none;
+  color: #E6E6E6;
+  background-color: #E6E6E6;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
   .b-content__title {
-    padding: 140px 0 100px;
+    padding: 120px 0 0;
+    height: 400px;
     background-image: url('../img/bg-tittle-vacancies.jpg');
     background-size: cover;
     background-position: center;
@@ -148,6 +162,9 @@
     }
 
   @media (max-width: 768px) {
+  .b-content__title {
+    height: auto;
+  }
     h1 {
       text-align: center;
       padding: 0;

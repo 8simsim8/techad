@@ -1,6 +1,7 @@
 /* Таблица стилей к странице блога */
   .b-content__title {
-    padding: 90px 0 70px;
+    padding: 120px 0 0;
+    height: 400px;
     background-image: url('../img/bg-tittle-blog.jpg');
     background-size: cover;
     background-position: center;
@@ -80,6 +81,12 @@
     }
 
   @media (max-width: 768px) {
+    .b-content__title {
+      height: auto;
+    }
+    .tag-container {
+      margin-bottom: 20px;
+    }
     .b-content__contact .input.input--akira  {
       width: 100%;
     }

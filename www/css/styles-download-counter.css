@@ -3,8 +3,8 @@
   padding-top: 0;
 }
   .b-content__title {
-    padding-top: 180px;
-    padding-bottom: 50px;
+    padding-top: 120px;
+    height: 400px;
     background-color: #EAEFF1;
   }
     .b-content__title picture {

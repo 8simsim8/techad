@@ -1,6 +1,7 @@
 /* Таблица стилей к странице контактов */
   .b-content__title {
-    padding: 140px 0 140px;
+    padding: 120px 0 0;
+    height: 400px;
     background-image: url('../img/bg-tittle-contact.jpg');
     background-size: cover;
     background-position: center;
@@ -108,6 +109,9 @@
         }
 
   @media (max-width: 768px) {
+    .b-content__title {
+      height: auto;
+    }
     .b-content__contact .input.input--akira  {
       width: 100%;
     }

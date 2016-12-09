@@ -3,13 +3,17 @@
   padding-top: 0;
 }
   .b-content__counter {
-    padding: 140px 0 45px;
+    padding: 120px 0 0;
+    height: 400px;
     width: 100%;
     background : -ms-linear-gradient(-164.1deg, rgba(92, 224, 152, 1) 0%, rgba(66, 86, 134, 1) 100%);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#5CE098', endColorstr='#425686' ,GradientType=0)";
     background : linear-gradient(254.1deg, rgba(92, 224, 152, 1) 0%, rgba(66, 86, 134, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5CE098',endColorstr='#425686' , GradientType=1);
   }
+    .b-content__counter .row.wrapp {
+      height: auto;
+    }
   .b-content__counter-title {
     width: 100%;
   }
@@ -17,19 +21,17 @@
       margin: 0 auto;
       color: #FFFFFF;
       text-align: center;
-      margin-bottom: 30px;
-      text-transform: uppercase;
     }
     .b-content__counter h1 + p.lead {
       margin: 0 auto;
       color: #FFFFFF;
       text-align: center;
-      margin-bottom: 65px;
+      margin-bottom: 30px;
     }
     .b-content__counter-digits {
       position: relative;
       margin: 0 auto;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       width: 100%;
       font-family : 'AABebasNeue';
       font-size : 0;
@@ -504,6 +506,7 @@
   @media (max-width: 768px) {
     .b-content__counter {
       padding: 90px 0 50px;
+      height: auto;
     }
 
     .b-content__counter-digits {
