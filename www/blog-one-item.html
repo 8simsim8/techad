@@ -44,10 +44,11 @@
       </div>
     </div>
 
+
     <header class="l-header">
-      <nav class="wrapp row row-center">
-        <a href="index.html" title="Main" class="header-logo col sm-2"></a>
-        <ul class="header-nav col order-xs-2 sm-7">
+      <nav class="wrapp row xs-no-row row-center">
+        <a href="index.html" title="Main" class="header-logo col sm-2 xs-1"></a>
+        <ul class="header-nav col order-xs-3 sm-6 xs-5">
           <li><a href="main.html" title="" class="text bold">Главная</a></li>
           <!-- <li><a href="#" title="" class="text bold">Примеры</a></li> -->
           <li><a href="statistics.html" title="" class="text bold">Статистика</a></li>
@@ -57,18 +58,26 @@
         </ul>
 
 <!-- Вход не был произведен -->
-<!--         <p class="header-register col order-xs-3">
+<!--         <p class="header-register col sm-3 order-xs-4 xs-2">
           <a href="#" title="Вход" class="text bold login-button button-open">Вход</a>
           <a href="#" title="Регистрация" class="text bold register-button button-open">Регистрация</a>
         </p> -->
 
 <!-- Вход произведен -->
-        <div class="header-user col lg-2 sm-3 order-xs-1">
+        <div class="header-user col sm-3 order-xs-1">
           <picture>
             <source srcset="img/temp/2.jpg">
             <img src="img/bg-img-logo.svg" alt="No logo">
           </picture>
           <a href="my-cabinet.html" class="annotation" title="Мой кабинет">nik.petrov@gmail.com</a>
+        </div>
+
+        <div class="header-lang col sm-1 xs-1 order-xs-2 droplist" lang="">
+          <span class="droplist-current text bold tab-input">Язык</span>
+          <ul class="droplist-block">
+            <li class="droplist-item text bold" data-link-flag-lang='img/flag_ru.png'>русский</li>
+            <li class="droplist-item text bold" data-link-flag-lang='img/flag_eng.png'>english</li>
+          </ul>
         </div>
       </nav>
     </header>

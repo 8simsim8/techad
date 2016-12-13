@@ -768,8 +768,11 @@ footer {
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
-        padding: 0 40px;
+        padding: 0 20px;
       }
+        .l-header .header-nav a {
+          font-size: 0.7rem;
+        }
         .l-header .header-nav a:hover {
           color: #39B54A;
         }
@@ -779,19 +782,20 @@ footer {
         }
           .header-register a {
             display: inline-block;
-            margin: 10px 5px;
-            padding: 5px 15px;
+/*             margin: 10px auto; */
+            padding: 0.4em 1em;
             height: 100%;
+            font-size: 0.7rem;
             border-radius: 4px;
             transition: background-color 0.2s ease,
                         padding 0.2s ease,
                         margin 0.2s ease;
           }
           .m-menu_small .header-register a {
-            margin: 3px 5px;
-            padding: 3px 15px;
+            
           }
           .header-register .login-button {
+            margin-right: 15px;
             background-color: #CCCCCC;
             color : #333333;
           }
@@ -816,7 +820,7 @@ footer {
           align-items: center;
           -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
-          justify-content: flex-end;
+          justify-content: center;
         }
           .header-user img {
             height: 30px;
@@ -828,6 +832,49 @@ footer {
           .header-user a.annotation {
             color: #0071BC;
           }
+        .header-lang {
+          /* height: 100%; */
+        }
+          .header-lang.droplist .text {
+            background-color: transparent;
+            color : #999999;
+          }
+            .header-lang.droplist .text {
+              padding: 0 2em;
+              font-size: 0.6rem;
+              text-transform: uppercase;
+              line-height: 3.5em;
+              background-position: left center;
+              background-repeat: no-repeat;
+              background-size: 18px auto;
+            }
+            .header-lang.droplist span {
+            }
+            .header-lang.droplist .droplist-current:after {
+              right: 2px;
+              background-image: url('../img/icon-lang-arrow.svg');
+            }
+              .header-lang.droplist .droplist-block {
+                top: 45px;
+                left: -10px;
+                width: calc(100% + 20px);
+                background-color: rgba(0,0,0,0.7);
+              }
+              .header-lang.droplist li.text {
+                height: 28px;
+                padding-right: 10px;
+                padding-left: 40px;
+                color: #FFFFFF;
+                line-height: 28px;
+                background-position: 10px center;
+                background-repeat: no-repeat;
+                background-size: 18px auto;
+                border: none;
+              }
+                .header-lang.droplist li.text:hover {
+                  color: #FFFFFF;
+                  background-color: rgba(0,0,0,0.5);
+                }
 
 /* Стили оформления ссылки на новость блога */
 .blog-item__inner {
@@ -1036,6 +1083,12 @@ footer {
         margin-left: 30px;
       }
 
+@media (max-width: 1030px) {
+  .header-lang .droplist-current:after {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
 
   h1,
@@ -1102,6 +1155,7 @@ footer {
         opacity: 0;
         height: 100vh;
         width: 100vw;
+        background-color: rgba(0,0,0,0.95);
       }
         header.open-menu {
           opacity: 1;
@@ -1113,12 +1167,13 @@ footer {
         header .header-logo.col {
           display: none;
         }
-        .l-header .row {
+        .l-header .xs-no-row {
           padding: 20vh 10px 20vh;
-          -ms-flex-direction: column;
-          -webkit-flex-direction: column;
-          flex-direction: column;
+          width: 100%;
         }
+          .l-header .xs-no-row .col {
+            max-width: 100%;
+          }
           .header-nav.col {
             -ms-flex: 5;
             -webkit-flex: 5;
@@ -1126,20 +1181,34 @@ footer {
             -ms-flex-direction: column;
             -webkit-flex-direction: column;
             flex-direction: column;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
           }
         .header-nav > li {
+          width: 100%;
+          text-align: center;
+          border-bottom: 1px solid #666666;
+        }
+          .header-nav > li:last-child {
+            border-bottom: none;
+          }
+            .l-header .header-nav a {
+              color: #FFFFFF;
+              font-size: 1rem;
+              line-height: 2em;
+            }
+        .header-register.col {
+          -ms-flex: 1;
+          -webkit-flex: 1;
+          flex: 1;
           text-align: center;
         }
-          .header-nav a,
           .header-register a {
-            font-size: 1.5rem;
-          }
-          .header-register a {
-            display: block;
+            margin: 10px 0;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            font-size: 1rem;
             margin-bottom: 0.7em;
             height: auto;
-            margin: 20px auto;
             width: 40%;
           }
           .header-register.col {
@@ -1149,7 +1218,7 @@ footer {
           .header-register {
             opacity: 0;
             pointer-events: none;
-            font-size: 1.5rem;
+            font-size: 1rem;
             -ms-transform: translate3d(-50px,0,0);
                 -webkit-transform: translate3d(-50px,0,0);
                 transform: translate3d(-50px,0,0);
@@ -1169,16 +1238,11 @@ footer {
                 -webkit-transform: translate3d(0,0,0);
                 transform: translate3d(0,0,0);
           }
-        .header-register.col {
-          -ms-flex: 1;
-          -webkit-flex: 1;
-          flex: 1;
-          text-align: center;
-        }
       .header-user {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
+        margin-bottom: 20px;
       }
         .header-user img {
           height: 60px;
@@ -1187,6 +1251,40 @@ footer {
         .header-user a {
           font-size: 1.2rem;
         }
+      .l-header .header-lang.col {
+        width: 40%;
+        margin-bottom: 40px;
+      }
+        .header-lang.droplist .droplist-current:after {
+          display: block;
+          right: 10px;
+        }
+        .header-lang.droplist .text {
+          font-size: 0.6rem;
+        }
+        .header-lang.droplist ul.droplist-block {
+          top: 60px;
+          left: 0;
+          right: 0;
+          width: 100%;
+        }
+        .header-lang.droplist span.droplist-current,
+        .header-lang.droplist li.droplist-item {
+          padding: 0 2em;
+          text-align: center;
+          background-color : #333333;
+          background-position: 20px center;
+        }
+        .header-lang.droplist span.droplist-current {
+          color: #FFFFFF;
+          height: 50px;
+          border-radius: 4px;
+          line-height: 50px;
+        }
+          .header-lang.droplist li.droplist-item {
+            height: 40px;
+            line-height: 40px;
+          }
 
   .l-content {
     padding-top: 0;
@@ -1211,7 +1309,15 @@ footer {
   
 @media (max-width: 550px) {
   .l-header .row {
-    padding: 70px 10px 20px;
+    padding: 70px 10px 60px;
+  }
+  .l-header .header-nav.col {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .header-user img {
+    height: 40px;
+    width: 40px;
   }
   .header-user a {
     font-size: 1rem;
@@ -1221,7 +1327,28 @@ footer {
   }
   .header-register a {
     width: 100%;
+    margin: 5px 0;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    /* font-size: 1rem; */
   }
+  .header-lang.droplist span.droplist-current {
+    left: 10px;
+    right: 10px;
+    width: auto;
+/*     height: 35px;
+    line-height: 35px; */
+  }
+  .header-lang.droplist ul.droplist-block {
+    left: 10px;
+    right: 10px;
+    width: auto;
+    /* top: 40px; */
+  }
+/*     .header-lang.droplist ul.droplist-block > li {
+      height: 30px;
+      line-height: 30px;
+    } */
   .l-popup {
     height: 100%;
     width: 100%;

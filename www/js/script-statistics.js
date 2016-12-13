@@ -164,7 +164,7 @@ $(document).ready(function(){
       $('.m-open-droplist').removeClass('m-open-droplist');
     });
 
-    $('.droplist-current').on('click focus', function(){
+    $('.b-content__traffic .droplist-current').on('click focus', function(){
       var $this = $(this);
       $thisList = $this.siblings().filter('.droplist-block');
       var $dropList = $thisList;
@@ -180,7 +180,7 @@ $(document).ready(function(){
       return false;
     });
 
-    $('.droplist-item').on('click', function() {
+    $('.b-content__traffic .droplist-item').on('click', function() {
 
       var $this = $(this);
       var selectStr = $(this).html();
@@ -210,7 +210,7 @@ $(document).ready(function(){
   /*
     При загрузке страницы проверить, выбран ли выпадающий список, если нет, выбрать первый пункт
   */
-    $('.droplist-current').each(function(index,el){
+    $('.b-content__traffic .droplist-current').each(function(index,el){
       if(!$(el).html()) {
         $(el).parent().find('.droplist-item').eq(0).trigger('click');
       }

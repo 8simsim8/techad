@@ -180,7 +180,7 @@ $(document).ready(function(){
       }
     });
 
-    $('.b-content__site .droplist-item').each(function(index, el){
+    $('.b-content__site-droplist .droplist-item').each(function(index, el){
       if($(el).attr('data-src-icon-site')){
         var srcIcon = $(el).attr('data-src-icon-site');
         $(this).css({
@@ -194,7 +194,7 @@ $(document).ready(function(){
       $('.m-open-droplist').removeClass('m-open-droplist');
     });
 
-    $('.droplist-current').on('click focus', function(){
+    $('.l-content .droplist-current').on('click focus', function(){
       var $this = $(this);
       $thisList = $this.siblings().filter('.droplist-block');
       var $dropList = $thisList;
@@ -210,7 +210,7 @@ $(document).ready(function(){
       return false;
     });
 
-    $('.droplist-item').on('click', function() {
+    $('.l-content .droplist-item').on('click', function() {
 
       var $this = $(this);
       var selectStr = $(this).html();
@@ -247,7 +247,7 @@ $(document).ready(function(){
   /*
     При загрузке страницы проверить, выбран ли выпадающий список, если нет, выбрать первый пункт
   */
-    $('.droplist-current').each(function(index,el){
+    $('.l-content .droplist-current').each(function(index,el){
       if(!$(el).html()) {
         $(el).parent().find('.droplist-item').eq(0).trigger('click');
       }
@@ -257,9 +257,9 @@ $(document).ready(function(){
     При загрузке проверить, если всего один сайт,
     отключить дроплист и убрать кнопку "Добавить сайт"
   */
-    if($('.b-content__site .droplist-item').length <= 1) {
-      $('.b-content__site .droplist-block').hide();
-      $('.b-content__site .droplist-current').addClass('no-display');
+    if($('.b-content__site-droplist .droplist-item').length <= 1) {
+      $('.b-content__site-droplist .droplist-block').hide();
+      $('.b-content__site-droplist .droplist-current').addClass('no-display');
     }
 
 });

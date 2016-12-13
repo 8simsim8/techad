@@ -81,6 +81,12 @@ select
 	
 }
 
+.row.no-row {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
 .row.row-wrap
 {
 	-webkit-flex-wrap : wrap;
@@ -153,8 +159,12 @@ select
 	display : none !important;
 }
 
-@media (max-width : 768px)
-{
+@media (max-width : 768px) {
+.row.xs-no-row {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
 	.row .col.xs-offset-1
 {
 	margin-left : 8.3333%;
@@ -404,6 +414,11 @@ select
 
 @media (min-width : 769px) and (max-width : 991px)
 {
+.row.sm-no-row {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
 	/*Порядок размещения блоков*/
 	.row .col.order-sm-1
 	{
@@ -502,7 +517,11 @@ select
 
 @media (min-width : 992px) and (max-width : 1199px)
 {
-
+.row.md-no-row {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
 	/*Порядок размещения блоков*/
 	.row .col.order-md-1
 	{
@@ -924,7 +943,11 @@ select
 
 @media (min-width : 1200px)
 {
-
+.row.lg-no-row {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
 	/*Порядок размещения блоков*/
 	.row .col.order-lg-1
 	{

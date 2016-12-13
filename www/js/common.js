@@ -110,14 +110,63 @@ $(document).ready(function(){
         }
       });
 
-    // Проскроливание фиксорованного меню
-      $(window).scroll(function () {
-        if(window.innerWidth > WIDTH_TABLET_DEVICE || isCompactDevice) {
-          $header.css("left", -$(this).scrollLeft() + "px");
-        }
+      // Проскроливание фиксорованного меню
+        $(window).scroll(function () {
+          if(window.innerWidth > WIDTH_TABLET_DEVICE || isCompactDevice) {
+            $header.css("left", -$(this).scrollLeft() + "px");
+          }
+        });
+      }
+
+    // Закрыть дропдаун по клику на странице
+      $(document).on('click', function(){
+        $('.m-open-droplist').removeClass('m-open-droplist');
       });
 
-    }
+      $('.header-lang .droplist-item').each(function(i,el){
+        var urlIconFlag = $(el).attr('data-link-flag-lang');
+        $(el).css({
+          'background-image': 'url(' + urlIconFlag + ')'
+        });
+      });
+
+      $('.header-lang .droplist-current').on('click focus', function(){
+        var $this = $(this);
+        $thisList = $this.siblings().filter('.droplist-block');
+        var $dropList = $thisList;
+        sumListEl = $thisList.children().length;
+        heightList = $thisList[0].clientHeight;
+        if($dropList.hasClass('m-open-droplist')) {
+          $('.m-open-droplist').removeClass('m-open-droplist');
+        } else {
+          $('.m-open-droplist').removeClass('m-open-droplist');
+          $dropList.addClass('m-open-droplist');
+          $this.addClass('m-open-droplist');
+        }
+        return false;
+      });
+
+      $('.header-lang .droplist-item').on('click', function() {
+        var $this = $(this);
+        var selectStr = $(this).html();
+        var iconLang = $(this).attr('data-link-flag-lang');
+        $(this).parent().siblings().filter('.droplist-current').html(selectStr);
+        $(this).parent().siblings().filter('.droplist-current').css({
+          'background-image': 'url(' + iconLang + ')'
+        });
+        
+        $('.m-open-droplist').removeClass('m-open-droplist');
+        var currentList = $(this).parent().parent();
+        return false;
+      });
+
+    /*
+      При загрузке страницы проверить на наличие классов "m-filter__switch-item_active" на фильтрах, указывающих на то, какая сортировка, соответственно, имеющиие его пропустить
+    */
+
+      if(!$('.header-lang').hasClass('m-filter__switch-item_active')) {
+        $('.header-lang').find('.droplist-item').eq(0).trigger('click');
+      }
 
     // Работа кнопки открытия/закрытия меню
       var buttonMenu = document.getElementsByClassName('button-menu');
