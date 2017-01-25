@@ -3,8 +3,8 @@
   padding-top: 0;
 }
   .b-content__counter {
-    padding: 120px 0 0;
-    height: 400px;
+    padding: 85px 0 25px;
+    height: 260px;
     width: 100%;
     background : -ms-linear-gradient(-164.1deg, rgba(92, 224, 152, 1) 0%, rgba(66, 86, 134, 1) 100%);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#5CE098', endColorstr='#425686' ,GradientType=0)";
@@ -28,7 +28,7 @@
       text-align: center;
       margin-bottom: 30px;
     }
-    .b-content__counter-digits {
+/*     .b-content__counter-digits {
       position: relative;
       margin: 0 auto;
       margin-bottom: 20px;
@@ -60,15 +60,16 @@
       color: #FFFFFF;
       text-align: center;
       width: 100%;
-    }
+    } */
 
   .b-content__scheme {
+    margin-top: -160px;
   }
     .b-content__scheme .wrapp {
       padding: 80px 0 80px;
       border-bottom: 1px solid rgba(185, 203, 209, 0.4);
     }
-      .b-content__scheme h1 {
+       .b-content__scheme h1 {
         margin-bottom: 30px;
         text-align: center;
       }
@@ -522,6 +523,9 @@
         font-size: 2.5rem;
         line-height: 6rem;
       }
+  .b-content__scheme {
+    margin-top: 0px;
+  }
   .b-content__scheme .wrapp {
     padding-top: 30px;
   }

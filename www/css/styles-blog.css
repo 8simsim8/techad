@@ -1,6 +1,6 @@
 /* Таблица стилей к странице блога */
   .b-content__title {
-    padding: 120px 0 0;
+    padding: 85px 0 25px;
     height: 400px;
     background-image: url('../img/bg-tittle-blog.jpg');
     background-size: cover;

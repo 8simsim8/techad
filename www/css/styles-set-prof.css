@@ -28,8 +28,8 @@ main.show {
   padding-top: 0;
 }
   .b-content__title {
-    padding-top: 120px;
-    height: 400px;
+    padding: 85px 0 25px;
+    height: 260px;
     background-color: #EAEFF1;
   }
     .b-content__title picture {
@@ -170,6 +170,7 @@ main.show {
   @media (max-width: 768px) {
     .b-content__title {
       padding-top: 120px;
+      height: auto;
     }
     .b-content__form-set {
       margin-left: 10%;

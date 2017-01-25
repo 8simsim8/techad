@@ -3,8 +3,8 @@
   padding-top: 0;
 }
   .b-content__title {
-    padding-top: 120px;
-    height: 400px;
+    padding: 85px 0 25px;
+    height: 260px;
     background-color: #EAEFF1;
   }
     .b-content__title h1 {
@@ -455,6 +455,7 @@
   @media (max-width: 768px) {
   .b-content__title {
     padding: 100px 0 50px;
+    height: auto;
   }
     .b-content__losses-left-item {
         margin: 0 10px;

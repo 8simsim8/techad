@@ -1,17 +1,18 @@
 /* Таблица стилей к странице загрузки кода */
 .l-content {
   padding-top: 0;
+  min-height: calc(100vh - 232px);
 }
   .b-content__title {
-    padding-top: 120px;
-    height: 400px;
+    padding: 85px 0 25px;
+    height: 260px;
     background-color: #EAEFF1;
   }
     .b-content__title picture {
       display: block;
       margin: 0 auto;
       width: 90px;
-      margin-bottom: 25px;
+      margin-bottom: 5px;
     }
     .b-content__title picture source {
     }
@@ -22,7 +23,7 @@
         border-radius: 50%;
       }
     .b-content__title p.lead {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       text-align: center;
     }
     .b-content__title-settings {

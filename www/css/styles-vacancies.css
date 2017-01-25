@@ -13,8 +13,8 @@
 }
 
   .b-content__title {
-    padding: 120px 0 0;
-    height: 400px;
+    padding: 85px 0 25px;
+    height: 260px;
     background-image: url('../img/bg-tittle-vacancies.jpg');
     background-size: cover;
     background-position: center;
@@ -160,6 +160,15 @@
     .b-content__social .wrapp {
       padding: 40px 0 30px;
     }
+
+  @media (max-width: 1024px) {
+    .b-content__title {
+      height: auto;
+    }
+    .b-content__title p.lead {
+      margin-bottom: 0;
+    }
+  }
 
   @media (max-width: 768px) {
   .b-content__title {

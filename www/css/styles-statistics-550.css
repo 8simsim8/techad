@@ -2,6 +2,7 @@
   .b-content__title {
     padding-top: 100px;
     padding-bottom: 50px;
+    height: auto;
   }
     .b-content__losses .wrapp {
       padding-top: 10px;

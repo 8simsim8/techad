@@ -1,7 +1,7 @@
 /* Таблица стилей к странице помощи */
   .b-content__title {
-    padding: 120px 0 0;
-    height: 400px;
+    padding: 85px 0 25px;
+    height: 260px;
     background-color: rgba(185, 203, 209, 0.3);
   }
     .b-content__title h1 {
@@ -14,7 +14,7 @@
     }
 
   .b-content__accordeon {
-    margin-top: -90px;
+    margin-top: -50px;
   }
     .b-content__accordeon-category {
       margin-bottom: 215px;
@@ -210,6 +210,14 @@
   }
 
   @media (max-width: 768px) {
+    
+  .b-content__title {
+    height: auto;
+  }
+    .b-content__accordeon {
+      margin-top: 30px;
+    }
+    
     h2,
     .lead {
       max-width: 100%;
