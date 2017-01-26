@@ -1,20 +1,26 @@
 /* Таблица стилей к странице помощи */
   .b-content__title {
+    display: -webkit-flex;
+    display: flex;
     padding: 85px 0 25px;
     height: 260px;
     background-color: rgba(185, 203, 209, 0.3);
   }
+    .b-content__title .wrapp {
+      margin:  auto;
+      height: auto;
+    }
     .b-content__title h1 {
       text-align: center;
       color : #39B54A;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
     .b-content__title p.lead {
       text-align: center;
     }
 
   .b-content__accordeon {
-    margin-top: -50px;
+    margin-top: -30px;
   }
     .b-content__accordeon-category {
       margin-bottom: 215px;

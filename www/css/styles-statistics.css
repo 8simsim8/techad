@@ -4,13 +4,19 @@
 }
   .b-content__title {
     padding: 85px 0 25px;
+    display: -webkit-flex;
+    display: flex;
     height: 260px;
     background-color: #EAEFF1;
   }
+    .b-content__title .wrapp {
+      margin:  auto;
+      height: auto;
+    }
     .b-content__title h1 {
       text-align: center;
       color: #000000;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
     .b-content__title p.lead {
       text-align: center;

@@ -14,27 +14,37 @@
 
   .b-content__title {
     padding: 85px 0 25px;
+    display: -webkit-flex;
+    display: flex;
     height: 260px;
     background-image: url('../img/bg-tittle-vacancies.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
+    .b-content__title .wrapp {
+      margin:  auto;
+      height: auto;
+    }
     .b-content__title h1 {
       text-align: center;
-      font-size: 2.4rem;
       color: #FFFFFF;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
     }
     .b-content__title p.lead {
       text-align: center;
-      margin-bottom: 50px;
       color: #FFFFFF;
     }
 
 .b-content__transitions {
   padding: 45px 0 80px;
 }
+  .b-content__transitions-slogan {
+    margin-bottom: 30px;
+  }
+    .b-content__transitions-slogan p.lead {
+      text-align: center;
+    }
   .b-content__transitions-link-item {
     display: -webkit-flex;
     display: -ms-flexbox;
